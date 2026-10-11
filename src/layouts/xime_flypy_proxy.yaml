@@ -10,18 +10,18 @@ repo: https://github.com/tiengming/xime_flypy_proxy
 license: GPL-3.0
 appVersion: ">=3.0.0"
 requiresSchemes: []
-# 截图：仅详情页展示（1~5 张）
 screenshots:
-  - https://cdn.jsdelivr.net/gh/tiengming/xime_flypy_proxy@1.0.0/images/img1.jpg
-  - https://cdn.jsdelivr.net/gh/tiengming/xime_flypy_proxy@1.0.0/images/img2.jpg
-  - https://cdn.jsdelivr.net/gh/tiengming/xime_flypy_proxy@1.0.0/images/img3.jpg
-  - https://cdn.jsdelivr.net/gh/tiengming/xime_flypy_proxy@1.0.0/images/img4.jpg
-  - https://cdn.jsdelivr.net/gh/tiengming/xime_flypy_proxy@1.0.0/images/img5.jpg
-currentVersion: "1.0.0"
+  - https://cdn.jsdelivr.net/gh/tiengming/xime_flypy_proxy@xime_flypy_proxy-v1.0.1/images/img1.jpg
+  - https://cdn.jsdelivr.net/gh/tiengming/xime_flypy_proxy@xime_flypy_proxy-v1.0.1/images/img2.jpg
+  - https://cdn.jsdelivr.net/gh/tiengming/xime_flypy_proxy@xime_flypy_proxy-v1.0.1/images/img3.jpg
+  - https://cdn.jsdelivr.net/gh/tiengming/xime_flypy_proxy@xime_flypy_proxy-v1.0.1/images/img4.jpg
+  - https://cdn.jsdelivr.net/gh/tiengming/xime_flypy_proxy@xime_flypy_proxy-v1.0.1/images/img5.jpg
+currentVersion: "1.0.1"
 versions:
-  - version: "1.0.0"
-    date: "2026-10-01"
-    changelog: 个人长期使用版本。
+  - version: "1.0.1"
+    date: "2026-10-11"
+    changelog: 优化截图体积，单文件交付。
     downloadUrl:
-      - url: https://cdn.jsdelivr.net/gh/tiengming/xime_flypy_proxy@1.0.0/xime.custom.yaml
-        size: "16.6 KB"
+      - url: https://github.com/tiengming/xime_flypy_proxy/releases/download/xime_flypy_proxy-v1.0.1/xime.custom.yaml
+        sha256: "24aa932b792ef0fc6d2f8e61daf1d8b7b736ffa563d6038cbc41a61b8d991b0f"
+        size: "17 KB"
