@@ -114,7 +114,7 @@ author: Xime
 description: "插件说明"
 type: remote                     # 下载类型，固定 remote
 tags: [工具]
-pluginType: tool                 # 与插件 manifest 的 type 一致：tool/speech/emoji/backup/clipboard_sync...
+pluginType: tool                 # 与插件 manifest 的 type 一致：tool/speech/emoji/backup/clipboard_sync/jev...
 icon: "我"                        # manifest.icon：字符图标或 resources 下的图片名
 activation: multi                # manifest.activation：single / multi
 minHostVersion: '3.0.0'          # manifest.minHostVersion
