@@ -1,0 +1,32 @@
+id: com.jxmfkj.ai.ime.plugin.openai_ocr
+name: OpenAI 兼容 OCR
+author: JamesGZM
+description: "调用 OpenAI 兼容接口，识别图片中的文字。"
+type: remote
+tags:
+- OCR
+- 文字识别
+pluginType: ocr
+icon: "识"
+activation: single
+minHostVersion: '3.2.0'
+platforms:
+- android
+capabilities:
+  ocr:
+    requiresNetwork: true
+network:
+  allowCustomHosts: true
+homepage: https://github.com/JamesGZM/xime-index
+license: GPL-3.0
+appVersion: '>=3.2.0'
+currentVersion: 1.0.0
+versions:
+- version: 1.0.0
+  date: '2026-10-15'
+  changelog: 初始版本。手填 OpenAI 兼容接口地址、API Key 和模型名。
+  downloadUrl:
+  - url: https://github.com/JamesGZM/xime-index/releases/download/plugins-jxmfkj-2026-10-15/openai-ocr-1.0.0.xipk
+    size: 2.6 KB
+    sha256: 3d0a18dcaebededf8034e8988c211c09e41703537b0b25832b66ae5154d78d3c
+    sizeBytes: 2705

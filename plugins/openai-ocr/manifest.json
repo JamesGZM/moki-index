@@ -3,7 +3,7 @@
 // =============================================
 {
   // 插件唯一标识
-  "id": "com.jamesgzm.xime.plugin.openai_ocr",
+  "id": "com.jxmfkj.ai.ime.plugin.openai_ocr",
 
   // 插件名称与描述
   "name": "OpenAI 兼容 OCR",

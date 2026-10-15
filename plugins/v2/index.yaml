@@ -3,74 +3,6 @@
 index_version: 2
 updated_at: '2026-10-15'
 plugins:
-- id: com.jamesgzm.xime.plugin.bocha_jev
-  name: 博查 JEV
-  author: JamesGZM
-  description: '博查在线 JEV。协议与 TypeSafe /v1/systemone 一致。使用用户填写的 API Key（Authorization:
-    Bearer），不内置密钥。'
-  type: remote
-  tags:
-  - JEV
-  - 在线
-  pluginType: jev
-  icon: 判
-  activation: single
-  minHostVersion: 3.0.0
-  platforms:
-  - android
-  capabilities:
-    jev:
-      requiresNetwork: true
-  network:
-    hosts:
-    - jev.bocha.cn
-  homepage: https://jev.bocha.cn
-  appVersion: '>=3.0.0'
-  currentVersion: 1.1.0
-  versions:
-  - version: 1.1.0
-    date: '2026-10-15'
-    changelog: 改为 JS 脚本插件。宿主传入 state 与 questions，脚本使用用户填写的 API Key 请求博查 systemone。
-    downloadUrl:
-    - url: https://github.com/JamesGZM/xime-index/releases/download/bocha-jev-1.1.0/bocha-jev-1.1.0.xipk
-      size: 2.9 KB
-      sha256: 644c5afd446c24ba3e51fed7182a4a330d9441289e2df1e21d2d196937d79b47
-      sizeBytes: 3002
-  - version: 1.0.0
-    date: '2026-10-15'
-    changelog: 初始版本。在线服务由宿主调用，无插件包，不内置密钥。
-- id: com.jamesgzm.xime.plugin.openai_ocr
-  name: OpenAI 兼容 OCR
-  author: JamesGZM
-  description: 调用 OpenAI 兼容接口，识别图片中的文字。
-  type: remote
-  tags:
-  - OCR
-  - 文字识别
-  pluginType: ocr
-  icon: 识
-  activation: single
-  minHostVersion: 3.2.0
-  platforms:
-  - android
-  capabilities:
-    ocr:
-      requiresNetwork: true
-  network:
-    allowCustomHosts: true
-  homepage: https://github.com/JamesGZM/xime-index
-  license: GPL-3.0
-  appVersion: '>=3.2.0'
-  currentVersion: 1.0.0
-  versions:
-  - version: 1.0.0
-    date: '2026-10-15'
-    changelog: 初始版本。手填 OpenAI 兼容接口地址、API Key 和模型名。
-    downloadUrl:
-    - url: https://github.com/JamesGZM/xime-index/releases/download/openai-ocr-1.0.0/openai-ocr-1.0.0.xipk
-      size: 3.2 KB
-      sha256: 32b28fa9f2dfb174533de30063091faba88f532a4e010581618e3f75185af1dc
-      sizeBytes: 3285
 - id: com.jxmfkj.ai.ime.plugin.ai_reply
   name: AI 智能回复
   author: JamesGZM
@@ -137,6 +69,42 @@ plugins:
       size: 2.6 KB
       sha256: 548d4b3f59b9ff7f1fe8de8a3dac033a87d03984c79f62405548d443f02e7395
       sizeBytes: 2673
+- id: com.jxmfkj.ai.ime.plugin.bocha_jev
+  name: 博查 JEV
+  author: JamesGZM
+  description: '博查在线 JEV。协议与 TypeSafe /v1/systemone 一致。使用用户填写的 API Key（Authorization:
+    Bearer），不内置密钥。'
+  type: remote
+  tags:
+  - JEV
+  - 在线
+  pluginType: jev
+  icon: 判
+  activation: single
+  minHostVersion: 3.0.0
+  platforms:
+  - android
+  capabilities:
+    jev:
+      requiresNetwork: true
+  network:
+    hosts:
+    - jev.bocha.cn
+  homepage: https://jev.bocha.cn
+  appVersion: '>=3.0.0'
+  currentVersion: 1.1.0
+  versions:
+  - version: 1.1.0
+    date: '2026-10-15'
+    changelog: 改为 JS 脚本插件。宿主传入 state 与 questions，脚本使用用户填写的 API Key 请求博查 systemone。
+    downloadUrl:
+    - url: https://github.com/JamesGZM/xime-index/releases/download/plugins-jxmfkj-2026-10-15/bocha-jev-1.1.0.xipk
+      size: 2.3 KB
+      sha256: e2a0a1df2598e7b214b609bbcac2b57c9e481eadf811e6e1b2f30f16a2d0b9fe
+      sizeBytes: 2306
+  - version: 1.0.0
+    date: '2026-10-15'
+    changelog: 初始版本。在线服务由宿主调用，无插件包，不内置密钥。
 - id: com.jxmfkj.ai.ime.plugin.funasr_asr
   name: 阿里百炼 FunAsr
   author: JamesGZM
@@ -251,6 +219,38 @@ plugins:
       size: 65.0 KB
       sha256: c54d409459e93d0a776b7300013a1fae06c63e6be99cb304b0111e31b72f5b55
       sizeBytes: 66509
+- id: com.jxmfkj.ai.ime.plugin.openai_ocr
+  name: OpenAI 兼容 OCR
+  author: JamesGZM
+  description: 调用 OpenAI 兼容接口，识别图片中的文字。
+  type: remote
+  tags:
+  - OCR
+  - 文字识别
+  pluginType: ocr
+  icon: 识
+  activation: single
+  minHostVersion: 3.2.0
+  platforms:
+  - android
+  capabilities:
+    ocr:
+      requiresNetwork: true
+  network:
+    allowCustomHosts: true
+  homepage: https://github.com/JamesGZM/xime-index
+  license: GPL-3.0
+  appVersion: '>=3.2.0'
+  currentVersion: 1.0.0
+  versions:
+  - version: 1.0.0
+    date: '2026-10-15'
+    changelog: 初始版本。手填 OpenAI 兼容接口地址、API Key 和模型名。
+    downloadUrl:
+    - url: https://github.com/JamesGZM/xime-index/releases/download/plugins-jxmfkj-2026-10-15/openai-ocr-1.0.0.xipk
+      size: 2.6 KB
+      sha256: 3d0a18dcaebededf8034e8988c211c09e41703537b0b25832b66ae5154d78d3c
+      sizeBytes: 2705
 - id: com.jxmfkj.ai.ime.plugin.quick_phrase
   name: 常用语
   author: JamesGZM
