@@ -1,8 +1,62 @@
 # Xime v2 插件子索引（JS/QuickJS 插件，宿主 >=3.0.0）
 # ⚠️ 此文件由 scripts/ci-update.py 自动生成，请勿手动编辑
 index_version: 2
-updated_at: '2026-10-11'
+updated_at: '2026-10-15'
 plugins:
+- id: com.jamesgzm.xime.plugin.bocha_jev
+  name: 博查 JEV
+  author: JamesGZM
+  description: '博查在线 JEV。协议与 TypeSafe /v1/systemone 一致。使用用户填写的 API Key（Authorization:
+    Bearer），不内置密钥。'
+  type: remote
+  tags:
+  - JEV
+  - 在线
+  pluginType: jev
+  icon: 判
+  activation: single
+  minHostVersion: 3.0.0
+  platforms:
+  - android
+  capabilities:
+    jev:
+      protocol: typesafe-systemone
+      method: POST
+      baseUrl: https://jev.bocha.cn
+      path: /v1/systemone
+      model: bocha-jev-v1
+      auth:
+        scheme: bearer
+        header: Authorization
+      request:
+      - model
+      - state
+      - questions
+      response:
+        answers:
+          choice:
+          - choice
+          - confidence
+          - probabilities
+          noul:
+          - noul
+      retry:
+        statuses:
+        - 429
+        - 529
+        strategy: backoff
+      config:
+      - apiKey
+  network:
+    hosts:
+    - jev.bocha.cn
+  homepage: https://jev.bocha.cn
+  appVersion: '>=3.0.0'
+  currentVersion: 1.0.0
+  versions:
+  - version: 1.0.0
+    date: '2026-10-15'
+    changelog: 初始版本。在线服务由宿主调用，无插件包，不内置密钥。
 - id: com.kingzcheung.xime.plugin.ai_reply
   name: AI 智能回复
   author: Xime

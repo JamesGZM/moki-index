@@ -3,7 +3,7 @@ main = "src/index.js"
 compatibility_date = "2026-06-04"
 
 # 部署期变量(必须写这里;只在 Dashboard 设的会被 wrangler deploy 覆盖清空)
-# dev 模式让 Worker 代理你自己的 fork,而非默认的 ximeiorg
+# dev 模式与默认基地址都指向本 fork 的 raw
 [vars]
 ENV = "dev"
-GITHUB_RAW_URL = "https://raw.githubusercontent.com/ximeiorg/xime-index/main"
+GITHUB_RAW_URL = "https://raw.githubusercontent.com/JamesGZM/xime-index/main"

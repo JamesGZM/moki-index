@@ -114,7 +114,7 @@ author: Xime
 description: "插件说明"
 type: remote                     # 下载类型，固定 remote
 tags: [工具]
-pluginType: tool                 # 与插件 manifest 的 type 一致：tool/speech/emoji/backup/clipboard_sync...
+pluginType: tool                 # 与插件 manifest 的 type 一致：tool/speech/emoji/backup/clipboard_sync/jev...
 icon: "我"                        # manifest.icon：字符图标或 resources 下的图片名
 activation: multi                # manifest.activation：single / multi
 minHostVersion: '3.0.0'          # manifest.minHostVersion
@@ -164,7 +164,7 @@ name: "我的模型"                     # 显示名称
 author: "你的名字"                   # 作者
 homepage: "https://..."             # 项目主页（可选）
 description: "模型说明"               # 简短描述
-category: "prediction"              # 分类：prediction / asr / punctuation / stroke / other
+category: "prediction"              # 分类：prediction / asr / punctuation / stroke / jev / other
 size: "30 MB"                       # 模型大小描述
 type: "remote"
 tags: ["AI", "ONNX"]                # 搜索标签
@@ -224,6 +224,7 @@ versions:
 | `asr` | 语音识别 |
 | `punctuation` | 标点预测 |
 | `stroke` | 笔画序列 (预留) |
+| `jev` | 聊天意图与风险判断，为 AI 回复排序 |
 | `other` | 其他 |
 
 ### 步骤 2：生成索引

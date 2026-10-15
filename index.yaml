@@ -27,5 +27,5 @@ layouts:
 sources:
   - id: "xime-official"
     name: "Xime 官方源"
-    url: "https://raw.githubusercontent.com/ximeiorg/xime-index/main/index.yaml"
+    url: "https://index.ailaogong.men/index.yaml"
     description: "Xime 官方维护的插件和方案市场"
