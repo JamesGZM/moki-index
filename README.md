@@ -137,3 +137,22 @@ python scripts/build_dist.py
 
 [CC BY-NC-SA 4.0](LICENSE) — 署名-非商业性使用-相同方式共享
 
+
+## OCR 清洗规则
+
+规则供 OCR 清洗插件内部商店使用，不作为独立插件安装。静态入口为 `/rules/ocr-clean/index.yaml`，版本文件为 `/rules/ocr-clean/<id>/<version>.json`。首批为通用、微信、飞书，阈值仍需设备校准；测试使用合成文字。
+
+子索引 v1 使用 **JSON 语法的 YAML 1.2**：`schemaVersion: 1`，`rules` 数组包含 `id/name/version/schemaVersion/minPluginVersion/match/url/sha256/sizeBytes/updatedAt`。摘要对应 JSON 文件的原始 UTF-8 字节（包括末尾换行），更新不得覆盖已发布版本。
+
+规则源、Schema 和引擎在 `JamesGZM/MfkjImeHelper`；固定提交及源文件摘要见 `tests/ocr-clean/upstream.json`。从该提交构建 xipm，然后在本仓验证：
+
+```bash
+python3 scripts/validate_ocr_rules.py --xipm /path/to/xipm --upstream /path/to/MfkjImeHelper
+python3 -m unittest discover -s tests -p 'test_*.py'
+node --test tests/worker.test.mjs
+CLOUDFLARE_SEND_METRICS=false npx --yes wrangler@4.151.0 dev --local --ip 127.0.0.1 --port 8787
+```
+
+`wrangler dev` 自动构建 `.worker-assets/`，只含公开主索引和规则；fixtures、来源与脚本不对外提供。`GET /rules/ocr-clean/index.yaml` 短缓存 300 秒，版本 JSON 使用 immutable 长缓存。其他 YAML 路径保留 GitHub raw 代理。
+
+PR 验证会构建固定提交的 xipm，在 QuickJS 同源引擎运行 12 个 fixtures，检查 Schema、正则、坐标、SHA256 与字节数。更新规则时同时更新本仓静态文件、索引和脱敏 fixture；若变更上游，更新固定提交与文件摘要。许可证见 `tests/ocr-clean/NOTICE.md`。部署需另行确认，本地校验不会部署。

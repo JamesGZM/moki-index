@@ -1,0 +1,166 @@
+{
+  "author": "Moki",
+  "calibration": {
+    "device": "待设备验收；数值来自旧实现与设计参考",
+    "needsCalibration": [
+      "regions",
+      "speaker.deadZone",
+      "conversationList.row"
+    ]
+  },
+  "cleanup": {
+    "dropEmpty": true,
+    "trim": true
+  },
+  "description": "缺少专用规则时按坐标和文字特征保守整理，无法确定的人保持 unknown。",
+  "fallback": {
+    "minSpeakerConfidence": 0.8
+  },
+  "grouping": {
+    "joiner": "auto",
+    "newBubbleGap": 1.2,
+    "sameSideRequired": true,
+    "sortBy": "top",
+    "xOverlapMin": 0.3
+  },
+  "id": "com.jxmfkj.ai.ime.ocrrule.generic",
+  "kind": "generic",
+  "match": {
+    "minScore": 0,
+    "packages": [],
+    "priority": 0
+  },
+  "minPluginVersion": "1.0.0",
+  "name": "通用清洗规则",
+  "noise": [
+    {
+      "reason": "status_bar",
+      "select": {
+        "in": "statusBar"
+      }
+    },
+    {
+      "reason": "timestamp",
+      "select": {
+        "aligned": "center",
+        "lenMax": 24,
+        "text": "/^(\\d{1,2}[:：]\\d{2}|(昨天|今天|前天|星期.)(\\s*\\d{1,2}[:：]\\d{2})?|\\d{4}年\\d+月\\d+日.*|\\d+月\\d+日.*)$/"
+      }
+    },
+    {
+      "reason": "system_notice",
+      "select": {
+        "aligned": "center",
+        "text": "/(撤回了一条消息|加入了群聊|以下为新消息|以下是新消息|拍了拍)/"
+      }
+    },
+    {
+      "reason": "input_bar",
+      "select": {
+        "in": "inputBar"
+      }
+    }
+  ],
+  "pages": {
+    "chat": {
+      "title": {
+        "centerX": [
+          0.25,
+          0.75
+        ],
+        "in": "titleBar",
+        "lenMax": 24,
+        "text": "/^(?!.*[，。？！、])(?!.*\\d{1,2}[:：]\\d{2})(?!.*\\d+月\\d+日)(?!昨天$|今天$).+$/",
+        "topmost": true
+      }
+    },
+    "conversationList": {
+      "row": {
+        "nameCol": [
+          0.15,
+          0.75
+        ],
+        "previewBelowName": true,
+        "rowGap": 1.5,
+        "timeCol": [
+          0.78,
+          1
+        ]
+      }
+    },
+    "detect": {
+      "chat": {
+        "features": [
+          {
+            "sideDistribution": {
+              "leftMax": 0.45,
+              "minEachSide": 1,
+              "region": "content",
+              "rightMin": 0.55
+            }
+          },
+          {
+            "inputBar": {
+              "textAny": [
+                "发送",
+                "按住 说话",
+                "按住说话"
+              ]
+            }
+          }
+        ],
+        "weights": [
+          0.7,
+          0.3
+        ]
+      },
+      "conversationList": {
+        "features": [
+          {
+            "rowPattern": {
+              "minRows": 3,
+              "timeRight": "/^(\\d{1,2}[:：]\\d{2}|昨天|星期.|\\d+\\/\\d+)$/"
+            }
+          }
+        ],
+        "weights": [
+          1
+        ]
+      },
+      "threshold": 0.6
+    }
+  },
+  "regions": {
+    "content": {
+      "b": 0.93,
+      "l": 0,
+      "r": 1,
+      "t": 0.14
+    },
+    "inputBar": {
+      "b": 1,
+      "l": 0,
+      "r": 1,
+      "t": 0.93
+    },
+    "statusBar": {
+      "b": 0.04,
+      "l": 0,
+      "r": 1,
+      "t": 0
+    },
+    "titleBar": {
+      "b": 0.14,
+      "l": 0,
+      "r": 1,
+      "t": 0.04
+    }
+  },
+  "schemaVersion": 1,
+  "speaker": {
+    "deadZone": 0.06,
+    "split": 0.5,
+    "strategy": "centerX"
+  },
+  "version": "1.0.0"
+}

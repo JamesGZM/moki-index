@@ -16,6 +16,26 @@ export default {
       path = "/index.yaml";
     }
 
+    // 本仓版本化规则直接由静态目录提供，未命中时不回退远程。
+    if (path === "/index.yaml" || path.startsWith("/rules/")) {
+      const allowed = path === "/index.yaml" || path === "/rules/ocr-clean/index.yaml" ||
+        /^\/rules\/ocr-clean\/[A-Za-z0-9_.-]+\/[0-9]+\.[0-9]+\.[0-9]+(?:-[A-Za-z0-9.-]+)?(?:\+[A-Za-z0-9.-]+)?\.json$/.test(path);
+      if (!allowed) return new Response("Not Found", { status: 404 });
+      if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: {
+        "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Methods": "GET, HEAD, OPTIONS",
+      } });
+      if (request.method !== "GET" && request.method !== "HEAD") return new Response("Method Not Allowed", { status: 405, headers: { Allow: "GET, HEAD, OPTIONS" } });
+      const target = new URL(request.url); target.pathname = path;
+      const asset = await env.ASSETS.fetch(new Request(target, request));
+      const headers = new Headers(asset.headers);
+      headers.set("Access-Control-Allow-Origin", "*");
+      if (asset.ok) {
+        headers.set("Content-Type", path.endsWith(".json") ? "application/json; charset=utf-8" : "text/yaml; charset=utf-8");
+        headers.set("Cache-Control", path.endsWith(".json") ? "public, max-age=31536000, immutable" : "public, max-age=300");
+      }
+      return new Response(request.method === "HEAD" ? null : asset.body, { status: asset.status, headers });
+    }
+
     // 只允许访问 .yaml 文件
     if (!path.endsWith(".yaml")) {
       return new Response("Not Found", { status: 404 });

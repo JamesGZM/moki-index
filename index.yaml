@@ -23,6 +23,10 @@ models:
 layouts:
   from: "./layouts/index.yaml"
 
+# ─── OCR 清洗规则（插件内规则商店）──────────────────────
+rules:
+  from: "./rules/ocr-clean/index.yaml"
+
 # ─── 索引源 ───────────────────────────────────────────────
 sources:
   - id: "xime-official"

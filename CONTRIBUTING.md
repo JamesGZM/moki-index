@@ -337,3 +337,7 @@ downloadUrl:
 - 方案若依赖其他方案，在 `dependencies` 中声明，安装时会自动处理
 - 子索引由脚本自动生成，不要手动编辑 `rimes/index.yaml`、`plugins/index.yaml` 或 `models/index.yaml`
 - 每个版本独立填写 `downloadUrl`，建议指向具体 Release Tag 而非 `latest`
+
+## OCR 清洗规则子索引
+
+规则先在 MfkjImeHelper 的 `plugins/ocr-clean/rules-src` 完成修改、校准、脱敏 fixture 和 `xipm rule check/test/build`；本仓接收构建得到的 JSON，不另写规则引擎。将 JSON 放入 `rules/ocr-clean/<id>/<version>.json`，更新 `index.yaml`（JSON 语法 YAML 1.2）的版本、SHA256、字节数和日期，保留历史版本。同步测试来源与固定提交，运行 README 的本地校验后提 PR。请勿提交真实对话或截图，也不要在上架 PR 中部署。

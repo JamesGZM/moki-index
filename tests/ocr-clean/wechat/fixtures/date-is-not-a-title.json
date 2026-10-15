@@ -1,0 +1,82 @@
+{
+  "name": "date-is-not-a-title",
+  "provenance": {
+    "basis": "设计 v0.3 与 jev 算法",
+    "coordinates": "synthetic; requires calibration",
+    "privacy": "所有文本均为合成数据"
+  },
+  "input": {
+    "schema": 1,
+    "requestId": "date-is-not-a-title",
+    "source": "adb_screenshot",
+    "engineId": "fixture",
+    "image": {
+      "width": 1080,
+      "height": 2000,
+      "rotation": 0
+    },
+    "region": null,
+    "blocks": [
+      {
+        "id": "b0",
+        "text": "今天",
+        "bounds": [
+          450,
+          100,
+          630,
+          140
+        ],
+        "level": "line"
+      },
+      {
+        "id": "b1",
+        "text": "消息甲",
+        "bounds": [
+          120,
+          400,
+          650,
+          440
+        ],
+        "level": "line"
+      },
+      {
+        "id": "b2",
+        "text": "消息乙",
+        "bounds": [
+          760,
+          700,
+          1000,
+          740
+        ],
+        "level": "line"
+      },
+      {
+        "id": "b3",
+        "text": "发送",
+        "bounds": [
+          900,
+          1900,
+          1050,
+          1940
+        ],
+        "level": "line"
+      }
+    ],
+    "context": {
+      "packageName": "com.tencent.mm",
+      "appVersionName": "8.0.50"
+    }
+  },
+  "expect": {
+    "pageType": "chat",
+    "title": null,
+    "messages": [
+      {
+        "speaker": "other"
+      },
+      {
+        "speaker": "me"
+      }
+    ]
+  }
+}

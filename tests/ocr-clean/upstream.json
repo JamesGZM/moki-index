@@ -1,0 +1,22 @@
+{
+  "repository": "JamesGZM/MfkjImeHelper",
+  "ref": "d8a6b827f9560e270c217191a1e021f7b4a11f7e",
+  "files": {
+    "plugins/ocr-clean/rules-src/generic/fixtures/group-gap-and-noise.json": "0ba0486fd15256d17999a9c0c76c2089b660051e80b0b94cdfa4736d00f7e717",
+    "plugins/ocr-clean/rules-src/generic/fixtures/conversation-list.json": "cdfe89fcb8f5e8b048645ab974454636bebc1b56f1893011c1214a65c0b82795",
+    "plugins/ocr-clean/rules-src/generic/fixtures/ambiguous-page.json": "7b436627a848cb5bde4257c30811d91f678097539adb5989648f9e27f077181b",
+    "plugins/ocr-clean/rules-src/generic/rule.yaml": "2b26459f874654010771a5c1305f553c014f48c8baaf2116b80f43739e9de985",
+    "plugins/ocr-clean/rules-src/wechat/fixtures/conversation-list.json": "7afd4cf2dc0b98d23481ebd4c66dede0d28d3ae2aefbecfb7184ad98e18f7764",
+    "plugins/ocr-clean/rules-src/wechat/fixtures/date-is-not-a-title.json": "bd56da6b8ce5ba8fb5164ce851d93650925db5386f6bc7aae748bd7e66c4c86d",
+    "plugins/ocr-clean/rules-src/wechat/fixtures/chat-with-time-and-title.json": "07e4f306084c2fc20af8c98cd8638d556536d1456dd6586eacee2977352892d8",
+    "plugins/ocr-clean/rules-src/wechat/fixtures/clipboard-score.json": "bced4edbc71b7bc4b477124a143c2ed679e71dc4872a8317435dee18e12ce833",
+    "plugins/ocr-clean/rules-src/wechat/rule.yaml": "5e24c4e8d0da1e409c302b91f52a633efca2df81d05232b0d96534562f400704",
+    "plugins/ocr-clean/rules-src/feishu/fixtures/wide-assistant-is-unknown.json": "b203dd403db3e47ae65446f79619aef282d4d09ee8a4e5f16b277da1901c0dd3",
+    "plugins/ocr-clean/rules-src/feishu/fixtures/ambiguous-chain.json": "c7033ecbf60eeed1e576a859bf3d2d05c8393e38706dba4d24efd7d21ef077e3",
+    "plugins/ocr-clean/rules-src/feishu/fixtures/inline-tails.json": "f3acee5c29590875f33138e7c6c766850126b59477d82015e25c8a7a3432f28b",
+    "plugins/ocr-clean/rules-src/feishu/fixtures/clipboard-chat.json": "7d75cf702fb235dfbc08f255761d7b0f5aabe2677339c89c8a5b2013844fbecd",
+    "plugins/ocr-clean/rules-src/feishu/fixtures/legacy-read-receipt.json": "5e9471c5a949da7949a7d1b71dffc9fce0eafd07193973b64fb0e4391880a528",
+    "plugins/ocr-clean/rules-src/feishu/rule.yaml": "67a2ad4f0ef307aecfd69f99caab102d12d293937e568c0d2ebd2e233c78182e",
+    "plugins/ocr-clean/schema/rule.schema.json": "25502e68fc1bc80be5fbbc9228baec08d29a8772f2febf05b487df32b5a3d6b6"
+  }
+}

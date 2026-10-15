@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "rules": [
+    {
+      "id": "com.jxmfkj.ai.ime.ocrrule.generic",
+      "name": "通用清洗规则",
+      "version": "1.0.0",
+      "schemaVersion": 1,
+      "minPluginVersion": "1.0.0",
+      "match": {
+        "packages": []
+      },
+      "url": "https://index.ailaogong.men/rules/ocr-clean/com.jxmfkj.ai.ime.ocrrule.generic/1.0.0.json",
+      "sha256": "b4f5b576efeb4f62080dd428fe447cd73b318ad897ebe550602c931e79796062",
+      "sizeBytes": 3364,
+      "updatedAt": "2026-10-16T00:00:00Z"
+    },
+    {
+      "id": "com.jxmfkj.ai.ime.ocrrule.wechat",
+      "name": "微信清洗规则",
+      "version": "1.0.0",
+      "schemaVersion": 1,
+      "minPluginVersion": "1.0.1",
+      "match": {
+        "packages": [
+          "com.tencent.mm"
+        ],
+        "appVersion": ">=8.0.0"
+      },
+      "url": "https://index.ailaogong.men/rules/ocr-clean/com.jxmfkj.ai.ime.ocrrule.wechat/1.0.0.json",
+      "sha256": "d225617ae710a3c1466624d1672505b06150f5445c9dbdb9a8e536d78f251a2f",
+      "sizeBytes": 4211,
+      "updatedAt": "2026-10-16T00:00:00Z"
+    },
+    {
+      "id": "com.jxmfkj.ai.ime.ocrrule.feishu",
+      "name": "飞书清洗规则",
+      "version": "1.0.0",
+      "schemaVersion": 1,
+      "minPluginVersion": "1.0.1",
+      "match": {
+        "packages": [
+          "com.ss.android.lark"
+        ]
+      },
+      "url": "https://index.ailaogong.men/rules/ocr-clean/com.jxmfkj.ai.ime.ocrrule.feishu/1.0.0.json",
+      "sha256": "7fd25bd2598feca53eff804a34b6805d28726e69637a14604f57a074be1419b2",
+      "sizeBytes": 4373,
+      "updatedAt": "2026-10-16T00:00:00Z"
+    }
+  ]
+}

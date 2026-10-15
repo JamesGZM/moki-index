@@ -1,0 +1,172 @@
+{
+  "name": "conversation-list",
+  "provenance": {
+    "basis": "设计 v0.3 与 jev 算法",
+    "coordinates": "synthetic; requires calibration",
+    "privacy": "所有文本均为合成数据"
+  },
+  "input": {
+    "schema": 1,
+    "requestId": "conversation-list",
+    "source": "adb_screenshot",
+    "engineId": "fixture",
+    "image": {
+      "width": 1080,
+      "height": 2000,
+      "rotation": 0
+    },
+    "region": null,
+    "blocks": [
+      {
+        "id": "b0",
+        "text": "合成会话列表",
+        "bounds": [
+          400,
+          100,
+          680,
+          140
+        ],
+        "level": "line"
+      },
+      {
+        "id": "b1",
+        "text": "合成会话1",
+        "bounds": [
+          200,
+          400,
+          650,
+          440
+        ],
+        "level": "line"
+      },
+      {
+        "id": "b2",
+        "text": "合成预览1",
+        "bounds": [
+          200,
+          450,
+          720,
+          480
+        ],
+        "level": "line"
+      },
+      {
+        "id": "b3",
+        "text": "12:30",
+        "bounds": [
+          850,
+          400,
+          1030,
+          430
+        ],
+        "level": "line"
+      },
+      {
+        "id": "b4",
+        "text": "合成会话2",
+        "bounds": [
+          200,
+          800,
+          650,
+          840
+        ],
+        "level": "line"
+      },
+      {
+        "id": "b5",
+        "text": "合成预览2",
+        "bounds": [
+          200,
+          850,
+          720,
+          880
+        ],
+        "level": "line"
+      },
+      {
+        "id": "b6",
+        "text": "12:30",
+        "bounds": [
+          850,
+          800,
+          1030,
+          830
+        ],
+        "level": "line"
+      },
+      {
+        "id": "b7",
+        "text": "合成会话3",
+        "bounds": [
+          200,
+          1200,
+          650,
+          1240
+        ],
+        "level": "line"
+      },
+      {
+        "id": "b8",
+        "text": "合成预览3",
+        "bounds": [
+          200,
+          1250,
+          720,
+          1280
+        ],
+        "level": "line"
+      },
+      {
+        "id": "b9",
+        "text": "12:30",
+        "bounds": [
+          850,
+          1200,
+          1030,
+          1230
+        ],
+        "level": "line"
+      },
+      {
+        "id": "b10",
+        "text": "微信",
+        "bounds": [
+          50,
+          1900,
+          180,
+          1940
+        ],
+        "level": "line"
+      },
+      {
+        "id": "b11",
+        "text": "通讯录",
+        "bounds": [
+          300,
+          1900,
+          480,
+          1940
+        ],
+        "level": "line"
+      }
+    ],
+    "context": {
+      "packageName": "com.tencent.mm",
+      "appVersionName": "8.0.50"
+    }
+  },
+  "expect": {
+    "pageType": "conversationList",
+    "conversations": [
+      {
+        "name": "合成会话1"
+      },
+      {
+        "name": "合成会话2"
+      },
+      {
+        "name": "合成会话3"
+      }
+    ]
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "name": "clipboard-chat",
+  "provenance": {
+    "source": "jev-chat-jarvis main@290317ca / FeishuMessagesTest.kt",
+    "coordinates": "仅显式横坐标来自旧节点；缺失的纵坐标和其它框均为合成测试",
+    "privacy": "合成文本，无真实对话"
+  },
+  "input": {
+    "schema": 1,
+    "requestId": "clipboard-chat",
+    "source": "clipboard_image",
+    "engineId": "fixture",
+    "image": {
+      "width": 1440,
+      "height": 2000,
+      "rotation": 0
+    },
+    "region": null,
+    "blocks": [
+      {
+        "id": "b0",
+        "text": "合成飞书会话",
+        "bounds": [
+          480,
+          120,
+          960,
+          160
+        ],
+        "level": "line"
+      },
+      {
+        "id": "b1",
+        "text": "合成发送消息",
+        "bounds": [
+          150,
+          500,
+          700,
+          540
+        ],
+        "level": "line"
+      },
+      {
+        "id": "b2",
+        "text": "3人未读",
+        "bounds": [
+          500,
+          545,
+          680,
+          570
+        ],
+        "level": "line"
+      },
+      {
+        "id": "b3",
+        "text": "合成接收消息",
+        "bounds": [
+          150,
+          900,
+          700,
+          940
+        ],
+        "level": "line"
+      },
+      {
+        "id": "b4",
+        "text": "未发送草稿",
+        "bounds": [
+          150,
+          1900,
+          900,
+          1940
+        ],
+        "level": "line"
+      },
+      {
+        "id": "b5",
+        "text": "发送",
+        "bounds": [
+          1100,
+          1900,
+          1350,
+          1940
+        ],
+        "level": "line"
+      }
+    ],
+    "context": {}
+  },
+  "expect": {
+    "pageType": "chat",
+    "rule": {
+      "matchedBy": "score"
+    },
+    "messages": [
+      {
+        "speaker": "me"
+      },
+      {
+        "speaker": "other"
+      }
+    ]
+  }
+}

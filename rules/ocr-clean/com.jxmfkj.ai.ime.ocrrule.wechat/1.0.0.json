@@ -1,0 +1,211 @@
+{
+  "author": "Moki",
+  "calibration": {
+    "device": "待设备验收；参考 jev 标题与旧设计坐标",
+    "needsCalibration": [
+      "regions",
+      "speaker.deadZone",
+      "speaker.groupSenderName",
+      "conversationList.row"
+    ]
+  },
+  "cleanup": {
+    "dropEmpty": true,
+    "trim": true
+  },
+  "description": "左右气泡分人；标题过滤时间和句子，保留 OCR 原文。",
+  "grouping": {
+    "joiner": "auto",
+    "newBubbleGap": 1.2,
+    "sameSideRequired": true,
+    "sortBy": "top"
+  },
+  "id": "com.jxmfkj.ai.ime.ocrrule.wechat",
+  "kind": "app",
+  "match": {
+    "activities": [
+      ".ui.LauncherUI",
+      ".ui.chatting.ChattingUI"
+    ],
+    "appVersion": ">=8.0.0",
+    "minScore": 0.65,
+    "packages": [
+      "com.tencent.mm"
+    ],
+    "priority": 100
+  },
+  "minPluginVersion": "1.0.1",
+  "name": "微信清洗规则",
+  "noise": [
+    {
+      "reason": "status_bar",
+      "select": {
+        "in": "statusBar"
+      }
+    },
+    {
+      "keepAs": "title",
+      "reason": "title_bar",
+      "select": {
+        "in": "titleBar"
+      }
+    },
+    {
+      "reason": "timestamp",
+      "select": {
+        "aligned": "center",
+        "text": "/^(\\d{1,2}[:：]\\d{2}|(昨天|今天|前天|星期.)(\\s*\\d{1,2}[:：]\\d{2})?|\\d{4}年\\d+月\\d+日.*|\\d+月\\d+日.*)$/"
+      }
+    },
+    {
+      "reason": "system_notice",
+      "select": {
+        "aligned": "center",
+        "text": "/(撤回了一条消息|拍了拍|加入了群聊|以下是新消息|你已添加了)/"
+      }
+    },
+    {
+      "reason": "input_bar",
+      "select": {
+        "in": "inputBar"
+      }
+    }
+  ],
+  "pages": {
+    "chat": {
+      "title": {
+        "centerX": [
+          0.25,
+          0.75
+        ],
+        "in": "titleBar",
+        "lenMax": 24,
+        "text": "/^(?!.*[，。？！、])(?!.*\\d{1,2}[:：]\\d{2})(?!.*\\d+月\\d+日)(?!昨天$|今天$).+$/",
+        "topmost": true
+      },
+      "titleCleanup": [
+        "/\\s*[（(]\\d+[）)]$/"
+      ]
+    },
+    "conversationList": {
+      "row": {
+        "nameCol": [
+          0.17,
+          0.75
+        ],
+        "previewBelowName": true,
+        "timeCol": [
+          0.78,
+          0.98
+        ]
+      }
+    },
+    "detect": {
+      "chat": {
+        "features": [
+          {
+            "sideDistribution": {
+              "leftMax": 0.45,
+              "minEachSide": 1,
+              "region": "content",
+              "rightMin": 0.55
+            }
+          },
+          {
+            "inputBar": {
+              "textAny": [
+                "按住 说话",
+                "按住说话",
+                "发送"
+              ]
+            }
+          },
+          {
+            "activity": [
+              ".ui.chatting.ChattingUI"
+            ]
+          }
+        ],
+        "weights": [
+          0.6,
+          0.3,
+          0.1
+        ]
+      },
+      "conversationList": {
+        "features": [
+          {
+            "exists": {
+              "in": "inputBar",
+              "textAny": [
+                "微信",
+                "通讯录",
+                "发现",
+                "我"
+              ]
+            }
+          },
+          {
+            "rowPattern": {
+              "minRows": 3,
+              "timeRight": "/^(\\d{1,2}[:：]\\d{2}|昨天|星期.|\\d+\\/\\d+)$/"
+            }
+          }
+        ],
+        "weights": [
+          0.5,
+          0.5
+        ]
+      },
+      "threshold": 0.55
+    }
+  },
+  "regions": {
+    "content": {
+      "b": 0.92,
+      "l": 0,
+      "r": 1,
+      "t": 0.14
+    },
+    "inputBar": {
+      "b": 1,
+      "l": 0,
+      "r": 1,
+      "t": 0.92
+    },
+    "statusBar": {
+      "b": 0.04,
+      "l": 0,
+      "r": 1,
+      "t": 0
+    },
+    "titleBar": {
+      "b": 0.14,
+      "l": 0.12,
+      "r": 0.88,
+      "t": 0.04
+    }
+  },
+  "schemaVersion": 1,
+  "speaker": {
+    "deadZone": 0.04,
+    "groupSenderName": {
+      "attachToNext": true,
+      "select": {
+        "height": [
+          0,
+          0.014
+        ],
+        "in": "content",
+        "left": [
+          0.15,
+          0.3
+        ],
+        "lenMax": 20
+      }
+    },
+    "split": 0.5,
+    "strategy": "centerX"
+  },
+  "version": "1.0.0"
+}

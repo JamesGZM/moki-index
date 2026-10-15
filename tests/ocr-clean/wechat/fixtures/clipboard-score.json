@@ -1,0 +1,114 @@
+{
+  "name": "clipboard-score",
+  "provenance": {
+    "basis": "设计 v0.3 与 jev 算法",
+    "coordinates": "synthetic; requires calibration",
+    "privacy": "所有文本均为合成数据"
+  },
+  "input": {
+    "schema": 1,
+    "requestId": "clipboard-score",
+    "source": "clipboard_image",
+    "engineId": "fixture",
+    "image": {
+      "width": 1080,
+      "height": 2000,
+      "rotation": 0
+    },
+    "region": null,
+    "blocks": [
+      {
+        "id": "b0",
+        "text": "合成群（3）",
+        "bounds": [
+          400,
+          100,
+          680,
+          140
+        ],
+        "level": "line"
+      },
+      {
+        "id": "b1",
+        "text": "昨天",
+        "bounds": [
+          450,
+          300,
+          630,
+          340
+        ],
+        "level": "line"
+      },
+      {
+        "id": "b2",
+        "text": "你好",
+        "bounds": [
+          120,
+          400,
+          650,
+          440
+        ],
+        "level": "line"
+      },
+      {
+        "id": "b3",
+        "text": "一起讨论",
+        "bounds": [
+          120,
+          450,
+          650,
+          490
+        ],
+        "level": "line"
+      },
+      {
+        "id": "b4",
+        "text": "可以",
+        "bounds": [
+          760,
+          700,
+          1000,
+          740
+        ],
+        "level": "line"
+      },
+      {
+        "id": "b5",
+        "text": "有人撤回了一条消息",
+        "bounds": [
+          300,
+          900,
+          780,
+          940
+        ],
+        "level": "line"
+      },
+      {
+        "id": "b6",
+        "text": "发送",
+        "bounds": [
+          900,
+          1900,
+          1050,
+          1940
+        ],
+        "level": "line"
+      }
+    ],
+    "context": {}
+  },
+  "expect": {
+    "pageType": "chat",
+    "rule": {
+      "matchedBy": "score"
+    },
+    "messages": [
+      {
+        "speaker": "other"
+      },
+      {
+        "speaker": "me"
+      }
+    ]
+  }
+}

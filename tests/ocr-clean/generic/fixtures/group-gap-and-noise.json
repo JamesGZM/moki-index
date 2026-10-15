@@ -1,0 +1,151 @@
+{
+  "name": "group-gap-and-noise",
+  "provenance": {
+    "basis": "设计 v0.3 与 jev 算法",
+    "coordinates": "synthetic; requires calibration",
+    "privacy": "所有文本均为合成数据"
+  },
+  "input": {
+    "schema": 1,
+    "requestId": "group-gap-and-noise",
+    "source": "clipboard_image",
+    "engineId": "fixture",
+    "image": {
+      "width": 1080,
+      "height": 2000,
+      "rotation": 0
+    },
+    "region": null,
+    "blocks": [
+      {
+        "id": "b0",
+        "text": "09:00",
+        "bounds": [
+          20,
+          10,
+          150,
+          45
+        ],
+        "level": "line"
+      },
+      {
+        "id": "b1",
+        "text": "合成会话",
+        "bounds": [
+          400,
+          100,
+          680,
+          140
+        ],
+        "level": "line"
+      },
+      {
+        "id": "b2",
+        "text": "今天 12:30",
+        "bounds": [
+          420,
+          300,
+          660,
+          340
+        ],
+        "level": "line"
+      },
+      {
+        "id": "b3",
+        "text": "第一行",
+        "bounds": [
+          120,
+          400,
+          600,
+          440
+        ],
+        "level": "line"
+      },
+      {
+        "id": "b4",
+        "text": "第二行",
+        "bounds": [
+          120,
+          488,
+          600,
+          528
+        ],
+        "level": "line"
+      },
+      {
+        "id": "b5",
+        "text": "第三行",
+        "bounds": [
+          120,
+          577,
+          600,
+          617
+        ],
+        "level": "line"
+      },
+      {
+        "id": "b6",
+        "text": "合成回复",
+        "bounds": [
+          760,
+          800,
+          1000,
+          840
+        ],
+        "level": "line"
+      },
+      {
+        "id": "b7",
+        "text": "发送",
+        "bounds": [
+          900,
+          1900,
+          1050,
+          1940
+        ],
+        "level": "line"
+      }
+    ],
+    "context": {}
+  },
+  "expect": {
+    "pageType": "chat",
+    "title": "合成会话",
+    "messages": [
+      {
+        "speaker": "other",
+        "text": "第一行第二行",
+        "blockIds": [
+          "b3",
+          "b4"
+        ]
+      },
+      {
+        "speaker": "other",
+        "text": "第三行"
+      },
+      {
+        "speaker": "me",
+        "text": "合成回复"
+      }
+    ],
+    "noise": [
+      {
+        "blockId": "b0",
+        "reason": "status_bar"
+      },
+      {
+        "blockId": "b2",
+        "reason": "timestamp"
+      },
+      {
+        "blockId": "b7",
+        "reason": "input_bar"
+      },
+      {
+        "blockId": "b1",
+        "reason": "title_bar"
+      }
+    ]
+  }
+}

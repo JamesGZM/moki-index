@@ -1,0 +1,226 @@
+{
+  "author": "Moki",
+  "calibration": {
+    "device": "待设备验收；横坐标参考 jev FeishuMessagesTest，纵坐标为合成测试",
+    "needsCalibration": [
+      "regions",
+      "pages.detect.chat",
+      "speaker.chain",
+      "speaker.groupSenderName",
+      "conversationList.row"
+    ]
+  },
+  "cleanup": {
+    "dropEmpty": true,
+    "tails": [
+      "/\\s*(已读|未读|\\d+人未读)$/",
+      "/\\s*\\d{1,2}[:：]\\d{2}$/"
+    ],
+    "trim": true
+  },
+  "description": "已读标记优先，然后比较左右留白；全宽或模糊气泡保持 unknown。",
+  "fallback": {
+    "minSpeakerConfidence": 0.7
+  },
+  "grouping": {
+    "breakOn": "nameRow",
+    "joiner": "auto",
+    "newBubbleGap": 1.2,
+    "sameSideRequired": true,
+    "sortBy": "top"
+  },
+  "id": "com.jxmfkj.ai.ime.ocrrule.feishu",
+  "kind": "app",
+  "match": {
+    "minScore": 0.65,
+    "packages": [
+      "com.ss.android.lark"
+    ],
+    "priority": 100
+  },
+  "minPluginVersion": "1.0.1",
+  "name": "飞书清洗规则",
+  "noise": [
+    {
+      "reason": "status_bar",
+      "select": {
+        "in": "statusBar"
+      }
+    },
+    {
+      "keepAs": "title",
+      "reason": "title_bar",
+      "select": {
+        "in": "titleBar"
+      }
+    },
+    {
+      "reason": "timestamp",
+      "select": {
+        "aligned": "center",
+        "text": "/^(\\d{1,2}[:：]\\d{2}|(昨天|今天)(\\s*\\d{1,2}[:：]\\d{2})?|\\d+月\\d+日.*)$/"
+      }
+    },
+    {
+      "reason": "input_bar",
+      "select": {
+        "in": "inputBar"
+      }
+    }
+  ],
+  "pages": {
+    "chat": {
+      "title": {
+        "centerX": [
+          0.25,
+          0.75
+        ],
+        "in": "titleBar",
+        "lenMax": 24,
+        "text": "/^(?!.*\\d{1,2}[:：]\\d{2})(?!昨天$|今天$).+$/",
+        "topmost": true
+      }
+    },
+    "conversationList": {
+      "row": {
+        "nameCol": [
+          0.15,
+          0.75
+        ],
+        "previewBelowName": true,
+        "timeCol": [
+          0.78,
+          1
+        ]
+      }
+    },
+    "detect": {
+      "chat": {
+        "features": [
+          {
+            "columnAligned": {
+              "minRows": 2,
+              "x": [
+                0.02,
+                0.22
+              ]
+            }
+          },
+          {
+            "inputBar": {
+              "textAny": [
+                "发送给",
+                "发送"
+              ]
+            }
+          },
+          {
+            "exists": {
+              "in": "content"
+            }
+          },
+          {
+            "count": {
+              "max": 0,
+              "select": {
+                "in": "content",
+                "left": [
+                  0.6,
+                  1
+                ]
+              }
+            }
+          }
+        ],
+        "weights": [
+          0.25,
+          0.25,
+          0.1,
+          0.4
+        ]
+      },
+      "conversationList": {
+        "features": [
+          {
+            "rowPattern": {
+              "minRows": 3,
+              "timeRight": "/^(\\d{1,2}[:：]\\d{2}|昨天|星期.|\\d+\\/\\d+)$/"
+            }
+          },
+          {
+            "exists": {
+              "in": "inputBar",
+              "textAny": [
+                "云文档",
+                "工作台",
+                "飞书"
+              ]
+            }
+          }
+        ],
+        "weights": [
+          0.6,
+          0.4
+        ]
+      },
+      "threshold": 0.55
+    }
+  },
+  "regions": {
+    "content": {
+      "b": 0.92,
+      "l": 0,
+      "r": 1,
+      "t": 0.14
+    },
+    "inputBar": {
+      "b": 1,
+      "l": 0,
+      "r": 1,
+      "t": 0.92
+    },
+    "statusBar": {
+      "b": 0.04,
+      "l": 0,
+      "r": 1,
+      "t": 0
+    },
+    "titleBar": {
+      "b": 0.14,
+      "l": 0.12,
+      "r": 0.88,
+      "t": 0.04
+    }
+  },
+  "schemaVersion": 1,
+  "speaker": {
+    "chain": [
+      {
+        "marker": "/^(已读|未读|\\d+人未读)$/",
+        "maxDistance": 0.03,
+        "strategy": "readReceipt"
+      },
+      {
+        "meIf": "rightMarginLess",
+        "minDelta": 0.06,
+        "strategy": "marginCompare"
+      }
+    ],
+    "groupSenderName": {
+      "attachToNext": true,
+      "select": {
+        "height": [
+          0,
+          0.014
+        ],
+        "in": "content",
+        "left": [
+          0.02,
+          0.22
+        ],
+        "lenMax": 20
+      }
+    }
+  },
+  "version": "1.0.0"
+}

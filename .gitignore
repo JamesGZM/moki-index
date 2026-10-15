@@ -7,3 +7,10 @@ __pycache__/
 # Cloudflare Pages 发布产物（scripts/build_dist.py 生成）
 dist/
 
+
+# 本地 Wrangler 与静态资源构建产物
+.wrangler/
+.worker-assets/
+
+# CI 固定来源校验检出
+.validation/

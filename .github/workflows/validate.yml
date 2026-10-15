@@ -8,6 +8,8 @@ on:
       - "plugins/**"
       - "models/**"
       - "layouts/**"
+      - "rules/**"
+      - "tests/**"
       - "scripts/**"
       - ".github/workflows/**"
       - "pyproject.toml"
@@ -19,6 +21,8 @@ on:
       - "plugins/**"
       - "models/**"
       - "layouts/**"
+      - "rules/**"
+      - "tests/**"
       - "scripts/**"
       - ".github/workflows/**"
       - "pyproject.toml"
@@ -91,6 +95,7 @@ jobs:
           assert 'plugins_v2' in data and 'from' in data['plugins_v2'], 'missing plugins_v2.from'
           assert 'models' in data and 'from' in data['models'], 'missing models.from'
           assert 'layouts' in data and 'from' in data['layouts'], 'missing layouts.from'
+          assert data.get('rules', {}).get('from') == './rules/ocr-clean/index.yaml', 'missing rules.from'
           assert 'sources' in data, 'missing sources'
           print('OK: main index.yaml is valid')
           "
@@ -151,3 +156,33 @@ jobs:
               sys.exit(1)
           print('All remote URLs are reachable')
           "
+
+  ocr-rules:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read immutable engine source ref
+        id: source
+        shell: bash
+        run: |
+          python3 - <<'PYTHON' >> "$GITHUB_OUTPUT"
+          import json, re
+          ref = json.load(open('tests/ocr-clean/upstream.json'))['ref']
+          assert re.fullmatch(r'[0-9a-f]{40}', ref)
+          print('ref=' + ref)
+          PYTHON
+      - uses: actions/checkout@v4
+        with:
+          repository: JamesGZM/MfkjImeHelper
+          ref: ${{ steps.source.outputs.ref }}
+          path: .validation/ime
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Build pinned xipm and validate schema, SHA256 and fixtures
+        run: |
+          cargo build --release --locked --manifest-path .validation/ime/tools/moki-plugin/Cargo.toml
+          python3 scripts/validate_ocr_rules.py --xipm .validation/ime/tools/moki-plugin/target/release/xipm --upstream .validation/ime
+          python3 -m unittest discover -s tests -p 'test_*.py'
+          node --test tests/worker.test.mjs

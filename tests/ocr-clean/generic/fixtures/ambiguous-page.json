@@ -1,0 +1,39 @@
+{
+  "name": "ambiguous-page",
+  "provenance": {
+    "basis": "设计 v0.3 与 jev 算法",
+    "coordinates": "synthetic; requires calibration",
+    "privacy": "所有文本均为合成数据"
+  },
+  "input": {
+    "schema": 1,
+    "requestId": "ambiguous-page",
+    "source": "clipboard_image",
+    "engineId": "fixture",
+    "image": {
+      "width": 1080,
+      "height": 2000,
+      "rotation": 0
+    },
+    "region": null,
+    "blocks": [
+      {
+        "id": "b0",
+        "text": "居中的合成内容",
+        "bounds": [
+          450,
+          500,
+          630,
+          540
+        ],
+        "level": "line"
+      }
+    ],
+    "context": {}
+  },
+  "expect": {
+    "pageType": "unknown",
+    "messages": null,
+    "speakerConfidence": 0
+  }
+}

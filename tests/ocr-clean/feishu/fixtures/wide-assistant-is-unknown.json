@@ -1,0 +1,87 @@
+{
+  "name": "wide-assistant-is-unknown",
+  "provenance": {
+    "source": "jev-chat-jarvis main@290317ca / FeishuMessagesTest.kt",
+    "coordinates": "仅显式横坐标来自旧节点；缺失的纵坐标和其它框均为合成测试",
+    "privacy": "合成文本，无真实对话",
+    "legacyHorizontalBounds": [
+      44,
+      1396
+    ],
+    "migration": "旧节点结构断言 other；OCR 只有等宽边距，按新设计保守输出 unknown"
+  },
+  "input": {
+    "schema": 1,
+    "requestId": "wide-assistant-is-unknown",
+    "source": "adb_screenshot",
+    "engineId": "fixture",
+    "image": {
+      "width": 1440,
+      "height": 2000,
+      "rotation": 0
+    },
+    "region": null,
+    "blocks": [
+      {
+        "id": "b0",
+        "text": "合成会话",
+        "bounds": [
+          480,
+          120,
+          960,
+          160
+        ],
+        "level": "line"
+      },
+      {
+        "id": "b1",
+        "text": "合成的长回复",
+        "bounds": [
+          44,
+          400,
+          1396,
+          480
+        ],
+        "level": "line"
+      },
+      {
+        "id": "b2",
+        "text": "下一条合成消息",
+        "bounds": [
+          150,
+          800,
+          700,
+          840
+        ],
+        "level": "line"
+      },
+      {
+        "id": "b3",
+        "text": "发送",
+        "bounds": [
+          1100,
+          1900,
+          1350,
+          1940
+        ],
+        "level": "line"
+      }
+    ],
+    "context": {
+      "packageName": "com.ss.android.lark",
+      "appVersionName": "8.0.50"
+    }
+  },
+  "expect": {
+    "pageType": "chat",
+    "messages": [
+      {
+        "speaker": "unknown",
+        "text": "合成的长回复"
+      },
+      {
+        "speaker": "other"
+      }
+    ]
+  }
+}

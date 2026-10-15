@@ -24,7 +24,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DIST = os.path.join(ROOT, "dist")
 
 # 需要发布的顶层条目（文件或目录，逐项复制）
-PUBLISH = ["index.yaml", "_headers", "rimes", "plugins", "models", "layouts"]
+PUBLISH = ["index.yaml", "_headers", "rimes", "plugins", "models", "layouts", "rules"]
 
 
 def main() -> int:
