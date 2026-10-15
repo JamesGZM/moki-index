@@ -1,0 +1,33 @@
+id: com.jxmfkj.ai.ime.plugin.ai_write
+name: AI 帮写
+author: JamesGZM
+description: "输入草稿/指令，SSE 流式生成长文本，支持任意 OpenAI 兼容接口。"
+type: remote
+tags:
+- AI
+- 写作
+- 工具
+pluginType: tool
+icon: "帮"
+activation: multi
+minHostVersion: '3.0.0'
+platforms:
+- android
+capabilities:
+  tool:
+    display: direct
+network:
+  allowCustomHosts: true
+homepage: https://github.com/JamesGZM/xime-index
+license: GPL-3.0
+appVersion: '>=3.0.0'
+currentVersion: 1.0.0
+versions:
+- version: 1.0.0
+  date: '2026-10-15'
+  changelog: 改为 MfkjImeHelper 构建，插件 ID 与已装插件一致
+  downloadUrl:
+  - url: https://github.com/JamesGZM/xime-index/releases/download/plugins-jxmfkj-2026-10-15/ai-write-1.0.0.xipk
+    size: 2.6 KB
+    sha256: 548d4b3f59b9ff7f1fe8de8a3dac033a87d03984c79f62405548d443f02e7395
+    sizeBytes: 2673

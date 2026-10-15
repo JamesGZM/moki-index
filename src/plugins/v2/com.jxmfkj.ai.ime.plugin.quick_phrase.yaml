@@ -1,0 +1,32 @@
+id: com.jxmfkj.ai.ime.plugin.quick_phrase
+name: 常用语
+author: JamesGZM
+description: "把常用语联想进候选栏：读取宿主快捷发送库（设置里的快捷短语，含触发编码），输入时内容命中跟随该候选，编码命中放第二候选位，点选即上屏。数据经 host.quickSend.list() 读取。"
+type: remote
+tags:
+- 候选
+- 常用语
+pluginType: tool
+icon: "语"
+activation: multi
+minHostVersion: '3.0.0'
+platforms:
+- android
+capabilities:
+  candidate_transform: true
+  quick_send_read: true
+  events:
+  - quick_send_changed
+homepage: https://github.com/JamesGZM/xime-index
+license: GPL-3.0
+appVersion: '>=3.0.0'
+currentVersion: 1.0.0
+versions:
+- version: 1.0.0
+  date: '2026-10-15'
+  changelog: 改为 MfkjImeHelper 构建，插件 ID 与已装插件一致
+  downloadUrl:
+  - url: https://github.com/JamesGZM/xime-index/releases/download/plugins-jxmfkj-2026-10-15/quick-phrase-1.0.0.xipk
+    size: 1.5 KB
+    sha256: 3a7e9a6d001ba03d2ef3dc2f978b77330e9eee314d25ac197dd92f7187629280
+    sizeBytes: 1562

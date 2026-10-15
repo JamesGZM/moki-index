@@ -1,0 +1,33 @@
+id: com.jxmfkj.ai.ime.plugin.ai_reply
+name: AI 智能回复
+author: JamesGZM
+description: "根据对方消息生成 3~5 条回复候选，点选上屏。支持任意 OpenAI 兼容的 chat/completions 接口。"
+type: remote
+tags:
+- AI
+- 回复
+- 工具
+pluginType: tool
+icon: "应"
+activation: multi
+minHostVersion: '3.0.0'
+platforms:
+- android
+capabilities:
+  tool:
+    display: passive
+network:
+  allowCustomHosts: true
+homepage: https://github.com/JamesGZM/xime-index
+license: GPL-3.0
+appVersion: '>=3.0.0'
+currentVersion: 1.0.0
+versions:
+- version: 1.0.0
+  date: '2026-10-15'
+  changelog: 改为 MfkjImeHelper 构建，插件 ID 与已装插件一致
+  downloadUrl:
+  - url: https://github.com/JamesGZM/xime-index/releases/download/plugins-jxmfkj-2026-10-15/ai-reply-1.0.0.xipk
+    size: 3.4 KB
+    sha256: 9ead1e34dabfe1a572fd616d6280f469c4c38c0549ef0239e1f4985f21542916
+    sizeBytes: 3465

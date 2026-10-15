@@ -1,0 +1,32 @@
+id: com.jxmfkj.ai.ime.plugin.meme_bunny
+name: 恶搞兔表情包
+author: JamesGZM
+description: "恶搞兔表情包（6 个表情图片），这只是一个示例插件，展示了如何在 Xime 中使用脚本插件开发表情包功能。"
+type: remote
+tags:
+- 表情
+- 贴纸
+pluginType: emoji
+icon: "🐰"
+activation: multi
+minHostVersion: '3.0.0'
+platforms:
+- android
+capabilities:
+  emoji:
+    supportsSearch: true
+    columns: 3
+    itemHeightDp: 110
+homepage: https://github.com/JamesGZM/xime-index
+license: GPL-3.0
+appVersion: '>=3.0.0'
+currentVersion: 4.0.0
+versions:
+- version: 4.0.0
+  date: '2026-10-15'
+  changelog: 改为 MfkjImeHelper 构建，插件 ID 与已装插件一致
+  downloadUrl:
+  - url: https://github.com/JamesGZM/xime-index/releases/download/plugins-jxmfkj-2026-10-15/meme-bunny-4.0.0.xipk
+    size: 65.0 KB
+    sha256: c54d409459e93d0a776b7300013a1fae06c63e6be99cb304b0111e31b72f5b55
+    sizeBytes: 66509
