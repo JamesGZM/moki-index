@@ -1,0 +1,40 @@
+// =============================================
+// OpenAI 兼容 OCR 插件元数据（QuickJS/TS 版；宽松 JSON：支持 // 注释与尾逗号）
+// =============================================
+{
+  // 插件唯一标识
+  "id": "com.jamesgzm.xime.plugin.openai_ocr",
+
+  // 插件名称与描述
+  "name": "OpenAI 兼容 OCR",
+  "icon": "识",
+  "description": "调用 OpenAI 兼容接口，识别图片中的文字。",
+
+  // 插件版本
+  "version": "1.0.0",
+
+  // 插件分类：ocr 文字识别（单选）
+  "type": "ocr",
+  "activation": "single",
+
+  // 入口脚本（编译产物）
+  "entry": "main.js",
+
+  // 目标平台
+  "platforms": ["android"],
+
+  // 宿主最低版本（文字识别插件类型）
+  "minHostVersion": "3.2.0",
+
+  // 网络访问：用户填写的接口域名自动获得联网授权，不预置服务商
+  "network": {
+    "allowCustomHosts": true
+  },
+
+  // 能力声明
+  "capabilities": {
+    "ocr": {
+      "requiresNetwork": true
+    }
+  }
+}
