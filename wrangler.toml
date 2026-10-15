@@ -2,6 +2,8 @@ name = "xime-index"
 main = "src/index.js"
 compatibility_date = "2026-06-04"
 
+routes = [{ pattern = "index.ailaogong.men", custom_domain = true }]
+
 # 部署期变量(必须写这里;只在 Dashboard 设的会被 wrangler deploy 覆盖清空)
 # dev 模式与默认基地址都指向本 fork 的 raw
 [vars]
