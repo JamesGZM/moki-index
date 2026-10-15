@@ -1,6 +1,6 @@
-id: com.kingzcheung.xime.plugin.kaomoji
+id: com.jxmfkj.ai.ime.plugin.kaomoji
 name: 颜文字表情包
-author: Xime
+author: JamesGZM
 description: "包含 174 个常用颜文字的表情插件"
 type: remote
 tags:
@@ -17,16 +17,16 @@ capabilities:
     supportsSearch: true
     columns: 3
     itemHeightDp: 30
-homepage: https://github.com/ximeiorg/Xime
+homepage: https://github.com/JamesGZM/xime-index
 license: GPL-3.0
 appVersion: '>=3.0.0'
 currentVersion: 4.0.0
 versions:
 - version: 4.0.0
-  date: '2026-09-24'
-  changelog: v3 重构：TypeScript/QuickJS 插件，需宿主 v3.0.0+
+  date: '2026-10-15'
+  changelog: 改为 MfkjImeHelper 构建，插件 ID 与已装插件一致
   downloadUrl:
-  - url: https://github.com/ximeiorg/Xime/releases/download/v3.0.0-beta1/kaomoji-4.0.0.xipk
+  - url: https://github.com/JamesGZM/xime-index/releases/download/plugins-jxmfkj-2026-10-15/kaomoji-4.0.0.xipk
     size: 3.0 KB
-    sha256: 850d37ed6af0a6cc579c21fb63db574931e2b173aa7494a8b59eb0b67a2a05c2
-    sizeBytes: 3029
+    sha256: 4d0e6e48d0fdef570fff81c6cf743f08f074eaa31e979c34234ca72158e055b0
+    sizeBytes: 3028

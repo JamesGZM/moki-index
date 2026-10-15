@@ -1,6 +1,6 @@
-id: com.kingzcheung.xime.plugin.ai_write
+id: com.jxmfkj.ai.ime.plugin.ai_write
 name: AI 帮写
-author: Xime
+author: JamesGZM
 description: "输入草稿/指令，SSE 流式生成长文本，支持任意 OpenAI 兼容接口。"
 type: remote
 tags:
@@ -18,16 +18,16 @@ capabilities:
     display: direct
 network:
   allowCustomHosts: true
-homepage: https://github.com/ximeiorg/Xime
+homepage: https://github.com/JamesGZM/xime-index
 license: GPL-3.0
 appVersion: '>=3.0.0'
 currentVersion: 1.0.0
 versions:
 - version: 1.0.0
-  date: '2026-09-24'
-  changelog: v3 重构：TypeScript/QuickJS 插件，需宿主 v3.0.0+
+  date: '2026-10-15'
+  changelog: 改为 MfkjImeHelper 构建，插件 ID 与已装插件一致
   downloadUrl:
-  - url: https://github.com/ximeiorg/Xime/releases/download/v3.0.0-beta1/ai-write-1.0.0.xipk
+  - url: https://github.com/JamesGZM/xime-index/releases/download/plugins-jxmfkj-2026-10-15/ai-write-1.0.0.xipk
     size: 2.6 KB
-    sha256: 8cd6d793bbda0bd60d6b53f9847871262023ab59961ea288f09c6a5cfd3a9b8f
-    sizeBytes: 2674
+    sha256: 548d4b3f59b9ff7f1fe8de8a3dac033a87d03984c79f62405548d443f02e7395
+    sizeBytes: 2673

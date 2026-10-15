@@ -1,6 +1,6 @@
-id: com.kingzcheung.xime.plugin.volc_asr
+id: com.jxmfkj.ai.ime.plugin.volc_asr
 name: 火山引擎流式语音识别
-author: Xime
+author: JamesGZM
 description: "火山方舟在线语音识别。使用火山引擎控制台获取的 App Key，可参考快速入门（https://console.volcengine.com/speech/new/setting/apikeys）"
 type: remote
 tags:
@@ -19,19 +19,19 @@ capabilities:
 network:
   hosts:
   - openspeech.bytedance.com
-homepage: https://github.com/ximeiorg/Xime
+homepage: https://github.com/JamesGZM/xime-index
 license: GPL-3.0
 appVersion: '>=3.0.0'
 currentVersion: 3.0.1
 versions:
 - version: 3.0.1
-  date: '2026-10-04'
-  changelog:  fix(asr)：修复ASR插件在连接建立期间的音频发送顺序问题
+  date: '2026-10-15'
+  changelog: 改为 MfkjImeHelper 构建，插件 ID 与已装插件一致
   downloadUrl:
-  - url: https://github.com/ximeiorg/Xime/releases/download/v3.0.0-beta9/volc-asr-3.0.1.xipk
-    size: 8.8 KB
-    sha256: 59f4fc12b001bf31a731b160f707b4ad9183c6dfc0256af69b43f16492f444d9
-    sizeBytes: 9043
+  - url: https://github.com/JamesGZM/xime-index/releases/download/plugins-jxmfkj-2026-10-15/volc-asr-3.0.1.xipk
+    size: 8.9 KB
+    sha256: 4e6f8631bb9806c6e41ef665a215fdc0a33015e12157fecc674ec06abe843b8e
+    sizeBytes: 9103
 - version: 3.0.0
   date: '2026-09-24'
   changelog: v3 重构：TypeScript/QuickJS 插件，需宿主 v3.0.0+
