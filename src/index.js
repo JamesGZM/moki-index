@@ -4,7 +4,7 @@
  */
 
 // 生产环境默认的 GitHub raw 基地址
-const DEFAULT_GITHUB_RAW = "https://raw.githubusercontent.com/ximeiorg/xime-index/main";
+const DEFAULT_GITHUB_RAW = "https://raw.githubusercontent.com/JamesGZM/xime-index/main";
 
 export default {
   async fetch(request, env, ctx) {
