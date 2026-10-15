@@ -1,0 +1,34 @@
+id: jev-laya-int8
+name: JEV 判断
+author: JamesGZM
+description: 判断聊天意图与风险，为 AI 回复排序
+category: jev
+size: 369.4 MB
+type: remote
+tags:
+- JEV
+- ONNX
+homepage: https://modelscope.cn/models/JamesGZM/jev-laya-int8
+appVersion: '>=2.5.0'
+currentVersion: v1.0
+versions:
+- version: v1.0
+  date: '2026-10-15'
+  changelog: 初始版本
+  storageDir: ''
+  files:
+  - name: model.onnx
+    url: https://modelscope.cn/models/JamesGZM/jev-laya-int8/resolve/master/model.onnx
+    sha256: 4d857622148ea469fa891032bb5923771c5ceaa500d6fab068d5bc7dec10785e
+    size: 335.0 MB
+    sizeBytes: 334995910
+  - name: tokenizer.json
+    url: https://modelscope.cn/models/JamesGZM/jev-laya-int8/resolve/master/tokenizer.json
+    sha256: 609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f
+    size: 34.4 MB
+    sizeBytes: 34363188
+  - name: edgejev.json
+    url: https://modelscope.cn/models/JamesGZM/jev-laya-int8/resolve/master/edgejev.json
+    sha256: 11d1abb6d09bdaa34301ce14d14ccbe71d385c1a190e0459e07aa062f1d21ba4
+    size: 392 B
+    sizeBytes: 392
