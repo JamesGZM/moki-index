@@ -9,7 +9,7 @@ tags:
 pluginType: speech
 icon: 🎤
 activation: single
-minHostVersion: 3.3.0
+minHostVersion: 0.0.1
 platforms:
 - android
 capabilities:
@@ -19,40 +19,16 @@ capabilities:
 network:
   hosts:
   - dashscope.aliyuncs.com
-homepage: https://github.com/JamesGZM/moki-index
+homepage: https://github.com/JamesGZM/Moki/tree/0994f45d7bfa070a6ee902a330b6b0cee9195785/plugins/funasr-asr
 license: GPL-3.0
-appVersion: '>=3.3.0'
-currentVersion: 3.1.2
+appVersion: '>=0.0.1'
+currentVersion: 0.0.1
 versions:
-- version: 3.1.2
+- version: 0.0.1
   date: '2026-10-20'
-  changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
+  changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。
   downloadUrl:
-  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-2026-10-20/funasr-asr-3.1.2.xipk
+  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-0.0.1/funasr-asr-0.0.1.mopk
+    sha256: bab604d047d5db796b35ed675637990a5721cd57428644ad9f854230682d6e3e
     size: 9.9 KB
-    sha256: 9fe455110017ba1fdaf5ca0347a86bb3d36826e50528f9f27aa2352580985634
-    sizeBytes: 10097
-- version: 3.1.1
-  date: '2026-10-15'
-  changelog: 改为 MfkjImeHelper 构建，插件 ID 与已装插件一致
-  downloadUrl:
-  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-jxmfkj-2026-10-15/funasr-asr-3.1.1.xipk
-    size: 9.6 KB
-    sha256: c976829a489c0c2344d612ae14df22ab9d6aa017461f7da86b98b12ffd8ce784
-    sizeBytes: 9876
-- version: 3.1.0
-  date: '2026-09-29'
-  changelog: 1. 优化语音输入在发送场景下的文本处理
-  downloadUrl:
-  - url: https://github.com/ximeiorg/Xime/releases/download/v3.0.0-beta6/funasr-asr-3.1.0.xipk
-    size: 9.6 KB
-    sha256: c8dbdb41e0d323f0e3df11d9a24f766fdc1ebe76b3c8aa07ba1ea5d4b7273cd1
-    sizeBytes: 9499
-- version: 3.0.0
-  date: '2026-09-24'
-  changelog: v3 重构：TypeScript/QuickJS 插件，需宿主 v3.0.0+
-  downloadUrl:
-  - url: https://github.com/ximeiorg/Xime/releases/download/v3.0.0-beta1/funasr-asr-3.0.0.xipk
-    size: 9.3 KB
-    sha256: a20e4d08dba211026b5236f07fd10d9b708caf118f0846e4905b50dca8cccaac
-    sizeBytes: 9499
+    sizeBytes: 10094

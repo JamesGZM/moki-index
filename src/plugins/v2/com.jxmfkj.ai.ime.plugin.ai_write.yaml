@@ -10,7 +10,7 @@ tags:
 pluginType: tool
 icon: 帮
 activation: multi
-minHostVersion: 3.3.17
+minHostVersion: 0.0.1
 platforms:
 - android
 capabilities:
@@ -18,24 +18,16 @@ capabilities:
     display: direct
 network:
   allowCustomHosts: true
-homepage: https://github.com/JamesGZM/moki-index
+homepage: https://github.com/JamesGZM/Moki/tree/0994f45d7bfa070a6ee902a330b6b0cee9195785/plugins/ai-write
 license: GPL-3.0
-appVersion: '>=3.3.17'
-currentVersion: 1.2.4
+appVersion: '>=0.0.1'
+currentVersion: 0.0.1
 versions:
-- version: 1.2.4
+- version: 0.0.1
   date: '2026-10-20'
-  changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
+  changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。
   downloadUrl:
-  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-2026-10-20/ai-write-1.2.4.xipk
+  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-0.0.1/ai-write-0.0.1.mopk
+    sha256: ea4b2e4aab44949a767b36eeb203addc2e8f4afe8a99dc1dbe0a6935746e6947
     size: 2.9 KB
-    sha256: b43d71c03a5470f22c3f1f0ba7820ce1c8ecb6ddf0e33642cb8b0182851441a4
-    sizeBytes: 2987
-- version: 1.0.0
-  date: '2026-10-15'
-  changelog: 改为 MfkjImeHelper 构建，插件 ID 与已装插件一致
-  downloadUrl:
-  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-jxmfkj-2026-10-15/ai-write-1.0.0.xipk
-    size: 2.6 KB
-    sha256: 548d4b3f59b9ff7f1fe8de8a3dac033a87d03984c79f62405548d443f02e7395
-    sizeBytes: 2673
+    sizeBytes: 2978

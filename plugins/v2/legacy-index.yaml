@@ -1,0 +1,816 @@
+# Moki v2 插件子索引（JS/QuickJS 插件，宿主 >=3.0.0）
+# ⚠️ 此文件由 scripts/ci-update.py 自动生成，请勿手动编辑
+index_version: 2
+updated_at: '2026-10-20'
+plugins:
+- id: com.jxmfkj.ai.ime.plugin.ai_reply
+  name: AI 智能回复
+  author: JamesGZM
+  description: 根据当前对话生成 3 条回复候选，点选上屏。支持任意 OpenAI 兼容的 chat/completions 接口。
+  type: remote
+  tags:
+  - AI
+  - 回复
+  - 工具
+  pluginType: tool
+  icon: 应
+  activation: multi
+  minHostVersion: 3.3.17
+  platforms:
+  - android
+  capabilities:
+    tool:
+      display: passive
+  network:
+    allowCustomHosts: true
+  homepage: https://github.com/JamesGZM/moki-index
+  license: GPL-3.0
+  appVersion: '>=3.3.17'
+  currentVersion: 1.5.7
+  versions:
+  - version: 1.5.7
+    date: '2026-10-20'
+    changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-2026-10-20/ai-reply-1.5.7.xipk
+      size: 16.1 KB
+      sha256: 45312c75b24afe6fe77d5b0d226262e938f6a1cf20b314092f07946a12385bf5
+      sizeBytes: 16489
+  - version: 1.0.0
+    date: '2026-10-15'
+    changelog: 改为 MfkjImeHelper 构建，插件 ID 与已装插件一致
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-jxmfkj-2026-10-15/ai-reply-1.0.0.xipk
+      size: 3.4 KB
+      sha256: 9ead1e34dabfe1a572fd616d6280f469c4c38c0549ef0239e1f4985f21542916
+      sizeBytes: 3465
+- id: com.jxmfkj.ai.ime.plugin.ai_write
+  name: AI 帮写
+  author: JamesGZM
+  description: 输入草稿/指令，SSE 流式生成长文本，支持任意 OpenAI 兼容接口。
+  type: remote
+  tags:
+  - AI
+  - 写作
+  - 工具
+  pluginType: tool
+  icon: 帮
+  activation: multi
+  minHostVersion: 3.3.17
+  platforms:
+  - android
+  capabilities:
+    tool:
+      display: direct
+  network:
+    allowCustomHosts: true
+  homepage: https://github.com/JamesGZM/moki-index
+  license: GPL-3.0
+  appVersion: '>=3.3.17'
+  currentVersion: 1.2.4
+  versions:
+  - version: 1.2.4
+    date: '2026-10-20'
+    changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-2026-10-20/ai-write-1.2.4.xipk
+      size: 2.9 KB
+      sha256: b43d71c03a5470f22c3f1f0ba7820ce1c8ecb6ddf0e33642cb8b0182851441a4
+      sizeBytes: 2987
+  - version: 1.0.0
+    date: '2026-10-15'
+    changelog: 改为 MfkjImeHelper 构建，插件 ID 与已装插件一致
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-jxmfkj-2026-10-15/ai-write-1.0.0.xipk
+      size: 2.6 KB
+      sha256: 548d4b3f59b9ff7f1fe8de8a3dac033a87d03984c79f62405548d443f02e7395
+      sizeBytes: 2673
+- id: com.jxmfkj.ai.ime.plugin.ai_writing
+  name: AI 写作
+  author: JamesGZM
+  description: 输入草稿或写作要求，生成三条候选并查看参考资料，点选填入，支持 OpenAI 兼容接口。
+  type: remote
+  tags:
+  - 工具
+  pluginType: tool
+  icon: 写
+  activation: multi
+  minHostVersion: 3.3.15
+  platforms:
+  - android
+  capabilities:
+    tool:
+      display: passive
+  network:
+    allowCustomHosts: true
+  homepage: https://github.com/JamesGZM/Moki/tree/master/plugins/ai-writing
+  license: GPL-3.0
+  appVersion: '>=3.3.15'
+  currentVersion: 1.0.3
+  versions:
+  - version: 1.0.3
+    date: '2026-10-20'
+    changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-2026-10-20/ai-writing-1.0.3.xipk
+      size: 5.8 KB
+      sha256: 784142425930c67d0b1164f48539244f93d19740f0392c68338377168519ca3d
+      sizeBytes: 5937
+- id: com.jxmfkj.ai.ime.plugin.bocha_jev
+  name: 博查 JEV
+  author: JamesGZM
+  description: '博查在线 JEV。协议与 TypeSafe /v1/systemone 一致。使用用户填写的 API Key（Authorization:
+    Bearer），不内置密钥。'
+  type: remote
+  tags:
+  - JEV
+  - 在线
+  pluginType: jev
+  icon: 判
+  activation: single
+  minHostVersion: 3.0.0
+  platforms:
+  - android
+  capabilities:
+    jev:
+      requiresNetwork: true
+  network:
+    hosts:
+    - jev.bocha.cn
+  homepage: https://jev.bocha.cn
+  appVersion: '>=3.0.0'
+  currentVersion: 1.1.0
+  versions:
+  - version: 1.1.0
+    date: '2026-10-15'
+    changelog: 改为 JS 脚本插件。宿主传入 state 与 questions，脚本使用用户填写的 API Key 请求博查 systemone。
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-jxmfkj-2026-10-15/bocha-jev-1.1.0.xipk
+      size: 2.3 KB
+      sha256: e2a0a1df2598e7b214b609bbcac2b57c9e481eadf811e6e1b2f30f16a2d0b9fe
+      sizeBytes: 2306
+  - version: 1.0.0
+    date: '2026-10-15'
+    changelog: 初始版本。在线服务由宿主调用，无插件包，不内置密钥。
+- id: com.jxmfkj.ai.ime.plugin.funasr_asr
+  name: 阿里百炼 FunAsr
+  author: JamesGZM
+  description: 阿里百炼 FunAsr 在线语音识别，使用阿里云控制台获取的 API Key，可参考 快速入门（https://www.aliyun.com/product/bailian）
+  type: remote
+  tags:
+  - 语音
+  - ASR
+  pluginType: speech
+  icon: 🎤
+  activation: single
+  minHostVersion: 3.3.0
+  platforms:
+  - android
+  capabilities:
+    speech:
+      inputMode: streaming
+      supportsPartialResults: true
+  network:
+    hosts:
+    - dashscope.aliyuncs.com
+  homepage: https://github.com/JamesGZM/moki-index
+  license: GPL-3.0
+  appVersion: '>=3.3.0'
+  currentVersion: 3.1.2
+  versions:
+  - version: 3.1.2
+    date: '2026-10-20'
+    changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-2026-10-20/funasr-asr-3.1.2.xipk
+      size: 9.9 KB
+      sha256: 9fe455110017ba1fdaf5ca0347a86bb3d36826e50528f9f27aa2352580985634
+      sizeBytes: 10097
+  - version: 3.1.1
+    date: '2026-10-15'
+    changelog: 改为 MfkjImeHelper 构建，插件 ID 与已装插件一致
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-jxmfkj-2026-10-15/funasr-asr-3.1.1.xipk
+      size: 9.6 KB
+      sha256: c976829a489c0c2344d612ae14df22ab9d6aa017461f7da86b98b12ffd8ce784
+      sizeBytes: 9876
+  - version: 3.1.0
+    date: '2026-09-29'
+    changelog: 1. 优化语音输入在发送场景下的文本处理
+    downloadUrl:
+    - url: https://github.com/ximeiorg/Xime/releases/download/v3.0.0-beta6/funasr-asr-3.1.0.xipk
+      size: 9.6 KB
+      sha256: c8dbdb41e0d323f0e3df11d9a24f766fdc1ebe76b3c8aa07ba1ea5d4b7273cd1
+      sizeBytes: 9499
+  - version: 3.0.0
+    date: '2026-09-24'
+    changelog: v3 重构：TypeScript/QuickJS 插件，需宿主 v3.0.0+
+    downloadUrl:
+    - url: https://github.com/ximeiorg/Xime/releases/download/v3.0.0-beta1/funasr-asr-3.0.0.xipk
+      size: 9.3 KB
+      sha256: a20e4d08dba211026b5236f07fd10d9b708caf118f0846e4905b50dca8cccaac
+      sizeBytes: 9499
+- id: com.jxmfkj.ai.ime.plugin.kaomoji
+  name: 颜文字表情包
+  author: JamesGZM
+  description: 包含 174 个常用颜文字的表情插件
+  type: remote
+  tags:
+  - 表情
+  - 颜文字
+  pluginType: emoji
+  icon: థ౪థ
+  activation: multi
+  minHostVersion: 3.3.0
+  platforms:
+  - android
+  capabilities:
+    emoji:
+      supportsSearch: true
+      columns: 3
+      itemHeightDp: 30
+  homepage: https://github.com/JamesGZM/moki-index
+  license: GPL-3.0
+  appVersion: '>=3.3.0'
+  currentVersion: 4.0.1
+  versions:
+  - version: 4.0.1
+    date: '2026-10-20'
+    changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-2026-10-20/kaomoji-4.0.1.xipk
+      size: 3.0 KB
+      sha256: 903674688bb5595796ed72df3384324bbb9a56aa4fa162d02888f9fdae89a71a
+      sizeBytes: 3032
+  - version: 4.0.0
+    date: '2026-10-15'
+    changelog: 改为 MfkjImeHelper 构建，插件 ID 与已装插件一致
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-jxmfkj-2026-10-15/kaomoji-4.0.0.xipk
+      size: 3.0 KB
+      sha256: 4d0e6e48d0fdef570fff81c6cf743f08f074eaa31e979c34234ca72158e055b0
+      sizeBytes: 3028
+- id: com.jxmfkj.ai.ime.plugin.knowledge.local
+  name: 本地知识库
+  author: JamesGZM
+  description: 在本机保存分组、条目和文档，并按文字提供检索
+  type: remote
+  tags:
+  - 资料
+  pluginType: context
+  icon: 知
+  activation: multi
+  minHostVersion: 3.3.3
+  platforms:
+  - android
+  provides:
+  - id: knowledge.query
+    version: 1
+  homepage: https://github.com/JamesGZM/Moki/tree/master/plugins/local-knowledge
+  license: GPL-3.0
+  appVersion: '>=3.3.3'
+  currentVersion: 1.0.3
+  versions:
+  - version: 1.0.3
+    date: '2026-10-20'
+    changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-2026-10-20/local-knowledge-1.0.3.xipk
+      size: 10.2 KB
+      sha256: 629793b30e4b24a390b5d5073d4867a374a89f9d4af1739b792cafe3cb279085
+      sizeBytes: 10420
+- id: com.jxmfkj.ai.ime.plugin.meme_bunny
+  name: 恶搞兔表情包
+  author: JamesGZM
+  description: 恶搞兔表情包（6 个表情图片），这只是一个示例插件，展示了如何在 Moki 中使用脚本插件开发表情包功能。
+  type: remote
+  tags:
+  - 表情
+  - 贴纸
+  pluginType: emoji
+  icon: 🐰
+  activation: multi
+  minHostVersion: 3.3.0
+  platforms:
+  - android
+  capabilities:
+    emoji:
+      supportsSearch: true
+      columns: 3
+      itemHeightDp: 110
+  homepage: https://github.com/JamesGZM/moki-index
+  license: GPL-3.0
+  appVersion: '>=3.3.0'
+  currentVersion: 4.0.1
+  versions:
+  - version: 4.0.1
+    date: '2026-10-20'
+    changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-2026-10-20/meme-bunny-4.0.1.xipk
+      size: 65.0 KB
+      sha256: e52191677298841dda9266f555aa60d6a474c38d31bd8c6c5346259cbb2a88c1
+      sizeBytes: 66512
+  - version: 4.0.0
+    date: '2026-10-15'
+    changelog: 改为 MfkjImeHelper 构建，插件 ID 与已装插件一致
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-jxmfkj-2026-10-15/meme-bunny-4.0.0.xipk
+      size: 65.0 KB
+      sha256: c54d409459e93d0a776b7300013a1fae06c63e6be99cb304b0111e31b72f5b55
+      sizeBytes: 66509
+- id: com.jxmfkj.ai.ime.plugin.ocr_clean
+  name: OCR 清洗规则
+  author: JamesGZM
+  description: 在本机将 OCR 文字块整理为消息、会话列表和噪音信息，保留识别原文。
+  type: remote
+  tags:
+  - 工具
+  pluginType: tool
+  activation: multi
+  minHostVersion: 3.3.0
+  platforms:
+  - android
+  provides:
+  - id: ocr.postprocess
+    version: 1
+  homepage: https://github.com/JamesGZM/Moki/tree/master/plugins/ocr-clean
+  license: GPL-3.0
+  appVersion: '>=3.3.0'
+  currentVersion: 1.1.9
+  versions:
+  - version: 1.1.9
+    date: '2026-10-20'
+    changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-2026-10-20/ocr-clean-1.1.9.xipk
+      size: 12.7 KB
+      sha256: a2990b26e560f7fa4f9bb0e7bd601fa1731da00b8003276484603d45a7adb09c
+      sizeBytes: 13041
+- id: com.jxmfkj.ai.ime.plugin.openai_ocr
+  name: OpenAI 兼容 OCR
+  author: JamesGZM
+  description: 调用 OpenAI 兼容接口，识别图片中的文字。
+  type: remote
+  tags:
+  - OCR
+  - 文字识别
+  pluginType: ocr
+  icon: 识
+  activation: single
+  minHostVersion: 3.2.0
+  platforms:
+  - android
+  capabilities:
+    ocr:
+      requiresNetwork: true
+  network:
+    allowCustomHosts: true
+  homepage: https://github.com/JamesGZM/moki-index
+  license: GPL-3.0
+  appVersion: '>=3.2.0'
+  currentVersion: 1.0.0
+  versions:
+  - version: 1.0.0
+    date: '2026-10-15'
+    changelog: 初始版本。手填 OpenAI 兼容接口地址、API Key 和模型名。
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-jxmfkj-2026-10-15/openai-ocr-1.0.0.xipk
+      size: 2.6 KB
+      sha256: 3d0a18dcaebededf8034e8988c211c09e41703537b0b25832b66ae5154d78d3c
+      sizeBytes: 2705
+- id: com.jxmfkj.ai.ime.plugin.quick_phrase
+  name: 常用语
+  author: JamesGZM
+  description: 把常用语联想进候选栏：读取宿主快捷发送库（设置里的快捷短语，含触发编码），输入时内容命中（条目以候选词开头）跟随该候选，编码命中（输入为
+    code 前缀）放第二候选位，点选即上屏。数据经 host.quickSend.list() 读取，变更经 quick_send_changed 事件刷新。
+  type: remote
+  tags:
+  - 候选
+  - 常用语
+  pluginType: tool
+  icon: 语
+  activation: multi
+  minHostVersion: 3.3.0
+  platforms:
+  - android
+  capabilities:
+    candidate_transform: true
+    quick_send_read: true
+    events:
+    - quick_send_changed
+  homepage: https://github.com/JamesGZM/moki-index
+  license: GPL-3.0
+  appVersion: '>=3.3.0'
+  currentVersion: 1.0.1
+  versions:
+  - version: 1.0.1
+    date: '2026-10-20'
+    changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-2026-10-20/quick-phrase-1.0.1.xipk
+      size: 1.5 KB
+      sha256: 097d4df3b834c372c4823f87e19a7b800261a70166883301c15e01279dad7141
+      sizeBytes: 1564
+  - version: 1.0.0
+    date: '2026-10-15'
+    changelog: 改为 MfkjImeHelper 构建，插件 ID 与已装插件一致
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-jxmfkj-2026-10-15/quick-phrase-1.0.0.xipk
+      size: 1.5 KB
+      sha256: 3a7e9a6d001ba03d2ef3dc2f978b77330e9eee314d25ac197dd92f7187629280
+      sizeBytes: 1562
+- id: com.jxmfkj.ai.ime.plugin.qwen_translate
+  name: 千问翻译
+  author: JamesGZM
+  description: qwen-mt 专用翻译：翻译选中文本/输入框内容，结果替换原选区或光标处追加。基于阿里云百炼 qwen-mt 系列翻译模型。
+  type: remote
+  tags:
+  - AI
+  - 翻译
+  - 工具
+  pluginType: tool
+  icon: 译
+  activation: multi
+  minHostVersion: 3.3.17
+  platforms:
+  - android
+  capabilities:
+    tool:
+      display: direct
+  network:
+    allowCustomHosts: true
+  homepage: https://github.com/JamesGZM/moki-index
+  license: GPL-3.0
+  appVersion: '>=3.3.17'
+  currentVersion: 1.0.3
+  versions:
+  - version: 1.0.3
+    date: '2026-10-20'
+    changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-2026-10-20/qwen-translate-1.0.3.xipk
+      size: 2.9 KB
+      sha256: 97e3de830889b37bed7d4d266be223be49428956013ae05610e827a0fe6bb4c5
+      sizeBytes: 2997
+  - version: 1.0.0
+    date: '2026-10-15'
+    changelog: 改为 MfkjImeHelper 构建，插件 ID 与已装插件一致
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-jxmfkj-2026-10-15/qwen-translate-1.0.0.xipk
+      size: 2.6 KB
+      sha256: c01620db5820eaf6667f8a3bf1befc54123baef54568ec65d1e04f091c2ec63b
+      sizeBytes: 2635
+- id: com.jxmfkj.ai.ime.plugin.s3_clipboard_sync
+  name: S3 剪贴板同步
+  author: JamesGZM
+  description: 通过 S3 兼容对象存储（Cloudflare R2 / AWS S3 / MinIO 等）同步剪贴板文本与图片，多设备共享。
+  type: remote
+  tags:
+  - 剪贴板
+  pluginType: clipboard_sync
+  icon: 🪣
+  activation: single
+  minHostVersion: 3.3.0
+  platforms:
+  - android
+  capabilities:
+    clipboard_sync:
+      protocols:
+      - s3
+      attachments: true
+  network:
+    hosts: []
+    allowCustomHosts: true
+  homepage: https://github.com/JamesGZM/Moki/tree/master/plugins/s3-clipboard-sync
+  license: GPL-3.0
+  appVersion: '>=3.3.0'
+  currentVersion: 1.0.1
+  versions:
+  - version: 1.0.1
+    date: '2026-10-20'
+    changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-2026-10-20/s3-clipboard-sync-1.0.1.xipk
+      size: 6.9 KB
+      sha256: 07787e91ef8cd02da203e21553b1e858308b9f208116b8046374c19e8c0b7a5f
+      sizeBytes: 7026
+- id: com.jxmfkj.ai.ime.plugin.sessions
+  name: 会话管理
+  author: JamesGZM
+  description: 在本机记录个人和群聊的称呼、关系和备注，供其他插件按当前会话查询。
+  type: remote
+  tags:
+  - 资料
+  pluginType: context
+  icon: 话
+  activation: multi
+  minHostVersion: 3.3.12
+  platforms:
+  - android
+  capabilities:
+    tool:
+      display: passive
+  provides:
+  - id: chat.profile
+    version: 1
+  homepage: https://github.com/JamesGZM/Moki/tree/master/plugins/sessions
+  license: GPL-3.0
+  appVersion: '>=3.3.12'
+  currentVersion: 1.2.5
+  versions:
+  - version: 1.2.5
+    date: '2026-10-20'
+    changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-2026-10-20/sessions-1.2.5.xipk
+      size: 12.2 KB
+      sha256: c3b63957e1449771155eebf48f12ccca54b9bb2bdcf17890e21866ac57dcdb34
+      sizeBytes: 12507
+- id: com.jxmfkj.ai.ime.plugin.tencent_asr
+  name: 腾讯云实时语音识别
+  author: JamesGZM
+  description: 腾讯云实时语音识别 V2（WebSocket），支持中英粤及 30 种方言、说话人分离。需在腾讯云控制台开通语音识别服务，并在 API
+    密钥管理页获取 AppID / SecretId / SecretKey。
+  type: remote
+  tags:
+  - 语音
+  pluginType: speech
+  icon: 🎙️
+  activation: single
+  minHostVersion: 3.3.0
+  platforms:
+  - android
+  capabilities:
+    speech:
+      inputMode: streaming
+      supportsPartialResults: true
+  network:
+    hosts:
+    - asr.cloud.tencent.com
+  homepage: https://github.com/JamesGZM/Moki/tree/master/plugins/tencent-asr
+  license: GPL-3.0
+  appVersion: '>=3.3.0'
+  currentVersion: 2.0.2
+  versions:
+  - version: 2.0.2
+    date: '2026-10-20'
+    changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-2026-10-20/tencent-asr-2.0.2.xipk
+      size: 11.8 KB
+      sha256: 1fe8fd10fd945961a09ea82a34110b1107f3699297d15d00d4a2409573cbbad3
+      sizeBytes: 12113
+- id: com.jxmfkj.ai.ime.plugin.typing_stats
+  name: 输入统计
+  author: JamesGZM
+  description: 统计打字量（今日/累计字数、提交次数）。基于宿主下行事件，无网络访问。
+  type: remote
+  tags:
+  - 工具
+  - 统计
+  pluginType: tool
+  icon: 统
+  activation: multi
+  minHostVersion: 3.3.0
+  platforms:
+  - android
+  capabilities:
+    tool:
+      display: passive
+    events:
+    - input_changed
+    - text_committed
+  homepage: https://github.com/JamesGZM/moki-index
+  license: GPL-3.0
+  appVersion: '>=3.3.0'
+  currentVersion: 1.0.1
+  versions:
+  - version: 1.0.1
+    date: '2026-10-20'
+    changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-2026-10-20/typing-stats-1.0.1.xipk
+      size: 2.5 KB
+      sha256: 03cd14e4a5b04ede80c68e61bc5bbb0e51b014601f70697a2861a0edf4cf5e5b
+      sizeBytes: 2589
+  - version: 1.0.0
+    date: '2026-10-15'
+    changelog: 改为 MfkjImeHelper 构建，插件 ID 与已装插件一致
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-jxmfkj-2026-10-15/typing-stats-1.0.0.xipk
+      size: 2.5 KB
+      sha256: dc6fe65054e8d0722f3675435211f8328f672fb65607c21458cb042f0831f818
+      sizeBytes: 2589
+- id: com.jxmfkj.ai.ime.plugin.ui_read
+  name: 界面读取规则
+  author: JamesGZM
+  description: 按 App 规则从无障碍界面树提取聊天标题与消息。
+  type: remote
+  tags:
+  - 工具
+  pluginType: tool
+  activation: multi
+  minHostVersion: 3.3.0
+  platforms:
+  - android
+  provides:
+  - id: ui.read
+    version: 1
+  homepage: https://github.com/JamesGZM/Moki/tree/master/plugins/ui-read
+  license: GPL-3.0
+  appVersion: '>=3.3.0'
+  currentVersion: 1.0.3
+  versions:
+  - version: 1.0.3
+    date: '2026-10-20'
+    changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-2026-10-20/ui-read-1.0.3.xipk
+      size: 3.3 KB
+      sha256: a749fa94638e98f494f8ce57c98a04e72faf3bd7178f40b366242e0787a53a73
+      sizeBytes: 3393
+- id: com.jxmfkj.ai.ime.plugin.volc_asr
+  name: 火山引擎流式语音识别
+  author: JamesGZM
+  description: 火山方舟在线语音识别。使用火山引擎控制台获取的APP Key，可参考 快速入门（https://console.volcengine.com/speech/new/setting/apikeys?projectName=default）
+  type: remote
+  tags:
+  - 语音
+  - ASR
+  pluginType: speech
+  icon: 🎙️
+  activation: single
+  minHostVersion: 3.3.0
+  platforms:
+  - android
+  capabilities:
+    speech:
+      inputMode: streaming
+      supportsPartialResults: true
+  network:
+    hosts:
+    - openspeech.bytedance.com
+  homepage: https://github.com/JamesGZM/moki-index
+  license: GPL-3.0
+  appVersion: '>=3.3.0'
+  currentVersion: 3.0.2
+  versions:
+  - version: 3.0.2
+    date: '2026-10-20'
+    changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-2026-10-20/volc-asr-3.0.2.xipk
+      size: 9.2 KB
+      sha256: f137940d79ea1ed086c9b615bf52f74659f5ea64f7d361295fe4178f30b521a8
+      sizeBytes: 9388
+  - version: 3.0.1
+    date: '2026-10-15'
+    changelog: 改为 MfkjImeHelper 构建，插件 ID 与已装插件一致
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-jxmfkj-2026-10-15/volc-asr-3.0.1.xipk
+      size: 8.9 KB
+      sha256: 4e6f8631bb9806c6e41ef665a215fdc0a33015e12157fecc674ec06abe843b8e
+      sizeBytes: 9103
+  - version: 3.0.0
+    date: '2026-09-24'
+    changelog: v3 重构：TypeScript/QuickJS 插件，需宿主 v3.0.0+
+    downloadUrl:
+    - url: https://github.com/ximeiorg/Xime/releases/download/v3.0.0-beta1/volc-asr-3.0.0.xipk
+      size: 8.8 KB
+      sha256: 5b7429451b73355acb14bbc18a72eb8e6ccc1490609c6b2570547ddeb357f41b
+      sizeBytes: 9043
+- id: com.jxmfkj.ai.ime.plugin.webdav_backup
+  name: WebDAV 云备份
+  author: JamesGZM
+  description: 通过 WebDAV 将输入方案、自造词、插件与设置备份到云端（已测试坚果云），支持备份列表、恢复与删除。
+  type: remote
+  tags:
+  - 备份
+  - WebDAV
+  pluginType: backup
+  icon: ☁️
+  activation: single
+  minHostVersion: 3.3.0
+  platforms:
+  - android
+  capabilities:
+    backup:
+      protocols:
+      - webdav
+  network:
+    hosts: []
+    allowCustomHosts: true
+  homepage: https://github.com/JamesGZM/moki-index
+  license: GPL-3.0
+  appVersion: '>=3.3.0'
+  currentVersion: 3.0.1
+  versions:
+  - version: 3.0.1
+    date: '2026-10-20'
+    changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-2026-10-20/webdav-backup-3.0.1.xipk
+      size: 3.7 KB
+      sha256: 0cc4221d36567a4aa73121a1552748b50f437bfd821f6c11aa007698edcaa2bf
+      sizeBytes: 3828
+  - version: 3.0.0
+    date: '2026-10-15'
+    changelog: 改为 MfkjImeHelper 构建，插件 ID 与已装插件一致
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-jxmfkj-2026-10-15/webdav-backup-3.0.0.xipk
+      size: 3.7 KB
+      sha256: 7295267803738039bca3ff34774464f72bdc9c7542b750b7f8d1af574a2076a9
+      sizeBytes: 3828
+  - version: 2.0.0
+    date: '2026-09-24'
+    changelog: v3 重构：TypeScript/QuickJS 插件，需宿主 v3.0.0+
+    downloadUrl:
+    - url: https://github.com/ximeiorg/Xime/releases/download/v3.0.0-beta1/webdav-backup-2.0.0.xipk
+      size: 3.7 KB
+      sha256: 54d9cf58eaa245ca6fe462ba9e85bf000e6c3eb0adad444d5be5e806e29457a4
+      sizeBytes: 3780
+- id: com.jxmfkj.ai.ime.plugin.webdav_clipboard_sync
+  name: WebDAV 剪贴板同步
+  author: JamesGZM
+  description: 通过 WebDAV 文件同步剪贴板（文本与图片，多设备）,目前仅测试了坚果云盘的 WebDAV 接口。
+  type: remote
+  tags:
+  - 剪贴板
+  - 同步
+  pluginType: clipboard_sync
+  icon: ☁️
+  activation: single
+  minHostVersion: 3.3.0
+  platforms:
+  - android
+  capabilities:
+    clipboard_sync:
+      protocols:
+      - webdav
+      attachments: true
+  network:
+    hosts: []
+    allowCustomHosts: true
+  homepage: https://github.com/JamesGZM/moki-index
+  license: GPL-3.0
+  appVersion: '>=3.3.0'
+  currentVersion: 1.1.1
+  versions:
+  - version: 1.1.1
+    date: '2026-10-20'
+    changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-2026-10-20/webdav-clipboard-sync-1.1.1.xipk
+      size: 4.2 KB
+      sha256: a07e695747eba432ff1bda1f99fc6ff26d332f7650a98699fbf1af88ec016582
+      sizeBytes: 4276
+  - version: 1.1.0
+    date: '2026-10-15'
+    changelog: 改为 MfkjImeHelper 构建，插件 ID 与已装插件一致
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-jxmfkj-2026-10-15/webdav-clipboard-sync-1.1.0.xipk
+      size: 4.1 KB
+      sha256: a9aec1af1fbecb865b250cc2bb212065e53ba0bcd192de4a01588a028d87d3b6
+      sizeBytes: 4171
+  - version: 1.0.0
+    date: '2026-09-24'
+    changelog: v3 重构：TypeScript/QuickJS 插件，需宿主 v3.0.0+
+    downloadUrl:
+    - url: https://github.com/ximeiorg/Xime/releases/download/v3.0.0-beta1/webdav-clipboard-sync-1.0.0.xipk
+      size: 3.1 KB
+      sha256: 8c4578dd64b30c8bd81cb2855e47429fd826ff55e360cc3686f51b425534b884
+      sizeBytes: 3169
+- id: com.jxmfkj.ai.ime.plugin.ximed_sync
+  name: ximed 剪贴板同步
+  author: JamesGZM
+  description: 对接 ximed HTTP 接口的双向剪贴板同步（文本），需要安装 ximed 服务器端和 ximed 客户端(https://github.com/kingzcheung/ximed)
+  type: remote
+  tags:
+  - 剪贴板
+  pluginType: clipboard_sync
+  icon: 🔗
+  activation: single
+  minHostVersion: 3.3.0
+  platforms:
+  - android
+  capabilities:
+    clipboard_sync:
+      protocols:
+      - ximed
+  network:
+    hosts: []
+    allowCustomHosts: true
+  homepage: https://github.com/JamesGZM/Moki/tree/master/plugins/ximed-clipboard-sync
+  license: GPL-3.0
+  appVersion: '>=3.3.0'
+  currentVersion: 1.0.2
+  versions:
+  - version: 1.0.2
+    date: '2026-10-20'
+    changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-2026-10-20/ximed-clipboard-sync-1.0.2.xipk
+      size: 2.5 KB
+      sha256: 34f72eddc6d3414d8137a985a2ae17dd448f2122c9d5cacb10985efe34727967
+      sizeBytes: 2518

@@ -1,15 +1,16 @@
 id: com.jxmfkj.ai.ime.plugin.bocha_jev
 name: 博查 JEV
 author: JamesGZM
-description: "博查在线 JEV。协议与 TypeSafe /v1/systemone 一致。使用用户填写的 API Key（Authorization: Bearer），不内置密钥。"
+description: '博查在线 JEV。协议与 TypeSafe /v1/systemone 一致。使用用户填写的 API Key（Authorization:
+  Bearer），不内置密钥。'
 type: remote
 tags:
 - JEV
 - 在线
 pluginType: jev
-icon: "判"
+icon: 判
 activation: single
-minHostVersion: '3.0.0'
+minHostVersion: 0.0.1
 platforms:
 - android
 capabilities:
@@ -18,18 +19,15 @@ capabilities:
 network:
   hosts:
   - jev.bocha.cn
-homepage: https://jev.bocha.cn
-appVersion: '>=3.0.0'
-currentVersion: 1.1.0
+homepage: https://github.com/JamesGZM/moki-index/tree/main/plugins/bocha-jev
+appVersion: '>=0.0.1'
+currentVersion: 0.0.1
 versions:
-- version: 1.1.0
-  date: '2026-10-15'
-  changelog: 改为 JS 脚本插件。宿主传入 state 与 questions，脚本使用用户填写的 API Key 请求博查 systemone。
+- version: 0.0.1
+  date: '2026-10-20'
+  changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。
   downloadUrl:
-  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-jxmfkj-2026-10-15/bocha-jev-1.1.0.xipk
-    size: 2.3 KB
-    sha256: e2a0a1df2598e7b214b609bbcac2b57c9e481eadf811e6e1b2f30f16a2d0b9fe
-    sizeBytes: 2306
-- version: 1.0.0
-  date: '2026-10-15'
-  changelog: 初始版本。在线服务由宿主调用，无插件包，不内置密钥。
+  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-0.0.1/bocha-jev-0.0.1.mopk
+    sha256: 2a0da70a5bea687ea4ec000a6b058e83b9f98fdff37616e254acb3467f3313f0
+    size: 2.2 KB
+    sizeBytes: 2302

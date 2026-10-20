@@ -10,7 +10,7 @@ tags:
 pluginType: tool
 icon: 语
 activation: multi
-minHostVersion: 3.3.0
+minHostVersion: 0.0.1
 platforms:
 - android
 capabilities:
@@ -18,24 +18,16 @@ capabilities:
   quick_send_read: true
   events:
   - quick_send_changed
-homepage: https://github.com/JamesGZM/moki-index
+homepage: https://github.com/JamesGZM/Moki/tree/0994f45d7bfa070a6ee902a330b6b0cee9195785/plugins/quick-phrase
 license: GPL-3.0
-appVersion: '>=3.3.0'
-currentVersion: 1.0.1
+appVersion: '>=0.0.1'
+currentVersion: 0.0.1
 versions:
-- version: 1.0.1
+- version: 0.0.1
   date: '2026-10-20'
-  changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
+  changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。
   downloadUrl:
-  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-2026-10-20/quick-phrase-1.0.1.xipk
+  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-0.0.1/quick-phrase-0.0.1.mopk
+    sha256: bd51afd6249b892deeb5f556e103e8c954b0a9db896b1becce2b00bbabc94f70
     size: 1.5 KB
-    sha256: 097d4df3b834c372c4823f87e19a7b800261a70166883301c15e01279dad7141
-    sizeBytes: 1564
-- version: 1.0.0
-  date: '2026-10-15'
-  changelog: 改为 MfkjImeHelper 构建，插件 ID 与已装插件一致
-  downloadUrl:
-  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-jxmfkj-2026-10-15/quick-phrase-1.0.0.xipk
-    size: 1.5 KB
-    sha256: 3a7e9a6d001ba03d2ef3dc2f978b77330e9eee314d25ac197dd92f7187629280
-    sizeBytes: 1562
+    sizeBytes: 1559

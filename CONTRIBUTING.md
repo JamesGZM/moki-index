@@ -98,6 +98,8 @@ python scripts/ci-update.py
 
 ## 上架 v2 插件（JS/QuickJS）
 
+当前 Moki 插件使用 SDK `1.0.0`，最低宿主为 `0.0.1`，安装包为 `.mopk`，不使用 `versionCode`。先上传并验证真实 Release 资产，再填写源 YAML 的下载地址、大小和 SHA256。当前 `plugins/v2/index.yaml` 只发布这套协议的插件；旧 SDK / `.xipk` 条目保留在 [历史索引](plugins/v2/legacy-index.yaml) 与旧 Release，不混入当前安装版本。
+
 v2 插件是 TypeScript/QuickJS 形态：源码为 `manifest.json` + `main.ts`（由 `mopm pack` 产出 `.mopk`，
 包内含 `manifest.json` + 编译产物 `main.js` + `resources/`）。它们使用独立索引
 `plugins/v2/index.yaml`（源文件放在 `src/plugins/v2/`），旧版 App 不受影响。

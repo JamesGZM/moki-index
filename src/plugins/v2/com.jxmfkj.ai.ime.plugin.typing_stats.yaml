@@ -9,7 +9,7 @@ tags:
 pluginType: tool
 icon: 统
 activation: multi
-minHostVersion: 3.3.0
+minHostVersion: 0.0.1
 platforms:
 - android
 capabilities:
@@ -18,24 +18,16 @@ capabilities:
   events:
   - input_changed
   - text_committed
-homepage: https://github.com/JamesGZM/moki-index
+homepage: https://github.com/JamesGZM/Moki/tree/0994f45d7bfa070a6ee902a330b6b0cee9195785/plugins/typing-stats
 license: GPL-3.0
-appVersion: '>=3.3.0'
-currentVersion: 1.0.1
+appVersion: '>=0.0.1'
+currentVersion: 0.0.1
 versions:
-- version: 1.0.1
+- version: 0.0.1
   date: '2026-10-20'
-  changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
+  changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。
   downloadUrl:
-  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-2026-10-20/typing-stats-1.0.1.xipk
+  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-0.0.1/typing-stats-0.0.1.mopk
+    sha256: ec48922061ed4e24035af175a32218517170a6ea30f9f1db2b83a6f4e331ab46
     size: 2.5 KB
-    sha256: 03cd14e4a5b04ede80c68e61bc5bbb0e51b014601f70697a2861a0edf4cf5e5b
-    sizeBytes: 2589
-- version: 1.0.0
-  date: '2026-10-15'
-  changelog: 改为 MfkjImeHelper 构建，插件 ID 与已装插件一致
-  downloadUrl:
-  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-jxmfkj-2026-10-15/typing-stats-1.0.0.xipk
-    size: 2.5 KB
-    sha256: dc6fe65054e8d0722f3675435211f8328f672fb65607c21458cb042f0831f818
-    sizeBytes: 2589
+    sizeBytes: 2586

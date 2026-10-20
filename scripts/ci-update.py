@@ -40,7 +40,7 @@ PLUGIN_FIELDS = [
     "tags", "pluginType", "homepage", "license",
     "appVersion", "warning", "currentVersion", "versions",
 ]
-# v2 插件索引（JS/QuickJS，宿主 >=3.0.0）：在旧字段上追加新插件系统的元数据
+# v2 插件索引（JS/QuickJS，Moki 宿主 >=0.0.1）：在旧字段上追加新插件系统的元数据
 PLUGIN_V2_FIELDS = [
     "id", "name", "author", "description", "type",
     "tags", "pluginType", "icon", "activation",
@@ -103,7 +103,7 @@ def check():
 HEADERS = {
     "rimes": "# Moki 输入方案子索引\n# ⚠️ 此文件由 scripts/ci-update.py 自动生成，请勿手动编辑\n",
     "plugins": "# Moki 插件子索引（旧版 Lua/DEX，兼容旧版 App）\n# ⚠️ 此文件由 scripts/ci-update.py 自动生成，请勿手动编辑\n",
-    "plugins/v2": "# Moki v2 插件子索引（JS/QuickJS 插件，宿主 >=3.0.0）\n# ⚠️ 此文件由 scripts/ci-update.py 自动生成，请勿手动编辑\n",
+    "plugins/v2": "# Moki v2 插件子索引（JS/QuickJS，Moki >=0.0.1，SDK 1.0.0）\n# ⚠️ 此文件由 scripts/ci-update.py 自动生成，请勿手动编辑\n",
     "models": "# Moki 模型子索引\n# ⚠️ 此文件由 scripts/ci-update.py 自动生成，请勿手动编辑\n",
     "layouts": "# Moki 键盘布局子索引\n# ⚠️ 此文件由 scripts/ci-update.py 自动生成，请勿手动编辑\n",
 }

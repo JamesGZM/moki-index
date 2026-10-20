@@ -7,22 +7,20 @@ tags:
 - 工具
 pluginType: tool
 activation: multi
-minHostVersion: 3.3.0
-platforms:
-- android
+minHostVersion: 0.0.1
 provides:
 - id: ocr.postprocess
   version: 1
-homepage: https://github.com/JamesGZM/Moki/tree/master/plugins/ocr-clean
+homepage: https://github.com/JamesGZM/Moki/tree/0994f45d7bfa070a6ee902a330b6b0cee9195785/plugins/ocr-clean
 license: GPL-3.0
-appVersion: '>=3.3.0'
-currentVersion: 1.1.9
+appVersion: '>=0.0.1'
+currentVersion: 0.0.1
 versions:
-- version: 1.1.9
+- version: 0.0.1
   date: '2026-10-20'
-  changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
+  changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。
   downloadUrl:
-  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-2026-10-20/ocr-clean-1.1.9.xipk
+  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-0.0.1/ocr-clean-0.0.1.mopk
+    sha256: abb97c450799d9ec2528ce971057aa35af75bfcb8be30e91aa23739289fa58e1
     size: 12.7 KB
-    sha256: a2990b26e560f7fa4f9bb0e7bd601fa1731da00b8003276484603d45a7adb09c
-    sizeBytes: 13041
+    sizeBytes: 13035

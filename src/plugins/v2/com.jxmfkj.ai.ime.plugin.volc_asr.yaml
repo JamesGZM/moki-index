@@ -9,7 +9,7 @@ tags:
 pluginType: speech
 icon: 🎙️
 activation: single
-minHostVersion: 3.3.0
+minHostVersion: 0.0.1
 platforms:
 - android
 capabilities:
@@ -19,32 +19,16 @@ capabilities:
 network:
   hosts:
   - openspeech.bytedance.com
-homepage: https://github.com/JamesGZM/moki-index
+homepage: https://github.com/JamesGZM/Moki/tree/0994f45d7bfa070a6ee902a330b6b0cee9195785/plugins/volc-asr
 license: GPL-3.0
-appVersion: '>=3.3.0'
-currentVersion: 3.0.2
+appVersion: '>=0.0.1'
+currentVersion: 0.0.1
 versions:
-- version: 3.0.2
+- version: 0.0.1
   date: '2026-10-20'
-  changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
+  changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。
   downloadUrl:
-  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-2026-10-20/volc-asr-3.0.2.xipk
+  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-0.0.1/volc-asr-0.0.1.mopk
+    sha256: b326ba3b4a7facd3999c11f7ccb1be12040c26297eade927190cb2b5b0732364
     size: 9.2 KB
-    sha256: f137940d79ea1ed086c9b615bf52f74659f5ea64f7d361295fe4178f30b521a8
-    sizeBytes: 9388
-- version: 3.0.1
-  date: '2026-10-15'
-  changelog: 改为 MfkjImeHelper 构建，插件 ID 与已装插件一致
-  downloadUrl:
-  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-jxmfkj-2026-10-15/volc-asr-3.0.1.xipk
-    size: 8.9 KB
-    sha256: 4e6f8631bb9806c6e41ef665a215fdc0a33015e12157fecc674ec06abe843b8e
-    sizeBytes: 9103
-- version: 3.0.0
-  date: '2026-09-24'
-  changelog: v3 重构：TypeScript/QuickJS 插件，需宿主 v3.0.0+
-  downloadUrl:
-  - url: https://github.com/ximeiorg/Xime/releases/download/v3.0.0-beta1/volc-asr-3.0.0.xipk
-    size: 8.8 KB
-    sha256: 5b7429451b73355acb14bbc18a72eb8e6ccc1490609c6b2570547ddeb357f41b
-    sizeBytes: 9043
+    sizeBytes: 9381

@@ -7,7 +7,7 @@ tags:
 - 剪贴板
 pluginType: clipboard_sync
 activation: single
-minHostVersion: 3.3.0
+minHostVersion: 0.0.1
 platforms:
 - android
 icon: 🔗
@@ -18,16 +18,16 @@ capabilities:
 network:
   hosts: []
   allowCustomHosts: true
-homepage: https://github.com/JamesGZM/Moki/tree/master/plugins/ximed-clipboard-sync
+homepage: https://github.com/JamesGZM/Moki/tree/0994f45d7bfa070a6ee902a330b6b0cee9195785/plugins/ximed-clipboard-sync
 license: GPL-3.0
-appVersion: '>=3.3.0'
-currentVersion: 1.0.2
+appVersion: '>=0.0.1'
+currentVersion: 0.0.1
 versions:
-- version: 1.0.2
+- version: 0.0.1
   date: '2026-10-20'
-  changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
+  changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。
   downloadUrl:
-  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-2026-10-20/ximed-clipboard-sync-1.0.2.xipk
+  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-0.0.1/ximed-clipboard-sync-0.0.1.mopk
+    sha256: 30ba450d121971ffe598d7d919a6c261c86b2a113d225015f7b7e6ad7333effc
     size: 2.5 KB
-    sha256: 34f72eddc6d3414d8137a985a2ae17dd448f2122c9d5cacb10985efe34727967
-    sizeBytes: 2518
+    sizeBytes: 2511

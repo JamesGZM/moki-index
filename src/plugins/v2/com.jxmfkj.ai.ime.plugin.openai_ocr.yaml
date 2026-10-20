@@ -1,15 +1,15 @@
 id: com.jxmfkj.ai.ime.plugin.openai_ocr
 name: OpenAI 兼容 OCR
 author: JamesGZM
-description: "调用 OpenAI 兼容接口，识别图片中的文字。"
+description: 调用 OpenAI 兼容接口，识别图片中的文字。
 type: remote
 tags:
 - OCR
 - 文字识别
 pluginType: ocr
-icon: "识"
+icon: 识
 activation: single
-minHostVersion: '3.2.0'
+minHostVersion: 0.0.1
 platforms:
 - android
 capabilities:
@@ -17,16 +17,16 @@ capabilities:
     requiresNetwork: true
 network:
   allowCustomHosts: true
-homepage: https://github.com/JamesGZM/moki-index
+homepage: https://github.com/JamesGZM/moki-index/tree/main/plugins/openai-ocr
 license: GPL-3.0
-appVersion: '>=3.2.0'
-currentVersion: 1.0.0
+appVersion: '>=0.0.1'
+currentVersion: 0.0.1
 versions:
-- version: 1.0.0
-  date: '2026-10-15'
-  changelog: 初始版本。手填 OpenAI 兼容接口地址、API Key 和模型名。
+- version: 0.0.1
+  date: '2026-10-20'
+  changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。
   downloadUrl:
-  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-jxmfkj-2026-10-15/openai-ocr-1.0.0.xipk
+  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-0.0.1/openai-ocr-0.0.1.mopk
+    sha256: edc3d3e70cd5e987392c9e35bff12db45d2c2643f3cdcced5e8b5fe4f9a974a9
     size: 2.6 KB
-    sha256: 3d0a18dcaebededf8034e8988c211c09e41703537b0b25832b66ae5154d78d3c
-    sizeBytes: 2705
+    sizeBytes: 2701
