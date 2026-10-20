@@ -1,15 +1,15 @@
 id: com.jxmfkj.ai.ime.plugin.typing_stats
 name: 输入统计
 author: JamesGZM
-description: "统计打字量（今日/累计字数、提交次数）。基于宿主下行事件，无网络访问。"
+description: 统计打字量（今日/累计字数、提交次数）。基于宿主下行事件，无网络访问。
 type: remote
 tags:
 - 工具
 - 统计
 pluginType: tool
-icon: "统"
+icon: 统
 activation: multi
-minHostVersion: '3.0.0'
+minHostVersion: 3.3.0
 platforms:
 - android
 capabilities:
@@ -20,9 +20,17 @@ capabilities:
   - text_committed
 homepage: https://github.com/JamesGZM/xime-index
 license: GPL-3.0
-appVersion: '>=3.0.0'
-currentVersion: 1.0.0
+appVersion: '>=3.3.0'
+currentVersion: 1.0.1
 versions:
+- version: 1.0.1
+  date: '2026-10-20'
+  changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
+  downloadUrl:
+  - url: https://github.com/JamesGZM/xime-index/releases/download/plugins-moki-2026-10-20/typing-stats-1.0.1.xipk
+    size: 2.5 KB
+    sha256: 03cd14e4a5b04ede80c68e61bc5bbb0e51b014601f70697a2861a0edf4cf5e5b
+    sizeBytes: 2589
 - version: 1.0.0
   date: '2026-10-15'
   changelog: 改为 MfkjImeHelper 构建，插件 ID 与已装插件一致

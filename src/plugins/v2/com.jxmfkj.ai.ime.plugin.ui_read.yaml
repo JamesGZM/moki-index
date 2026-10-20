@@ -1,0 +1,28 @@
+id: com.jxmfkj.ai.ime.plugin.ui_read
+name: 界面读取规则
+author: JamesGZM
+description: 按 App 规则从无障碍界面树提取聊天标题与消息。
+type: remote
+tags:
+- 工具
+pluginType: tool
+activation: multi
+minHostVersion: 3.3.0
+platforms:
+- android
+provides:
+- id: ui.read
+  version: 1
+homepage: https://github.com/JamesGZM/MfkjImeHelper/tree/master/plugins/ui-read
+license: GPL-3.0
+appVersion: '>=3.3.0'
+currentVersion: 1.0.3
+versions:
+- version: 1.0.3
+  date: '2026-10-20'
+  changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
+  downloadUrl:
+  - url: https://github.com/JamesGZM/xime-index/releases/download/plugins-moki-2026-10-20/ui-read-1.0.3.xipk
+    size: 3.3 KB
+    sha256: a749fa94638e98f494f8ce57c98a04e72faf3bd7178f40b366242e0787a53a73
+    sizeBytes: 3393

@@ -155,6 +155,164 @@ def fill_files_checksums(data: dict) -> dict:
     return result
 
 
+def normalize_provides(raw):
+    """把 manifest.provides 收成 [{id, version}]。缺字段、空列表或无法识别时返回 None。"""
+    if not isinstance(raw, list):
+        return None
+    out = []
+    seen = set()
+    for item in raw:
+        if not isinstance(item, dict):
+            continue
+        pid = item.get("id")
+        if not isinstance(pid, str):
+            continue
+        pid = pid.strip()
+        if not pid or pid in seen:
+            continue
+        version = item.get("version", 1)
+        if isinstance(version, str) and version.strip().isdigit():
+            version = int(version.strip())
+        if isinstance(version, bool) or not isinstance(version, int) or version <= 0:
+            continue
+        seen.add(pid)
+        out.append({"id": pid, "version": version})
+    return out or None
+
+
+def _load_manifest_json(text: str):
+    import json
+    import re
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        stripped = re.sub(r"/\*.*?\*/", "", text, flags=re.S)
+        stripped = re.sub(r"(^|\s)//.*?$", "", stripped, flags=re.M)
+        stripped = re.sub(r",(\s*[}\]])", r"\1", stripped)
+        return json.loads(stripped)
+
+
+def provides_from_zip_bytes(blob: bytes):
+    """从 xipk（zip）里的 manifest.json 读取 provides。没有或解析失败时返回 None。"""
+    import io
+    import zipfile
+    try:
+        with zipfile.ZipFile(io.BytesIO(blob)) as zf:
+            names = [
+                name for name in zf.namelist()
+                if name.endswith("manifest.json") and not name.startswith("__MACOSX")
+            ]
+            if not names:
+                return None
+            names.sort(key=lambda name: (name.count("/"), len(name)))
+            text = zf.read(names[0]).decode("utf-8")
+        manifest = _load_manifest_json(text)
+    except Exception:
+        return None
+    if not isinstance(manifest, dict):
+        return None
+    return normalize_provides(manifest.get("provides"))
+
+
+def current_xipk_download(data: dict):
+    """当前版本里第一个 .xipk 下载项。没有时返回 None。"""
+    current = str(data.get("currentVersion") or "")
+    versions = data.get("versions") or []
+    chosen = next((item for item in versions if str(item.get("version")) == current), None)
+    if chosen is None and versions:
+        chosen = versions[0]
+    if not isinstance(chosen, dict):
+        return None
+    for download in chosen.get("downloadUrl") or []:
+        if not isinstance(download, dict):
+            continue
+        url = download.get("url") or ""
+        if str(url).endswith(".xipk"):
+            return download
+    return None
+
+
+def current_xipk_url(data: dict):
+    download = current_xipk_download(data)
+    if not download:
+        return None
+    return download.get("url") or None
+
+
+def _manifest_cache_get(cache, sha: str, url: str):
+    if cache is None:
+        return None, False
+    if sha and ("sha", sha) in cache:
+        return cache[("sha", sha)], True
+    if url and ("url", url) in cache:
+        return cache[("url", url)], True
+    return None, False
+
+
+def _manifest_cache_put(cache, sha: str, url: str, provides):
+    if cache is None:
+        return
+    if sha:
+        cache[("sha", sha)] = provides
+    if url:
+        cache[("url", url)] = provides
+
+
+def download_bytes(url: str):
+    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    with urllib.request.urlopen(req, timeout=60) as resp:
+        return resp.read()
+
+
+def derive_provides(data: dict, fetch=None, cache=None):
+    """
+    优先使用源 YAML 里已经写好的 provides（允许是 manifest 的完整对象）。
+    没有时读取当前版本 xipk 的 manifest.provides。失败或未声明则返回 None，不中断生成。
+    cache 以包的 sha256 和 url 记住已经解析出的 provides，同一次生成里不重复下载。
+    """
+    inline = normalize_provides(data.get("provides"))
+    if inline:
+        return inline
+    download = current_xipk_download(data)
+    if not download:
+        return None
+    url = str(download.get("url") or "")
+    sha = str(download.get("sha256") or "").strip().lower()
+    cached, hit = _manifest_cache_get(cache, sha, url)
+    if hit:
+        return cached
+    if not url:
+        return None
+    if fetch is None:
+        fetch = download_bytes
+    try:
+        blob = fetch(url)
+    except Exception as exc:
+        print(f"    ⚠ 未能下载插件包以读取 provides: {exc}")
+        _manifest_cache_put(cache, sha, url, None)
+        return None
+    result = None
+    if blob:
+        try:
+            result = provides_from_zip_bytes(blob)
+        except Exception as exc:
+            print(f"    ⚠ 未能从插件包读取 provides: {exc}")
+    _manifest_cache_put(cache, sha, url, result)
+    return result
+
+
+def apply_provides(data: dict, fetch=None, cache=None) -> dict:
+    """返回带规范化 provides 的副本；没有可用来源时去掉该字段。"""
+    import copy
+    result = copy.deepcopy(data)
+    derived = derive_provides(result, fetch=fetch, cache=cache)
+    if derived:
+        result["provides"] = derived
+    else:
+        result.pop("provides", None)
+    return result
+
+
 def recalc_model_size(data: dict) -> dict:
     """
     重新计算模型级 size = 所有版本中所有文件 sizeBytes 的总和。

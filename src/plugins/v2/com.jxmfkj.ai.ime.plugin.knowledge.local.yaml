@@ -1,0 +1,29 @@
+id: com.jxmfkj.ai.ime.plugin.knowledge.local
+name: 本地知识库
+author: JamesGZM
+description: 在本机保存分组、条目和文档，并按文字提供检索
+type: remote
+tags:
+- 资料
+pluginType: context
+activation: multi
+minHostVersion: 3.3.3
+platforms:
+- android
+icon: 知
+provides:
+- id: knowledge.query
+  version: 1
+homepage: https://github.com/JamesGZM/MfkjImeHelper/tree/master/plugins/local-knowledge
+license: GPL-3.0
+appVersion: '>=3.3.3'
+currentVersion: 1.0.3
+versions:
+- version: 1.0.3
+  date: '2026-10-20'
+  changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
+  downloadUrl:
+  - url: https://github.com/JamesGZM/xime-index/releases/download/plugins-moki-2026-10-20/local-knowledge-1.0.3.xipk
+    size: 10.2 KB
+    sha256: 629793b30e4b24a390b5d5073d4867a374a89f9d4af1739b792cafe3cb279085
+    sizeBytes: 10420

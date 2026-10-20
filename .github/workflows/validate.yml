@@ -32,6 +32,9 @@ jobs:
       - name: Install uv
         run: pip install uv
 
+      - name: Test provides metadata
+        run: uv run python scripts/test_provides.py
+
       # ─── 1. 生成索引并校验结构 ──────────────────────
       - name: Generate index files and validate structure
         run: |

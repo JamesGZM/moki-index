@@ -1,15 +1,15 @@
 id: com.jxmfkj.ai.ime.plugin.kaomoji
 name: 颜文字表情包
 author: JamesGZM
-description: "包含 174 个常用颜文字的表情插件"
+description: 包含 174 个常用颜文字的表情插件
 type: remote
 tags:
 - 表情
 - 颜文字
 pluginType: emoji
-icon: "థ౪థ"
+icon: థ౪థ
 activation: multi
-minHostVersion: '3.0.0'
+minHostVersion: 3.3.0
 platforms:
 - android
 capabilities:
@@ -19,9 +19,17 @@ capabilities:
     itemHeightDp: 30
 homepage: https://github.com/JamesGZM/xime-index
 license: GPL-3.0
-appVersion: '>=3.0.0'
-currentVersion: 4.0.0
+appVersion: '>=3.3.0'
+currentVersion: 4.0.1
 versions:
+- version: 4.0.1
+  date: '2026-10-20'
+  changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
+  downloadUrl:
+  - url: https://github.com/JamesGZM/xime-index/releases/download/plugins-moki-2026-10-20/kaomoji-4.0.1.xipk
+    size: 3.0 KB
+    sha256: 903674688bb5595796ed72df3384324bbb9a56aa4fa162d02888f9fdae89a71a
+    sizeBytes: 3032
 - version: 4.0.0
   date: '2026-10-15'
   changelog: 改为 MfkjImeHelper 构建，插件 ID 与已装插件一致

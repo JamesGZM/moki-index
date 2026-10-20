@@ -1,15 +1,15 @@
 id: com.jxmfkj.ai.ime.plugin.volc_asr
 name: 火山引擎流式语音识别
 author: JamesGZM
-description: "火山方舟在线语音识别。使用火山引擎控制台获取的 App Key，可参考快速入门（https://console.volcengine.com/speech/new/setting/apikeys）"
+description: 火山方舟在线语音识别。使用火山引擎控制台获取的APP Key，可参考 快速入门（https://console.volcengine.com/speech/new/setting/apikeys?projectName=default）
 type: remote
 tags:
 - 语音
 - ASR
 pluginType: speech
-icon: "🎙️"
+icon: 🎙️
 activation: single
-minHostVersion: '3.0.0'
+minHostVersion: 3.3.0
 platforms:
 - android
 capabilities:
@@ -21,9 +21,17 @@ network:
   - openspeech.bytedance.com
 homepage: https://github.com/JamesGZM/xime-index
 license: GPL-3.0
-appVersion: '>=3.0.0'
-currentVersion: 3.0.1
+appVersion: '>=3.3.0'
+currentVersion: 3.0.2
 versions:
+- version: 3.0.2
+  date: '2026-10-20'
+  changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
+  downloadUrl:
+  - url: https://github.com/JamesGZM/xime-index/releases/download/plugins-moki-2026-10-20/volc-asr-3.0.2.xipk
+    size: 9.2 KB
+    sha256: f137940d79ea1ed086c9b615bf52f74659f5ea64f7d361295fe4178f30b521a8
+    sizeBytes: 9388
 - version: 3.0.1
   date: '2026-10-15'
   changelog: 改为 MfkjImeHelper 构建，插件 ID 与已装插件一致

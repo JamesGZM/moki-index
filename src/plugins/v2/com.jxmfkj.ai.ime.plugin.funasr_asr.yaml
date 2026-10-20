@@ -1,15 +1,15 @@
 id: com.jxmfkj.ai.ime.plugin.funasr_asr
 name: 阿里百炼 FunAsr
 author: JamesGZM
-description: "阿里百炼 FunAsr 在线语音识别，使用阿里云控制台获取的 API Key，可参考快速入门（https://www.aliyun.com/product/bailian）"
+description: 阿里百炼 FunAsr 在线语音识别，使用阿里云控制台获取的 API Key，可参考 快速入门（https://www.aliyun.com/product/bailian）
 type: remote
 tags:
 - 语音
 - ASR
 pluginType: speech
-icon: "🎤"
+icon: 🎤
 activation: single
-minHostVersion: '3.0.0'
+minHostVersion: 3.3.0
 platforms:
 - android
 capabilities:
@@ -21,9 +21,17 @@ network:
   - dashscope.aliyuncs.com
 homepage: https://github.com/JamesGZM/xime-index
 license: GPL-3.0
-appVersion: '>=3.0.0'
-currentVersion: 3.1.1
+appVersion: '>=3.3.0'
+currentVersion: 3.1.2
 versions:
+- version: 3.1.2
+  date: '2026-10-20'
+  changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
+  downloadUrl:
+  - url: https://github.com/JamesGZM/xime-index/releases/download/plugins-moki-2026-10-20/funasr-asr-3.1.2.xipk
+    size: 9.9 KB
+    sha256: 9fe455110017ba1fdaf5ca0347a86bb3d36826e50528f9f27aa2352580985634
+    sizeBytes: 10097
 - version: 3.1.1
   date: '2026-10-15'
   changelog: 改为 MfkjImeHelper 构建，插件 ID 与已装插件一致

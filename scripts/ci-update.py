@@ -19,6 +19,7 @@ from lib import (
     fill_download_urls, fill_archive, fill_files_checksums,
     recalc_model_size,
     should_skip_version,
+    apply_provides,
 )
 
 # ─── 源码目录 vs 输出目录 ────────────────────────────────
@@ -43,7 +44,7 @@ PLUGIN_FIELDS = [
 PLUGIN_V2_FIELDS = [
     "id", "name", "author", "description", "type",
     "tags", "pluginType", "icon", "activation",
-    "minHostVersion", "platforms", "capabilities", "network",
+    "minHostVersion", "platforms", "capabilities", "provides", "network",
     "homepage", "license",
     "appVersion", "warning", "currentVersion", "versions",
 ]
@@ -122,6 +123,8 @@ def update_source(src_subdir, out_subdir, key, fields, filler, header, index_ver
     out_dir = os.path.join(ROOT, out_subdir)
 
     entries = []
+    # 同一轮生成里按包 sha256 / url 复用已下载的 manifest，避免重复拉同一个 xipk。
+    manifest_cache = {}
     for fpath in sorted(glob.glob(os.path.join(src_dir, "*.yaml"))):
         basename = os.path.basename(fpath)
         data = load_yaml(fpath)
@@ -134,6 +137,9 @@ def update_source(src_subdir, out_subdir, key, fields, filler, header, index_ver
 
         print(f"  📄 src/{src_subdir}/{basename}")
         filled = filler(data)  # 只补全内存数据，不写回 src/
+        if "provides" in fields:
+            # 从源 YAML 或当前版本 xipk 的 manifest.provides 收成 id + version
+            filled = apply_provides(filled, cache=manifest_cache)
         entry = {f: filled[f] for f in fields if f in filled and filled[f] is not None}
         entries.append(entry)
 

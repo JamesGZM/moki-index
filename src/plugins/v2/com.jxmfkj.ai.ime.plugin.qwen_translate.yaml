@@ -1,16 +1,16 @@
 id: com.jxmfkj.ai.ime.plugin.qwen_translate
 name: 千问翻译
 author: JamesGZM
-description: "qwen-mt 专用翻译：翻译选中文本/输入框内容，结果替换原选区或光标处追加。基于阿里云百炼 qwen-mt 系列翻译模型。"
+description: qwen-mt 专用翻译：翻译选中文本/输入框内容，结果替换原选区或光标处追加。基于阿里云百炼 qwen-mt 系列翻译模型。
 type: remote
 tags:
 - AI
 - 翻译
 - 工具
 pluginType: tool
-icon: "译"
+icon: 译
 activation: multi
-minHostVersion: '3.0.0'
+minHostVersion: 3.3.17
 platforms:
 - android
 capabilities:
@@ -20,9 +20,17 @@ network:
   allowCustomHosts: true
 homepage: https://github.com/JamesGZM/xime-index
 license: GPL-3.0
-appVersion: '>=3.0.0'
-currentVersion: 1.0.0
+appVersion: '>=3.3.17'
+currentVersion: 1.0.3
 versions:
+- version: 1.0.3
+  date: '2026-10-20'
+  changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
+  downloadUrl:
+  - url: https://github.com/JamesGZM/xime-index/releases/download/plugins-moki-2026-10-20/qwen-translate-1.0.3.xipk
+    size: 2.9 KB
+    sha256: 97e3de830889b37bed7d4d266be223be49428956013ae05610e827a0fe6bb4c5
+    sizeBytes: 2997
 - version: 1.0.0
   date: '2026-10-15'
   changelog: 改为 MfkjImeHelper 构建，插件 ID 与已装插件一致

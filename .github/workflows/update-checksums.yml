@@ -15,6 +15,8 @@ on:
 jobs:
   update:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     # 避免 CI commit 触发无限循环
     if: github.actor != 'xime-bot[bot]'
     steps:

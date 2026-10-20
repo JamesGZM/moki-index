@@ -1,0 +1,33 @@
+id: com.jxmfkj.ai.ime.plugin.ximed_sync
+name: ximed 剪贴板同步
+author: JamesGZM
+description: 对接 ximed HTTP 接口的双向剪贴板同步（文本），需要安装 ximed 服务器端和 ximed 客户端(https://github.com/kingzcheung/ximed)
+type: remote
+tags:
+- 剪贴板
+pluginType: clipboard_sync
+activation: single
+minHostVersion: 3.3.0
+platforms:
+- android
+icon: 🔗
+capabilities:
+  clipboard_sync:
+    protocols:
+    - ximed
+network:
+  hosts: []
+  allowCustomHosts: true
+homepage: https://github.com/JamesGZM/MfkjImeHelper/tree/master/plugins/ximed-clipboard-sync
+license: GPL-3.0
+appVersion: '>=3.3.0'
+currentVersion: 1.0.2
+versions:
+- version: 1.0.2
+  date: '2026-10-20'
+  changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
+  downloadUrl:
+  - url: https://github.com/JamesGZM/xime-index/releases/download/plugins-moki-2026-10-20/ximed-clipboard-sync-1.0.2.xipk
+    size: 2.5 KB
+    sha256: 34f72eddc6d3414d8137a985a2ae17dd448f2122c9d5cacb10985efe34727967
+    sizeBytes: 2518

@@ -1,0 +1,34 @@
+id: com.jxmfkj.ai.ime.plugin.s3_clipboard_sync
+name: S3 剪贴板同步
+author: JamesGZM
+description: 通过 S3 兼容对象存储（Cloudflare R2 / AWS S3 / MinIO 等）同步剪贴板文本与图片，多设备共享。
+type: remote
+tags:
+- 剪贴板
+pluginType: clipboard_sync
+activation: single
+minHostVersion: 3.3.0
+platforms:
+- android
+icon: 🪣
+capabilities:
+  clipboard_sync:
+    protocols:
+    - s3
+    attachments: true
+network:
+  hosts: []
+  allowCustomHosts: true
+homepage: https://github.com/JamesGZM/MfkjImeHelper/tree/master/plugins/s3-clipboard-sync
+license: GPL-3.0
+appVersion: '>=3.3.0'
+currentVersion: 1.0.1
+versions:
+- version: 1.0.1
+  date: '2026-10-20'
+  changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
+  downloadUrl:
+  - url: https://github.com/JamesGZM/xime-index/releases/download/plugins-moki-2026-10-20/s3-clipboard-sync-1.0.1.xipk
+    size: 6.9 KB
+    sha256: 07787e91ef8cd02da203e21553b1e858308b9f208116b8046374c19e8c0b7a5f
+    sizeBytes: 7026

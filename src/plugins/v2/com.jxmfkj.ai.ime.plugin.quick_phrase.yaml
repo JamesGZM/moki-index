@@ -1,15 +1,16 @@
 id: com.jxmfkj.ai.ime.plugin.quick_phrase
 name: 常用语
 author: JamesGZM
-description: "把常用语联想进候选栏：读取宿主快捷发送库（设置里的快捷短语，含触发编码），输入时内容命中跟随该候选，编码命中放第二候选位，点选即上屏。数据经 host.quickSend.list() 读取。"
+description: 把常用语联想进候选栏：读取宿主快捷发送库（设置里的快捷短语，含触发编码），输入时内容命中（条目以候选词开头）跟随该候选，编码命中（输入为
+  code 前缀）放第二候选位，点选即上屏。数据经 host.quickSend.list() 读取，变更经 quick_send_changed 事件刷新。
 type: remote
 tags:
 - 候选
 - 常用语
 pluginType: tool
-icon: "语"
+icon: 语
 activation: multi
-minHostVersion: '3.0.0'
+minHostVersion: 3.3.0
 platforms:
 - android
 capabilities:
@@ -19,9 +20,17 @@ capabilities:
   - quick_send_changed
 homepage: https://github.com/JamesGZM/xime-index
 license: GPL-3.0
-appVersion: '>=3.0.0'
-currentVersion: 1.0.0
+appVersion: '>=3.3.0'
+currentVersion: 1.0.1
 versions:
+- version: 1.0.1
+  date: '2026-10-20'
+  changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
+  downloadUrl:
+  - url: https://github.com/JamesGZM/xime-index/releases/download/plugins-moki-2026-10-20/quick-phrase-1.0.1.xipk
+    size: 1.5 KB
+    sha256: 097d4df3b834c372c4823f87e19a7b800261a70166883301c15e01279dad7141
+    sizeBytes: 1564
 - version: 1.0.0
   date: '2026-10-15'
   changelog: 改为 MfkjImeHelper 构建，插件 ID 与已装插件一致

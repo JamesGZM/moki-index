@@ -1,0 +1,31 @@
+id: com.jxmfkj.ai.ime.plugin.ai_writing
+name: AI 写作
+author: JamesGZM
+description: 输入草稿或写作要求，生成三条候选并查看参考资料，点选填入，支持 OpenAI 兼容接口。
+type: remote
+tags:
+- 工具
+pluginType: tool
+activation: multi
+minHostVersion: 3.3.15
+platforms:
+- android
+icon: 写
+capabilities:
+  tool:
+    display: passive
+network:
+  allowCustomHosts: true
+homepage: https://github.com/JamesGZM/MfkjImeHelper/tree/master/plugins/ai-writing
+license: GPL-3.0
+appVersion: '>=3.3.15'
+currentVersion: 1.0.3
+versions:
+- version: 1.0.3
+  date: '2026-10-20'
+  changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
+  downloadUrl:
+  - url: https://github.com/JamesGZM/xime-index/releases/download/plugins-moki-2026-10-20/ai-writing-1.0.3.xipk
+    size: 5.8 KB
+    sha256: 784142425930c67d0b1164f48539244f93d19740f0392c68338377168519ca3d
+    sizeBytes: 5937

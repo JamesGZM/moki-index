@@ -114,7 +114,7 @@ author: Xime
 description: "插件说明"
 type: remote                     # 下载类型，固定 remote
 tags: [工具]
-pluginType: tool                 # 与插件 manifest 的 type 一致：tool/speech/emoji/backup/clipboard_sync/jev...
+pluginType: tool                 # 商店分类。通常与 manifest type 一致；context 例外，见下方
 icon: "我"                        # manifest.icon：字符图标或 resources 下的图片名
 activation: multi                # manifest.activation：single / multi
 minHostVersion: '3.0.0'          # manifest.minHostVersion
@@ -139,7 +139,20 @@ versions:
 ```
 
 > `plugins/v2/index.yaml` 的 `index_version` 为 `2`，条目是旧扁平结构的超集，
-> 追加 `icon` / `activation` / `minHostVersion` / `platforms` / `capabilities` / `network`。
+> 追加 `icon` / `activation` / `minHostVersion` / `platforms` / `capabilities` / `provides` / `network`。
+
+`provides` 不用在源文件里手写完整清单。生成索引时：
+
+- 源文件如果写了 `provides`（可以是 manifest 里的完整对象），只保留每项的 `id` 和 `version`；
+- 源文件没有该字段时，从当前版本 `.xipk` 内的 `manifest.json` 自动读取；
+- manifest 没有 `provides`，或包暂时读不到，就省略这个字段。旧索引因此仍然有效。
+
+`pluginType` 是商店分类，不是宿主运行时分类：
+
+| 值 | 商店显示 | 说明 |
+| --- | --- | --- |
+| `tool` / `speech` / `emoji` / `ocr` / `jev` / `prediction` / `clipboard_sync` / `backup` | 与宿主里对应分类相同 | 一般等于 manifest 的 `type` |
+| `context` | 资料 | 知识库、会话配置等资料插件。只写在商店索引里，不改变 manifest 的 `type`，也不是宿主运行时分类。 |
 
 ### 步骤 2：生成索引
 

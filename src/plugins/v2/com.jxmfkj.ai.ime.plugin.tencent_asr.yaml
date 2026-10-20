@@ -1,0 +1,34 @@
+id: com.jxmfkj.ai.ime.plugin.tencent_asr
+name: 腾讯云实时语音识别
+author: JamesGZM
+description: 腾讯云实时语音识别 V2（WebSocket），支持中英粤及 30 种方言、说话人分离。需在腾讯云控制台开通语音识别服务，并在 API 密钥管理页获取
+  AppID / SecretId / SecretKey。
+type: remote
+tags:
+- 语音
+pluginType: speech
+activation: single
+minHostVersion: 3.3.0
+platforms:
+- android
+icon: 🎙️
+capabilities:
+  speech:
+    inputMode: streaming
+    supportsPartialResults: true
+network:
+  hosts:
+  - asr.cloud.tencent.com
+homepage: https://github.com/JamesGZM/MfkjImeHelper/tree/master/plugins/tencent-asr
+license: GPL-3.0
+appVersion: '>=3.3.0'
+currentVersion: 2.0.2
+versions:
+- version: 2.0.2
+  date: '2026-10-20'
+  changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
+  downloadUrl:
+  - url: https://github.com/JamesGZM/xime-index/releases/download/plugins-moki-2026-10-20/tencent-asr-2.0.2.xipk
+    size: 11.8 KB
+    sha256: 1fe8fd10fd945961a09ea82a34110b1107f3699297d15d00d4a2409573cbbad3
+    sizeBytes: 12113
