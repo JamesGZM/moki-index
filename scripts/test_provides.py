@@ -36,7 +36,7 @@ def check_index_generation():
                 "id": pid, "name": pid, "pluginType": "context", "currentVersion": "2.0.0",
                 "versions": [
                     {"version": "1.0.0", "downloadUrl": [{"url": "https://example.invalid/old.xipk"}]},
-                    {"version": "2.0.0", "downloadUrl": [{"url": "https://example.invalid/new.xipk"}]},
+                    {"version": "2.0.0", "downloadUrl": [{"url": "https://example.invalid/new.mopk"}]},
                 ],
             }
             path = src / (pid + ".yaml")
@@ -49,7 +49,7 @@ def check_index_generation():
         ):
             ci.update_source("plugins/v2", "plugins/v2", "plugins", ci.PLUGIN_V2_FIELDS,
                              lambda data: data, ci.HEADERS["plugins/v2"], index_version=2)
-        fetch.assert_called_once_with("https://example.invalid/new.xipk")
+        fetch.assert_called_once_with("https://example.invalid/new.mopk")
         index = yaml.safe_load((root / "plugins/v2/index.yaml").read_text(encoding="utf-8"))
         assert index["index_version"] == 2
         assert len(index["plugins"]) == 2

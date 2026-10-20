@@ -215,7 +215,7 @@ def provides_from_zip_bytes(blob: bytes):
 
 
 def current_xipk_download(data: dict):
-    """当前版本里第一个 .xipk 下载项。没有时返回 None。"""
+    """当前版本里第一个 .mopk 或历史 .xipk 下载项。没有时返回 None。"""
     current = str(data.get("currentVersion") or "")
     versions = data.get("versions") or []
     chosen = next((item for item in versions if str(item.get("version")) == current), None)
@@ -227,7 +227,7 @@ def current_xipk_download(data: dict):
         if not isinstance(download, dict):
             continue
         url = download.get("url") or ""
-        if str(url).endswith(".xipk"):
+        if str(url).lower().endswith((".mopk", ".xipk")):
             return download
     return None
 

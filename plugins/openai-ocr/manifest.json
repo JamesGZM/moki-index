@@ -11,7 +11,7 @@
   "description": "调用 OpenAI 兼容接口，识别图片中的文字。",
 
   // 插件版本
-  "version": "1.0.0",
+  "version": "0.0.1",
 
   // 插件分类：ocr 文字识别（单选）
   "type": "ocr",
@@ -24,7 +24,7 @@
   "platforms": ["android"],
 
   // 宿主最低版本（文字识别插件类型）
-  "minHostVersion": "3.2.0",
+  "minHostVersion": "0.0.1",
 
   // 网络访问：用户填写的接口域名自动获得联网授权，不预置服务商
   "network": {
