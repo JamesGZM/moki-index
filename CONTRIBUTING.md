@@ -8,7 +8,7 @@
 src/                          # 所有条目的源文件（每个条目一个独立 YAML）
 ├── rimes/                    #   输入方案源文件
 ├── plugins/v1/               #   旧版插件源文件归档（Lua/DEX）
-├── plugins/v2/               #   v2 插件源文件（JS/QuickJS，宿主 >=3.0.0）
+├── plugins/v2/               #   v2 插件源文件（JS/QuickJS）
 ├── models/                   #   AI 模型源文件
 └── layouts/                  #   键盘布局源文件
 
@@ -96,9 +96,9 @@ python scripts/ci-update.py
 
 `plugins/index.yaml` 会自动更新。
 
-## 上架 v2 插件（JS/QuickJS，宿主 >=3.0.0）
+## 上架 v2 插件（JS/QuickJS）
 
-v2 插件是 TypeScript/QuickJS 形态：源码为 `manifest.json` + `main.ts`（由 `xipm pack` 产出 `.xipk`，
+v2 插件是 TypeScript/QuickJS 形态：源码为 `manifest.json` + `main.ts`（由 `mopm pack` 产出 `.mopk`，
 包内含 `manifest.json` + 编译产物 `main.js` + `resources/`）。它们使用独立索引
 `plugins/v2/index.yaml`（源文件放在 `src/plugins/v2/`），旧版 App 不受影响。
 
@@ -108,32 +108,32 @@ v2 插件是 TypeScript/QuickJS 形态：源码为 `manifest.json` + `main.ts`�
 
 ```yaml
 # src/plugins/v2/my-plugin.yaml
-id: com.example.xime.plugin.my_plugin
+id: com.example.moki.plugin.my_plugin
 name: 我的插件
-author: Xime
+author: Moki
 description: "插件说明"
 type: remote                     # 下载类型，固定 remote
 tags: [工具]
 pluginType: tool                 # 商店分类。通常与 manifest type 一致；context 例外，见下方
 icon: "我"                        # manifest.icon：字符图标或 resources 下的图片名
 activation: multi                # manifest.activation：single / multi
-minHostVersion: '3.0.0'          # manifest.minHostVersion
+minHostVersion: '0.0.1'          # manifest.minHostVersion
 platforms: [android]             # manifest.platforms
 capabilities:                    # 原样取自 manifest.capabilities
   tool:
     display: passive
 network:                         # 原样取自 manifest.network（可省略）
   allowCustomHosts: true
-homepage: https://github.com/ximeiorg/Xime
+homepage: https://github.com/JamesGZM/Moki
 license: GPL-3.0
-appVersion: '>=3.0.0'            # 与 minHostVersion 对应，供 App 兼容性判定
-currentVersion: 1.0.0
+appVersion: '>=0.0.1'            # 与 minHostVersion 对应，供 App 兼容性判定
+currentVersion: 0.0.1
 versions:
-  - version: 1.0.0
-    date: '2026-09-24'
-    changelog: v3 重构：TypeScript/QuickJS 插件
+  - version: 0.0.1
+    date: '2026-10-20'
+    changelog: 初始发布
     downloadUrl:
-      - url: https://github.com/ximeiorg/Xime/releases/download/v3.0.0-beta1/my-plugin-1.0.0.xipk
+      - url: https://example.com/releases/v0.0.1/my-plugin-0.0.1.mopk
         sha256: ""               # 可留空，CI 自动补全
         size: ""                 # 可留空，CI 自动补全
 ```
@@ -144,7 +144,7 @@ versions:
 `provides` 不用在源文件里手写完整清单。生成索引时：
 
 - 源文件如果写了 `provides`（可以是 manifest 里的完整对象），只保留每项的 `id` 和 `version`；
-- 源文件没有该字段时，从当前版本 `.xipk` 内的 `manifest.json` 自动读取；
+- 源文件没有该字段时，从当前版本插件包内的 `manifest.json` 自动读取；
 - manifest 没有 `provides`，或包暂时读不到，就省略这个字段。旧索引因此仍然有效。
 
 `pluginType` 是商店分类，不是宿主运行时分类：
@@ -303,7 +303,7 @@ python scripts/ci-update.py
 |------|------|------|
 | 方案 | .zip / .tar.gz | 包含 .schema.yaml + .dict.yaml |
 | 插件（旧版） | .xipk | Lua/DEX 插件，兼容旧版 App |
-| 插件 v2 | .xipk | `manifest.json` + 编译产物 `main.js`（`xipm pack` 产物），宿主 >=3.0.0 |
+| 插件 v2 | .mopk | `manifest.json` + 编译产物 `main.js`（`mopm pack` 产物），Moki 宿主 >=0.0.1 |
 | 布局 | xime.custom.yaml 或 .zip | 纯文本直接给 yaml；含 themes/fonts 资源时打 zip（根级 xime.custom.yaml） |
 
 ## 下载地址

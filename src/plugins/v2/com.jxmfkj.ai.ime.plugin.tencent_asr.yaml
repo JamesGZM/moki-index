@@ -19,7 +19,7 @@ capabilities:
 network:
   hosts:
   - asr.cloud.tencent.com
-homepage: https://github.com/JamesGZM/MfkjImeHelper/tree/master/plugins/tencent-asr
+homepage: https://github.com/JamesGZM/Moki/tree/master/plugins/tencent-asr
 license: GPL-3.0
 appVersion: '>=3.3.0'
 currentVersion: 2.0.2
@@ -28,7 +28,7 @@ versions:
   date: '2026-10-20'
   changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
   downloadUrl:
-  - url: https://github.com/JamesGZM/xime-index/releases/download/plugins-moki-2026-10-20/tencent-asr-2.0.2.xipk
+  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-2026-10-20/tencent-asr-2.0.2.xipk
     size: 11.8 KB
     sha256: 1fe8fd10fd945961a09ea82a34110b1107f3699297d15d00d4a2409573cbbad3
     sizeBytes: 12113

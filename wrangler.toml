@@ -1,3 +1,4 @@
+# 现有 Cloudflare 服务标识，保留以更新同一个 Worker 与域名。
 name = "xime-index"
 main = "src/index.js"
 compatibility_date = "2026-06-04"
@@ -8,4 +9,4 @@ routes = [{ pattern = "index.ailaogong.men", custom_domain = true }]
 # dev 模式与默认基地址都指向本 fork 的 raw
 [vars]
 ENV = "dev"
-GITHUB_RAW_URL = "https://raw.githubusercontent.com/JamesGZM/xime-index/main"
+GITHUB_RAW_URL = "https://raw.githubusercontent.com/JamesGZM/moki-index/main"

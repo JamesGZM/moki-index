@@ -19,7 +19,7 @@ capabilities:
 network:
   hosts: []
   allowCustomHosts: true
-homepage: https://github.com/JamesGZM/xime-index
+homepage: https://github.com/JamesGZM/moki-index
 license: GPL-3.0
 appVersion: '>=3.3.0'
 currentVersion: 3.0.1
@@ -28,7 +28,7 @@ versions:
   date: '2026-10-20'
   changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
   downloadUrl:
-  - url: https://github.com/JamesGZM/xime-index/releases/download/plugins-moki-2026-10-20/webdav-backup-3.0.1.xipk
+  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-2026-10-20/webdav-backup-3.0.1.xipk
     size: 3.7 KB
     sha256: 0cc4221d36567a4aa73121a1552748b50f437bfd821f6c11aa007698edcaa2bf
     sizeBytes: 3828
@@ -36,7 +36,7 @@ versions:
   date: '2026-10-15'
   changelog: 改为 MfkjImeHelper 构建，插件 ID 与已装插件一致
   downloadUrl:
-  - url: https://github.com/JamesGZM/xime-index/releases/download/plugins-jxmfkj-2026-10-15/webdav-backup-3.0.0.xipk
+  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-jxmfkj-2026-10-15/webdav-backup-3.0.0.xipk
     size: 3.7 KB
     sha256: 7295267803738039bca3ff34774464f72bdc9c7542b750b7f8d1af574a2076a9
     sizeBytes: 3828

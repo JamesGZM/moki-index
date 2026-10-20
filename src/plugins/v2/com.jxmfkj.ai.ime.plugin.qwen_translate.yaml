@@ -18,7 +18,7 @@ capabilities:
     display: direct
 network:
   allowCustomHosts: true
-homepage: https://github.com/JamesGZM/xime-index
+homepage: https://github.com/JamesGZM/moki-index
 license: GPL-3.0
 appVersion: '>=3.3.17'
 currentVersion: 1.0.3
@@ -27,7 +27,7 @@ versions:
   date: '2026-10-20'
   changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
   downloadUrl:
-  - url: https://github.com/JamesGZM/xime-index/releases/download/plugins-moki-2026-10-20/qwen-translate-1.0.3.xipk
+  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-2026-10-20/qwen-translate-1.0.3.xipk
     size: 2.9 KB
     sha256: 97e3de830889b37bed7d4d266be223be49428956013ae05610e827a0fe6bb4c5
     sizeBytes: 2997
@@ -35,7 +35,7 @@ versions:
   date: '2026-10-15'
   changelog: 改为 MfkjImeHelper 构建，插件 ID 与已装插件一致
   downloadUrl:
-  - url: https://github.com/JamesGZM/xime-index/releases/download/plugins-jxmfkj-2026-10-15/qwen-translate-1.0.0.xipk
+  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-jxmfkj-2026-10-15/qwen-translate-1.0.0.xipk
     size: 2.6 KB
     sha256: c01620db5820eaf6667f8a3bf1befc54123baef54568ec65d1e04f091c2ec63b
     sizeBytes: 2635

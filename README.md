@@ -1,6 +1,6 @@
-# Xime Index
+# Moki Index
 
-Xime 输入法的插件、方案、模型与键盘布局市场索引。
+Moki 输入法的插件、方案、模型与键盘布局市场索引。
 
 ## 目录结构
 
@@ -130,13 +130,11 @@ python scripts/ci-update.py --check
 python scripts/build_dist.py
 ```
 
-推送到 `main` 分支时 CI 会自动生成索引、组装 `dist/` 并部署到 Cloudflare Pages，无需手动操作。
+线上 `https://index.ailaogong.men/` 由 Cloudflare Worker 代理本仓 `main` 分支的 YAML。修改并推送索引后，内容会随 GitHub raw 更新；响应的缓存期限为 600 秒。修改 Worker 源码或 `wrangler.toml` 时，由 [部署工作流](.github/workflows/deploy.yml) 发布 Worker。
 
-> **首次启用 Pages** 需在 Cloudflare 创建项目 `xime-index`：
-> `npx wrangler@3.90.0 pages project create xime-index --production-branch=main`。
-> 然后把对外域名（如 `index.ximei.me`）绑定到该 Pages 项目；若该域名此前绑定在 Worker 上，需先解除 Worker 的路由，避免冲突。
+现有 Cloudflare Worker 的部署名称仍为 `xime-index`，用于更新同一个服务与自定义域名；GitHub 仓库及公开品牌为 `moki-index` / Moki。
 
-详见 [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)。
+Moki 新插件格式为 `.mopk`，CLI 为 `mopm`，SDK 为 `1.0.0`，最低宿主为 `0.0.1`。本仓已有版本记录仍对应真实发布的旧 `.xipk` 文件；新包上传前不改写其文件名、版本、校验值或兼容要求。
 
 ## 上架
 

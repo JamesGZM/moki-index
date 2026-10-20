@@ -89,7 +89,7 @@ fonts/*.(ttf|otf)             # 可选 → 部署到 rime/fonts/
 ## 六、上架流程
 
 1. 在自己的仓库准备好 `xime.custom.yaml`（或 zip 包 + 资源）与截图，发布到固定 URL。
-2. 在 `xime-index` 新建 `src/layouts/<id>.yaml`（见「一、索引结构」）。
+2. 在 `moki-index` 新建 `src/layouts/<id>.yaml`（见「一、索引结构」）。
 3. 本地运行 `python scripts/ci-update.py` 生成 `layouts/index.yaml` 并补全 `sha256`/`size`。
 4. 提交 PR；CI 会校验结构、字段合法性与下载链接可达性。
 5. 维护者核对 License、截图与内容后再合并。

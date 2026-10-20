@@ -1,5 +1,5 @@
 def main():
-    print("Hello from xime-index!")
+    print("Hello from moki-index!")
 
 
 if __name__ == "__main__":

@@ -12,7 +12,7 @@ import yaml
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SKIP_VERSIONS = {"master", "main"}
-USER_AGENT = "Xime-Index-Checksum/1.0"
+USER_AGENT = "Moki-Index-Checksum/1.0"
 
 
 def human_size(bytes_val: int) -> str:

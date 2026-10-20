@@ -18,7 +18,7 @@ capabilities:
     display: direct
 network:
   allowCustomHosts: true
-homepage: https://github.com/JamesGZM/xime-index
+homepage: https://github.com/JamesGZM/moki-index
 license: GPL-3.0
 appVersion: '>=3.3.17'
 currentVersion: 1.2.4
@@ -27,7 +27,7 @@ versions:
   date: '2026-10-20'
   changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
   downloadUrl:
-  - url: https://github.com/JamesGZM/xime-index/releases/download/plugins-moki-2026-10-20/ai-write-1.2.4.xipk
+  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-2026-10-20/ai-write-1.2.4.xipk
     size: 2.9 KB
     sha256: b43d71c03a5470f22c3f1f0ba7820ce1c8ecb6ddf0e33642cb8b0182851441a4
     sizeBytes: 2987
@@ -35,7 +35,7 @@ versions:
   date: '2026-10-15'
   changelog: 改为 MfkjImeHelper 构建，插件 ID 与已装插件一致
   downloadUrl:
-  - url: https://github.com/JamesGZM/xime-index/releases/download/plugins-jxmfkj-2026-10-15/ai-write-1.0.0.xipk
+  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-jxmfkj-2026-10-15/ai-write-1.0.0.xipk
     size: 2.6 KB
     sha256: 548d4b3f59b9ff7f1fe8de8a3dac033a87d03984c79f62405548d443f02e7395
     sizeBytes: 2673

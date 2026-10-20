@@ -19,7 +19,7 @@ capabilities:
 network:
   hosts:
   - openspeech.bytedance.com
-homepage: https://github.com/JamesGZM/xime-index
+homepage: https://github.com/JamesGZM/moki-index
 license: GPL-3.0
 appVersion: '>=3.3.0'
 currentVersion: 3.0.2
@@ -28,7 +28,7 @@ versions:
   date: '2026-10-20'
   changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
   downloadUrl:
-  - url: https://github.com/JamesGZM/xime-index/releases/download/plugins-moki-2026-10-20/volc-asr-3.0.2.xipk
+  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-2026-10-20/volc-asr-3.0.2.xipk
     size: 9.2 KB
     sha256: f137940d79ea1ed086c9b615bf52f74659f5ea64f7d361295fe4178f30b521a8
     sizeBytes: 9388
@@ -36,7 +36,7 @@ versions:
   date: '2026-10-15'
   changelog: 改为 MfkjImeHelper 构建，插件 ID 与已装插件一致
   downloadUrl:
-  - url: https://github.com/JamesGZM/xime-index/releases/download/plugins-jxmfkj-2026-10-15/volc-asr-3.0.1.xipk
+  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-jxmfkj-2026-10-15/volc-asr-3.0.1.xipk
     size: 8.9 KB
     sha256: 4e6f8631bb9806c6e41ef665a215fdc0a33015e12157fecc674ec06abe843b8e
     sizeBytes: 9103

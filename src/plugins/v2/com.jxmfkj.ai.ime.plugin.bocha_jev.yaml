@@ -26,7 +26,7 @@ versions:
   date: '2026-10-15'
   changelog: 改为 JS 脚本插件。宿主传入 state 与 questions，脚本使用用户填写的 API Key 请求博查 systemone。
   downloadUrl:
-  - url: https://github.com/JamesGZM/xime-index/releases/download/plugins-jxmfkj-2026-10-15/bocha-jev-1.1.0.xipk
+  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-jxmfkj-2026-10-15/bocha-jev-1.1.0.xipk
     size: 2.3 KB
     sha256: e2a0a1df2598e7b214b609bbcac2b57c9e481eadf811e6e1b2f30f16a2d0b9fe
     sizeBytes: 2306

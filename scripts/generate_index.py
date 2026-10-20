@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Xime Index 生成器
+Moki Index 生成器
 扫描 rimes/*.yaml 和 plugins/*.yaml，读取完整数据，
 生成包含全部字段的内联索引文件。
 
@@ -107,19 +107,19 @@ def collect_entries(subdir, fields, src_subdir=None):
 
 HEADERS = {
     "rimes": (
-        "# Xime 输入方案子索引\n"
+        "# Moki 输入方案子索引\n"
         "# ⚠️ 此文件由 scripts/generate_index.py 自动生成，请勿手动编辑\n"
     ),
     "plugins": (
-        "# Xime 插件子索引\n"
+        "# Moki 插件子索引\n"
         "# ⚠️ 此文件由 scripts/generate_index.py 自动生成，请勿手动编辑\n"
     ),
     "models": (
-        "# Xime 模型子索引\n"
+        "# Moki 模型子索引\n"
         "# ⚠️ 此文件由 scripts/generate_index.py 自动生成，请勿手动编辑\n"
     ),
     "layouts": (
-        "# Xime 键盘布局子索引\n"
+        "# Moki 键盘布局子索引\n"
         "# ⚠️ 此文件由 scripts/generate_index.py 自动生成，请勿手动编辑\n"
     ),
 }

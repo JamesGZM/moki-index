@@ -1,10 +1,10 @@
 /**
- * Xime Index Worker
+ * Moki Index Worker
  * 代理 GitHub raw 文件，添加正确的 Content-Type 和 CORS 头
  */
 
 // 生产环境默认的 GitHub raw 基地址
-const DEFAULT_GITHUB_RAW = "https://raw.githubusercontent.com/JamesGZM/xime-index/main";
+const DEFAULT_GITHUB_RAW = "https://raw.githubusercontent.com/JamesGZM/moki-index/main";
 
 export default {
   async fetch(request, env, ctx) {

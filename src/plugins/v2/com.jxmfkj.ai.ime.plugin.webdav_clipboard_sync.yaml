@@ -20,7 +20,7 @@ capabilities:
 network:
   hosts: []
   allowCustomHosts: true
-homepage: https://github.com/JamesGZM/xime-index
+homepage: https://github.com/JamesGZM/moki-index
 license: GPL-3.0
 appVersion: '>=3.3.0'
 currentVersion: 1.1.1
@@ -29,7 +29,7 @@ versions:
   date: '2026-10-20'
   changelog: '同步已合入 MfkjImeHelper 主线的插件版本（PR #37–#43），按清单声明宿主最低版本与接口。'
   downloadUrl:
-  - url: https://github.com/JamesGZM/xime-index/releases/download/plugins-moki-2026-10-20/webdav-clipboard-sync-1.1.1.xipk
+  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-2026-10-20/webdav-clipboard-sync-1.1.1.xipk
     size: 4.2 KB
     sha256: a07e695747eba432ff1bda1f99fc6ff26d332f7650a98699fbf1af88ec016582
     sizeBytes: 4276
@@ -37,7 +37,7 @@ versions:
   date: '2026-10-15'
   changelog: 改为 MfkjImeHelper 构建，插件 ID 与已装插件一致
   downloadUrl:
-  - url: https://github.com/JamesGZM/xime-index/releases/download/plugins-jxmfkj-2026-10-15/webdav-clipboard-sync-1.1.0.xipk
+  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-jxmfkj-2026-10-15/webdav-clipboard-sync-1.1.0.xipk
     size: 4.1 KB
     sha256: a9aec1af1fbecb865b250cc2bb212065e53ba0bcd192de4a01588a028d87d3b6
     sizeBytes: 4171
