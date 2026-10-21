@@ -1,7 +1,7 @@
 # Moki 输入方案子索引
 # ⚠️ 此文件由 scripts/ci-update.py 自动生成，请勿手动编辑
 index_version: 1
-updated_at: '2026-10-20'
+updated_at: '2026-10-21'
 schemas:
 - id: builtin
   name: 默认方案
@@ -12,7 +12,7 @@ schemas:
   - 五笔
   - 拼音
   homepage: https://github.com/kingzcheung/rime-wubi
-  appVersion: '>=2.6.0'
+  appVersion: '>=0.0.1'
   currentVersion: 2.1.2
   versions:
   - version: 2.1.2
@@ -51,7 +51,7 @@ schemas:
   - luna_pinyin
   - symbols
   - essay
-  appVersion: '>=2.3.0'
+  appVersion: '>=0.0.1'
   currentVersion: master
   versions:
   - version: master
@@ -72,7 +72,7 @@ schemas:
   homepage: https://github.com/rime/rime-luna-pinyin
   license: GPL-3.0
   dependencies: []
-  appVersion: '>=2.3.0'
+  appVersion: '>=0.0.1'
   currentVersion: master
   versions:
   - version: master
@@ -94,7 +94,7 @@ schemas:
   - luna_pinyin
   - cangjie
   - essay
-  appVersion: '>=2.3.0'
+  appVersion: '>=0.0.1'
   currentVersion: master
   versions:
   - version: master
@@ -113,7 +113,7 @@ schemas:
   - 拼音
   - 双拼
   homepage: https://github.com/gaboolic/rime-frost
-  appVersion: '>=2.3.0'
+  appVersion: '>=0.0.1'
   currentVersion: 1.0.4
   versions:
   - version: 1.0.4
@@ -132,7 +132,7 @@ schemas:
   - 拼音
   - 双拼
   homepage: https://github.com/iDvel/rime-ice
-  appVersion: '>=2.3.0'
+  appVersion: '>=0.0.1'
   currentVersion: 2026.06.30
   versions:
   - version: 2026.06.30
@@ -160,7 +160,7 @@ schemas:
   - 拼音
   - 双拼
   homepage: https://github.com/amzxyz/rime-wanxiang
-  appVersion: '>=2.4.0'
+  appVersion: '>=0.0.1'
   currentVersion: v17.9.6
   versions:
   - version: v17.9.6
@@ -184,7 +184,7 @@ schemas:
   homepage: https://github.com/ximeiorg/rime-stroke
   dependencies:
   - luna_pinyin
-  appVersion: '>=2.5.0'
+  appVersion: '>=0.0.1'
   currentVersion: 0.2.0
   versions:
   - version: 0.2.0
@@ -206,7 +206,7 @@ schemas:
   - 繁体
   homepage: https://github.com/cz-archive/rime-wubi98
   license: GPL-3.0
-  appVersion: '>=2.3.0'
+  appVersion: '>=0.0.1'
   currentVersion: 1.0.0
   versions:
   - version: 1.0.0
@@ -227,7 +227,7 @@ schemas:
   - 形码
   - 拼音
   homepage: https://github.com/aizigao/Xime_wubi_xinshiji
-  appVersion: '>=2.8.0'
+  appVersion: '>=0.0.1'
   currentVersion: 2.3.1
   versions:
   - version: 2.3.1
@@ -257,7 +257,7 @@ schemas:
   - 简繁
   homepage: https://github.com/hzqim/xqzm
   dependencies: []
-  appVersion: '>=2.6.0'
+  appVersion: '>=0.0.1'
   currentVersion: zm-6.4.2
   versions:
   - version: zm-6.4.2
@@ -279,7 +279,7 @@ schemas:
   - 简繁
   homepage: https://github.com/chen32768/zhengma_for_rime
   dependencies: []
-  appVersion: '>=2.3.0'
+  appVersion: '>=0.0.1'
   currentVersion: master
   versions:
   - version: master

@@ -9,7 +9,7 @@ tags:
 - 繁体
 homepage: https://github.com/cz-archive/rime-wubi98
 license: GPL-3.0
-appVersion: '>=2.3.0'
+appVersion: ">=0.0.1"
 currentVersion: 1.0.0
 versions:
 - version: 1.0.0

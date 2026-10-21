@@ -8,7 +8,7 @@ tags:
   - 多主题
 repo: https://github.com/tiengming/xime_flypy_proxy
 license: GPL-3.0
-appVersion: ">=3.0.0"
+appVersion: ">=0.0.1"
 requiresSchemes: []
 screenshots:
   - https://cdn.jsdelivr.net/gh/tiengming/xime_flypy_proxy@xime_flypy_proxy-v1.0.1/images/img1.jpg

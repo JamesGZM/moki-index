@@ -5,9 +5,11 @@ on:
     paths:
       - "index.yaml"
       - "rimes/**"
+      - "src/rimes/**"
       - "plugins/**"
       - "models/**"
       - "layouts/**"
+      - "src/layouts/**"
       - "scripts/**"
       - ".github/workflows/**"
       - "pyproject.toml"
@@ -16,9 +18,11 @@ on:
     paths:
       - "index.yaml"
       - "rimes/**"
+      - "src/rimes/**"
       - "plugins/**"
       - "models/**"
       - "layouts/**"
+      - "src/layouts/**"
       - "scripts/**"
       - ".github/workflows/**"
       - "pyproject.toml"
@@ -34,6 +38,9 @@ jobs:
 
       - name: Test provides metadata
         run: uv run python scripts/test_provides.py
+
+      - name: Test Moki resource version requirements
+        run: uv run python scripts/test_resource_versions.py
 
       # ─── 1. 生成索引并校验结构 ──────────────────────
       - name: Generate index files and validate structure

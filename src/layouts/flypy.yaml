@@ -7,7 +7,7 @@ tags:
   - 全键盘
 repo: https://github.com/cz-archive/flypy
 license: GPL-3.0
-appVersion: ">=3.0.0"
+appVersion: ">=0.0.1"
 requiresSchemes: []
 # 截图：仅详情页展示（1~5 张）
 screenshots:

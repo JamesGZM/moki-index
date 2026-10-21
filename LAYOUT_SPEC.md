@@ -21,7 +21,7 @@ tags: [布局]                   # 布局 | 配色 | 快捷键 | 输入法适配
 repo: https://github.com/you/my-layout   # 作者仓库（内容来源）
 homepage: https://...          # 可选
 license: MIT                   # 必填：可再分发声明
-appVersion: ">=3.0.0"          # 兼容的 App 版本
+appVersion: ">=0.0.1"          # 最低 Moki 版本，不能照搬原作者的 Xime 版本要求
 requiresSchemes: []            # 依赖的输入方案 id（如 [cangjie]），未安装则置灰
 screenshots:                   # 1~5 张，仅详情页展示
   - https://.../01.png
