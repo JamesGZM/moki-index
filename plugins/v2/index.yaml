@@ -100,39 +100,6 @@ plugins:
       sha256: 76a90780b6baad1741e04296f018b82a999899767bcdc536e3f3a96f8fd07482
       size: 5.8 KB
       sizeBytes: 5928
-- id: com.jxmfkj.ai.ime.plugin.bocha_jev
-  name: 博查 JEV
-  author: JamesGZM
-  description: '博查在线 JEV。协议与 TypeSafe /v1/systemone 一致。使用用户填写的 API Key（Authorization:
-    Bearer），不内置密钥。'
-  type: remote
-  tags:
-  - JEV
-  - 在线
-  pluginType: jev
-  icon: 判
-  activation: single
-  minHostVersion: 0.0.1
-  platforms:
-  - android
-  capabilities:
-    jev:
-      requiresNetwork: true
-  network:
-    hosts:
-    - jev.bocha.cn
-  homepage: https://github.com/JamesGZM/moki-index/tree/main/plugins/bocha-jev
-  appVersion: '>=0.0.1'
-  currentVersion: 0.0.1
-  versions:
-  - version: 0.0.1
-    date: '2026-10-20'
-    changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。
-    downloadUrl:
-    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-0.0.1/bocha-jev-0.0.1.mopk
-      sha256: 2a0da70a5bea687ea4ec000a6b058e83b9f98fdff37616e254acb3467f3313f0
-      size: 2.2 KB
-      sizeBytes: 2302
 - id: com.jxmfkj.ai.ime.plugin.funasr_asr
   name: 阿里百炼 FunAsr
   author: JamesGZM
@@ -484,6 +451,38 @@ plugins:
       sha256: 64c31e45c06c7157c54af5d68ddee413e6500d9f6c8fe241c4024824f073e7ba
       size: 11.8 KB
       sizeBytes: 12108
+- id: com.jxmfkj.ai.ime.plugin.typesafe_jev
+  name: TypeSafe 兼容 JEV
+  author: JamesGZM
+  description: 通过 TypeSafe System One 兼容接口进行在线判断，支持自定义完整接口地址、API Key 和模型。
+  type: remote
+  tags:
+  - JEV
+  - TypeSafe
+  - 在线
+  pluginType: jev
+  icon: 判
+  activation: single
+  minHostVersion: 0.0.1
+  platforms:
+  - android
+  capabilities:
+    jev:
+      requiresNetwork: true
+  network:
+    allowCustomHosts: true
+  homepage: https://github.com/JamesGZM/moki-index/tree/main/plugins/typesafe-jev
+  appVersion: '>=0.0.1'
+  currentVersion: 0.0.1
+  versions:
+  - version: 0.0.1
+    date: '2026-10-21'
+    changelog: TypeSafe 兼容 JEV：新插件 ID，完整接口地址、API Key 和模型均可配置；直接请求所填地址，需重新安装、选择和配置。
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-typesafe-jev-0.0.1/typesafe-jev-0.0.1.mopk
+      sha256: 9bf10b5d9894d94fb67957f1e56fe9e3bb27038d05f7617a24eaa558c4ddc182
+      size: 2.5 KB
+      sizeBytes: 2587
 - id: com.jxmfkj.ai.ime.plugin.typing_stats
   name: 输入统计
   author: JamesGZM

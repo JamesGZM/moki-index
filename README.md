@@ -7,15 +7,14 @@ Moki 输入法的插件、输入方案、模型与键盘布局市场索引。线
 - 当前发布：**21 个插件，统一 `0.0.1`**，最低宿主 **Moki `0.0.1`**。
 - SDK 协议：`1.0.0`；命令：`mopm`；插件包后缀：`.mopk`。插件不使用 `versionCode`。
 - [插件商店索引](plugins/v2/index.yaml) 的 `index_version: 2` 表示索引结构版本，与 SDK 版本分别管理。
-- 下载包见 [Moki 插件 0.0.1 Release](https://github.com/JamesGZM/moki-index/releases/tag/plugins-moki-0.0.1)。每个下载条目包含真实文件的 SHA256、字节数和展示大小。
-- 其中 19 个插件源码位于主应用的 `plugins/`，博查 JEV 与 OpenAI 兼容 OCR 源码位于本仓 `plugins/`。
+- 下载包以各条目的地址为准：既有包见 [Moki 插件 0.0.1 Release](https://github.com/JamesGZM/moki-index/releases/tag/plugins-moki-0.0.1)，新 JEV 包见 [TypeSafe 兼容 JEV 预发布](https://github.com/JamesGZM/moki-index/releases/tag/plugins-typesafe-jev-0.0.1)。每个下载条目包含真实文件的 SHA256、字节数和展示大小。
+- 其中 19 个插件源码位于主应用的 `plugins/`，TypeSafe 兼容 JEV 与 OpenAI 兼容 OCR 源码位于本仓 `plugins/`。
 
 | ID | 插件 | 商店分类 | 版本 | 包大小 | 最低 App 版本 |
 | --- | --- | --- | --- | --- | --- |
 | `com.jxmfkj.ai.ime.plugin.ai_reply` | AI 智能回复 | tool | 0.0.1 | 16.1 KB | >=0.0.1 |
 | `com.jxmfkj.ai.ime.plugin.ai_write` | AI 帮写 | tool | 0.0.1 | 2.9 KB | >=0.0.1 |
 | `com.jxmfkj.ai.ime.plugin.ai_writing` | AI 写作 | tool | 0.0.1 | 5.8 KB | >=0.0.1 |
-| `com.jxmfkj.ai.ime.plugin.bocha_jev` | 博查 JEV | jev | 0.0.1 | 2.2 KB | >=0.0.1 |
 | `com.jxmfkj.ai.ime.plugin.funasr_asr` | 阿里百炼 FunAsr | speech | 0.0.1 | 9.9 KB | >=0.0.1 |
 | `com.jxmfkj.ai.ime.plugin.kaomoji` | 颜文字表情包 | emoji | 0.0.1 | 3.0 KB | >=0.0.1 |
 | `com.jxmfkj.ai.ime.plugin.knowledge.local` | 本地知识库 | context | 0.0.1 | 10.2 KB | >=0.0.1 |
@@ -27,6 +26,7 @@ Moki 输入法的插件、输入方案、模型与键盘布局市场索引。线
 | `com.jxmfkj.ai.ime.plugin.s3_clipboard_sync` | S3 剪贴板同步 | clipboard_sync | 0.0.1 | 6.9 KB | >=0.0.1 |
 | `com.jxmfkj.ai.ime.plugin.sessions` | 会话管理 | context | 0.0.1 | 12.2 KB | >=0.0.1 |
 | `com.jxmfkj.ai.ime.plugin.tencent_asr` | 腾讯云实时语音识别 | speech | 0.0.1 | 11.8 KB | >=0.0.1 |
+| `com.jxmfkj.ai.ime.plugin.typesafe_jev` | TypeSafe 兼容 JEV | jev | 0.0.1 | 2.5 KB | >=0.0.1 |
 | `com.jxmfkj.ai.ime.plugin.typing_stats` | 输入统计 | tool | 0.0.1 | 2.5 KB | >=0.0.1 |
 | `com.jxmfkj.ai.ime.plugin.ui_read` | 界面读取规则 | tool | 0.0.1 | 3.3 KB | >=0.0.1 |
 | `com.jxmfkj.ai.ime.plugin.volc_asr` | 火山引擎流式语音识别 | speech | 0.0.1 | 9.2 KB | >=0.0.1 |
@@ -35,6 +35,8 @@ Moki 输入法的插件、输入方案、模型与键盘布局市场索引。线
 | `com.jxmfkj.ai.ime.plugin.ximed_sync` | ximed 剪贴板同步 | clipboard_sync | 0.0.1 | 2.5 KB | >=0.0.1 |
 
 `pluginType: context` 在商店显示为“资料”，只用于分类；会话管理、本地知识库的 manifest 类型仍为 `tool`。`provides` 只在商店索引中保留接口 ID 与主版本，完整契约以包内 manifest 为准。
+
+TypeSafe 兼容 JEV 使用新 ID，替换当前商店中的博查 JEV。接口地址、API Key 和模型均需重新填写，安装后重新选择；接口地址是完整 POST 地址，不会追加 `/v1/systemone`。详见[插件说明](plugins/typesafe-jev/README.md)。
 
 ## Debug 预装
 
@@ -114,7 +116,7 @@ src/rimes|models|layouts/     # 其他资源条目源码
 plugins/v2/index.yaml         # 当前插件商店索引（生成）
 plugins/v2/legacy-index.yaml  # 旧 SDK 发布快照
 plugins/index.yaml            # 历史 Lua/DEX 索引（生成）
-plugins/bocha-jev/            # 博查 JEV 插件源码
+plugins/typesafe-jev/         # TypeSafe 兼容 JEV 插件源码
 plugins/openai-ocr/           # OpenAI 兼容 OCR 插件源码
 scripts/                     # 索引生成、校验与静态预览
 src/index.js                 # Cloudflare Worker
@@ -126,7 +128,7 @@ wrangler.toml                # 线上域名和回源配置
 使用主仓构建的 `mopm`。在本仓可分别打包这里维护的两个插件：
 
 ```bash
-mopm pack plugins/bocha-jev --out dist/plugin-js --release-dir dist/plugin-release
+mopm pack plugins/typesafe-jev --out dist/plugin-js --release-dir dist/plugin-release
 mopm pack plugins/openai-ocr --out dist/plugin-js --release-dir dist/plugin-release
 ```
 
@@ -135,6 +137,8 @@ mopm pack plugins/openai-ocr --out dist/plugin-js --release-dir dist/plugin-rele
 ```bash
 uv run python scripts/test_provides.py
 uv run python scripts/test_resource_versions.py
+uv run python scripts/test_typesafe_jev.py
+node --experimental-vm-modules plugins/typesafe-jev/main.test.mjs
 uv run python scripts/ci-update.py
 # 检查源条目是否缺失校验值（历史资源可能仍有缺项）
 uv run python scripts/ci-update.py --check

@@ -49,7 +49,9 @@ jobs:
           node-version: '24'
 
       - name: Test TypeSafe compatible JEV
-        run: node --experimental-vm-modules plugins/typesafe-jev/main.test.mjs
+        run: |
+          node --experimental-vm-modules plugins/typesafe-jev/main.test.mjs
+          uv run python scripts/test_typesafe_jev.py
 
       # ─── 1. 生成索引并校验结构 ──────────────────────
       - name: Generate index files and validate structure

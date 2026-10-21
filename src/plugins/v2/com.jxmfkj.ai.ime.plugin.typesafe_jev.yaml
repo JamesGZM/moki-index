@@ -1,0 +1,32 @@
+id: com.jxmfkj.ai.ime.plugin.typesafe_jev
+name: TypeSafe 兼容 JEV
+author: JamesGZM
+description: 通过 TypeSafe System One 兼容接口进行在线判断，支持自定义完整接口地址、API Key 和模型。
+type: remote
+tags:
+- JEV
+- TypeSafe
+- 在线
+pluginType: jev
+icon: 判
+activation: single
+minHostVersion: 0.0.1
+platforms:
+- android
+capabilities:
+  jev:
+    requiresNetwork: true
+network:
+  allowCustomHosts: true
+homepage: https://github.com/JamesGZM/moki-index/tree/main/plugins/typesafe-jev
+appVersion: '>=0.0.1'
+currentVersion: 0.0.1
+versions:
+- version: 0.0.1
+  date: '2026-10-21'
+  changelog: TypeSafe 兼容 JEV：新插件 ID，完整接口地址、API Key 和模型均可配置；直接请求所填地址，需重新安装、选择和配置。
+  downloadUrl:
+  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-typesafe-jev-0.0.1/typesafe-jev-0.0.1.mopk
+    sha256: 9bf10b5d9894d94fb67957f1e56fe9e3bb27038d05f7617a24eaa558c4ddc182
+    size: 2.5 KB
+    sizeBytes: 2587
