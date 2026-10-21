@@ -29,6 +29,7 @@ class DefaultSchemeTest(unittest.TestCase):
         self.assertEqual([entry["currentVersion"]], [v["version"] for v in entry["versions"]])
         download = entry["versions"][0]["downloadUrl"][0]
         self.assertTrue(download["url"].startswith("https://github.com/JamesGZM/moki-index/releases/download/schemes-moki-default-"))
+        self.assertTrue(download["url"].endswith(f"/moki-default-{entry['currentVersion']}-market.zip"))
         self.assertRegex(download["sha256"], re.compile(r"^[0-9a-f]{64}$"))
         self.assertGreater(download["sizeBytes"], 0)
         self.assertIn("模型由 App", entry["warning"])

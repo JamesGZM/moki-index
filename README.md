@@ -65,7 +65,7 @@ AI 帮写、AI 写作、WebDAV 剪贴板同步及其他插件可从商店按需�
 
 ### Moki 默认方案
 
-`builtin` 保留原条目 ID，替换为 Moki 自有的六类方案包：九键拼音（新安装默认）、全键盘拼音、手写、笔画、五笔86、小鹤双拼。配套 App 随包内置手写模型；方案包只分发 Rime 资源，不覆盖用户模型或配置。手写模型兼容要求同步改为 Moki `>=0.0.1`，文件与校验值保持。生成入口是主应用仓库的 `scripts/package-default-scheme.py`，与 App 使用同一份资源清单。
+`builtin` 保留原条目 ID，替换为 Moki 自有的六类方案包：九键拼音（新安装默认）、全键盘拼音、手写、笔画、五笔86、小鹤双拼。配套 App 随包内置手写模型；商店包排除 `*.custom.yaml` 用户配置模板，不携带模型。手写模型兼容要求同步改为 Moki `>=0.0.1`，文件与校验值保持。生成入口是主应用仓库的 `scripts/package-default-scheme.py`，从 App 资源清单派生商店清单；使用 `-market.zip` 附件，不使用包含配置模板的初版 zip。
 
 [默认方案 0.0.1 预发布包](https://github.com/JamesGZM/moki-index/releases/tag/schemes-moki-default-0.0.1) 为本次 PR 的验证产物，索引合并前不切换线上默认条目。旧五笔包的版本／作者／下载记录见 [历史条目](archives/builtin-wubi.yaml)，不混入新默认方案的可选版本。
 

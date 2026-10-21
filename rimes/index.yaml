@@ -27,10 +27,10 @@ schemas:
     date: '2026-10-21'
     changelog: 替换原五笔为主的默认方案，统一为 Moki 六类输入方案；新安装默认九键拼音，手写模型由配套 App 内置。
     downloadUrl:
-    - url: https://github.com/JamesGZM/moki-index/releases/download/schemes-moki-default-0.0.1/moki-default-0.0.1.zip
-      sha256: b1a9a58592276e3a574cbb44da0bda8d722022414d7d3949316cdbdc09b93032
+    - url: https://github.com/JamesGZM/moki-index/releases/download/schemes-moki-default-0.0.1/moki-default-0.0.1-market.zip
+      sha256: 3e9b5bade00b078c97d5e9a2c247323c63998374f0f498f36ad7a4b568373d20
       size: 7.3 MB
-      sizeBytes: 7687507
+      sizeBytes: 7685301
 - id: cangjie
   name: 倉頡輸入法
   author: rime
