@@ -5,40 +5,32 @@ updated_at: '2026-10-21'
 schemas:
 - id: builtin
   name: 默认方案
-  author: 王永民
-  description: 五笔字形 86 版，经典五笔输入方案,包括了拼音相关功能。
+  author: Moki（整合；保留各上游作者）
+  description: Moki 默认方案：九键拼音（默认）、全键盘拼音、手写、笔画、五笔86和小鹤双拼。
   type: built-in
   tags:
-  - 五笔
   - 拼音
-  homepage: https://github.com/kingzcheung/rime-wubi
+  - 九键
+  - 全键盘
+  - 手写
+  - 笔画
+  - 五笔
+  - 小鹤双拼
+  homepage: https://github.com/JamesGZM/Moki
+  license: GPL-3.0
+  dependencies: []
   appVersion: '>=0.0.1'
-  currentVersion: 2.1.2
+  warning: 请使用配套新版 Moki；离线手写模型由 App 随包提供，方案包不覆盖已有模型和用户配置。
+  currentVersion: 0.0.1
   versions:
-  - version: 2.1.2
-    date: '2026-08-01'
-    changelog: 'feat(t9): 拼音九键方案适配 librime-t9 插件'
+  - version: 0.0.1
+    date: '2026-10-21'
+    changelog: 替换原五笔为主的默认方案，统一为 Moki 六类输入方案；新安装默认九键拼音，手写模型由配套 App 内置。
     downloadUrl:
-    - url: https://github.com/kingzcheung/rime-wubi/archive/refs/tags/2.1.2.tar.gz
-      size: 2.4 MB
-      sizeBytes: 2506623
-      sha256: 2a95f95e95a906b7fb2a20af752953dd3df73003775303d2e2fc7c641c56bec3
-  - version: 2.0.1
-    date: '2026-06-01'
-    changelog: ''
-    downloadUrl:
-    - url: https://github.com/kingzcheung/rime-wubi/archive/refs/tags/2.0.1.tar.gz
-      sha256: 2124a5168435293ae8cc9008d5322b844698e0fcb4e290397eb700d41ffd7469
-      size: 2.1 MB
-      sizeBytes: 2181001
-  - version: 2.0.0
-    date: '2026-05-14'
-    changelog: ''
-    downloadUrl:
-    - url: https://github.com/kingzcheung/rime-wubi/archive/refs/tags/2.0.0.tar.gz
-      sha256: 92c292339536434920aefe3728fa4666b347337e26e0aa47f0dab0d1cd5c5cc7
-      size: 2.1 MB
-      sizeBytes: 2165924
+    - url: https://github.com/JamesGZM/moki-index/releases/download/schemes-moki-default-0.0.1/moki-default-0.0.1-market.zip
+      sha256: 3e9b5bade00b078c97d5e9a2c247323c63998374f0f498f36ad7a4b568373d20
+      size: 7.3 MB
+      sizeBytes: 7685301
 - id: cangjie
   name: 倉頡輸入法
   author: rime

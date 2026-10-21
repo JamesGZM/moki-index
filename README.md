@@ -63,12 +63,18 @@ AI 帮写、AI 写作、WebDAV 剪贴板同步及其他插件可从商店按需�
 
 资源自身的发布版本与宿主兼容要求分别管理。当前 12 个输入方案和 7 个布局的 `appVersion` 使用 **Moki `>=0.0.1`**，不再沿用原作者的 Xime 2.x／3.x 版本号；下载物、资源发布版本、作者、许可证与校验值保持原样。新资源应按实际需要填写最低 Moki 版本。模型的既有要求及归档插件不在本次迁移范围。
 
+### Moki 默认方案
+
+`builtin` 保留原条目 ID，替换为 Moki 自有的六类方案包：九键拼音（新安装默认）、全键盘拼音、手写、笔画、五笔86、小鹤双拼。配套 App 随包内置手写模型；商店包排除 `*.custom.yaml` 用户配置模板，不携带模型。手写模型兼容要求同步改为 Moki `>=0.0.1`，文件与校验值保持。生成入口是主应用仓库的 `scripts/package-default-scheme.py`，从 App 资源清单派生商店清单；使用 `-market.zip` 附件，不使用包含配置模板的初版 zip。
+
+[默认方案 0.0.1 预发布包](https://github.com/JamesGZM/moki-index/releases/tag/schemes-moki-default-0.0.1) 为本次 PR 的验证产物，索引合并前不切换线上默认条目。旧五笔包的版本／作者／下载记录见 [历史条目](archives/builtin-wubi.yaml)，不混入新默认方案的可选版本。
+
 ### 模型
 
 | ID | 名称 | 作者 | 分类 | 大小 | App 兼容要求 |
 | --- | --- | --- | --- | --- | --- |
 | jev-laya-int8 | laya 多语言 int8 | JamesGZM | jev | 352.2 MB | >=2.5.0 |
-| ochwpro | 手写模型 | kingzcheung | handwriting | 6.7 MB | >=2.5.0 |
+| ochwpro | 手写模型 | kingzcheung | handwriting | 6.7 MB | >=0.0.1 |
 | predictive-text-base | 智能联想模型 base 版本 | kingzcheung | prediction | 34.8 MB | >=2.6.0 |
 | predictive-text-small | 智能联想模型 small 版本 | kingzcheung | prediction | 18.9 MB | >=2.3.0 |
 | punctuation_int8 | 标点预测模型 int8 | kingzcheung | punctuation | 2.3 MB | >=2.3.0 |
@@ -79,7 +85,7 @@ AI 帮写、AI 写作、WebDAV 剪贴板同步及其他插件可从商店按需�
 
 | ID | 名称 | 作者 | 类型 | App 兼容要求 |
 | --- | --- | --- | --- | --- |
-| builtin | 默认方案 | 王永民 | built-in | >=0.0.1 |
+| builtin | 默认方案 | Moki（整合；保留上游作者） | built-in | >=0.0.1 |
 | cangjie | 倉頡輸入法 | rime | remote | >=0.0.1 |
 | luna_pinyin | 朙月拼音 | rime | remote | >=0.0.1 |
 | quick | 速成輸入法 | rime | remote | >=0.0.1 |
