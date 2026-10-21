@@ -8,7 +8,7 @@ tags:
 homepage: https://github.com/ximeiorg/rime-stroke
 dependencies:
 - luna_pinyin
-appVersion: '>=2.5.0'
+appVersion: ">=0.0.1"
 currentVersion: 0.2.0
 versions:
 - version: 0.2.0

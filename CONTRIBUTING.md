@@ -36,7 +36,7 @@ tags: ["五笔"]                    # 搜索标签
 homepage: "https://..."          # 项目主页（可选）
 license: "GPL-3.0"               # 许可证（可选）
 dependencies: []                  # 依赖的其他方案 ID
-appVersion: ">=2.2.0"            # 兼容的 App 版本
+appVersion: ">=0.0.1"            # 最低 Moki 版本，与方案自身版本分别管理
 warning: ""                       # 安装前警告（可选）
 currentVersion: "1.0.0"          # 当前版本
 versions:                         # 版本历史
@@ -268,7 +268,7 @@ description: 一段简短说明
 tags: [布局]                      # 布局 | 配色 | 快捷键 | 输入法适配
 repo: https://github.com/you/my-layout   # 作者仓库（内容来源）
 license: MIT
-appVersion: ">=3.0.0"
+appVersion: ">=0.0.1"            # 最低 Moki 版本，不能直接沿用 Xime 版本号
 requiresSchemes: []               # 依赖的输入方案 id，如 [cangjie]
 screenshots:                      # 1~5 张，仅详情页展示
   - https://.../01.png

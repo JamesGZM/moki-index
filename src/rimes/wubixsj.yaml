@@ -8,7 +8,7 @@ tags:
 - 形码
 - 拼音
 homepage: https://github.com/aizigao/Xime_wubi_xinshiji
-appVersion: '>=2.8.0'
+appVersion: ">=0.0.1"
 currentVersion: 2.3.1
 versions:
 - version: 2.3.1

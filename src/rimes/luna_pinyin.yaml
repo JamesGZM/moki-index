@@ -9,7 +9,7 @@ tags:
 homepage: https://github.com/rime/rime-luna-pinyin
 license: GPL-3.0
 dependencies: []
-appVersion: '>=2.3.0'
+appVersion: ">=0.0.1"
 currentVersion: master
 versions:
 - version: master

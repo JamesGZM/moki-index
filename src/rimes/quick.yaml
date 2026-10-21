@@ -10,7 +10,7 @@ dependencies:
 - luna_pinyin
 - cangjie
 - essay
-appVersion: '>=2.3.0'
+appVersion: ">=0.0.1"
 currentVersion: master
 versions:
 - version: master

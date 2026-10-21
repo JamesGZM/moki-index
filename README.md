@@ -59,7 +59,7 @@ AI 帮写、AI 写作、WebDAV 剪贴板同步及其他插件可从商店按需�
 
 ## 其他资源目录
 
-以下目录保留原有发布版本与兼容性声明；没有在本轮插件迁移中将其版本要求改为 `0.0.1`。是否可用由 App 按具体条目判定，不能直接套用插件最低版本。
+资源自身的发布版本与宿主兼容要求分别管理。当前 12 个输入方案和 7 个布局的 `appVersion` 使用 **Moki `>=0.0.1`**，不再沿用原作者的 Xime 2.x／3.x 版本号；下载物、资源发布版本、作者、许可证与校验值保持原样。新资源应按实际需要填写最低 Moki 版本。模型的既有要求及归档插件不在本次迁移范围。
 
 ### 模型
 
@@ -77,18 +77,18 @@ AI 帮写、AI 写作、WebDAV 剪贴板同步及其他插件可从商店按需�
 
 | ID | 名称 | 作者 | 类型 | App 兼容要求 |
 | --- | --- | --- | --- | --- |
-| builtin | 默认方案 | 王永民 | built-in | >=2.6.0 |
-| cangjie | 倉頡輸入法 | rime | remote | >=2.3.0 |
-| luna_pinyin | 朙月拼音 | rime | remote | >=2.3.0 |
-| quick | 速成輸入法 | rime | remote | >=2.3.0 |
-| rime-frost | 白霜拼音 | gaboolic | remote | >=2.3.0 |
-| rime-ice | 雾凇拼音 | iDvel | remote | >=2.3.0 |
-| rime-wanxiang | 万象拼音标准版 | amzxyz | remote | >=2.4.0 |
-| stroke | 笔画 | rime | remote | >=2.5.0 |
-| wubi98 | 五笔98 | rime | remote | >=2.3.0 |
-| wubixsj | 新世纪五笔 | 空山明月（Xime 适配：aizigao） | remote | >=2.8.0 |
-| xqzm | 风入松郑码方案 | 风入松 | remote | >=2.6.0 |
-| zhengma | 郑码方案 | chen32768 | remote | >=2.3.0 |
+| builtin | 默认方案 | 王永民 | built-in | >=0.0.1 |
+| cangjie | 倉頡輸入法 | rime | remote | >=0.0.1 |
+| luna_pinyin | 朙月拼音 | rime | remote | >=0.0.1 |
+| quick | 速成輸入法 | rime | remote | >=0.0.1 |
+| rime-frost | 白霜拼音 | gaboolic | remote | >=0.0.1 |
+| rime-ice | 雾凇拼音 | iDvel | remote | >=0.0.1 |
+| rime-wanxiang | 万象拼音标准版 | amzxyz | remote | >=0.0.1 |
+| stroke | 笔画 | rime | remote | >=0.0.1 |
+| wubi98 | 五笔98 | rime | remote | >=0.0.1 |
+| wubixsj | 新世纪五笔 | 空山明月（Xime 适配：aizigao） | remote | >=0.0.1 |
+| xqzm | 风入松郑码方案 | 风入松 | remote | >=0.0.1 |
+| zhengma | 郑码方案 | chen32768 | remote | >=0.0.1 |
 
 ### 键盘布局
 
@@ -96,13 +96,13 @@ AI 帮写、AI 写作、WebDAV 剪贴板同步及其他插件可从商店按需�
 
 | ID | 名称 | 作者 | App 兼容要求 |
 | --- | --- | --- | --- |
-| flypy | 小鹤双拼带韵母 | kingzcheung | >=3.0.0 |
-| msdouble | 双拼布局（微软双拼） | kingzcheung | >=3.0.0 |
-| no_bubble | 无气泡布局 | kingzcheung | >=3.0.0 |
-| number_rows | 数字行 | kingzcheung | >=3.0.0 |
-| wubi_compact | 五笔86紧凑布局 | kingzcheung | >=3.0.0 |
-| xime_flypy_proxy | 小鹤双拼多功能配置 | tiengming | >=3.0.0 |
-| xime_index_net | 扩展商店资源加速 | tiengming | >=2.5.0 |
+| flypy | 小鹤双拼带韵母 | kingzcheung | >=0.0.1 |
+| msdouble | 双拼布局（微软双拼） | kingzcheung | >=0.0.1 |
+| no_bubble | 无气泡布局 | kingzcheung | >=0.0.1 |
+| number_rows | 数字行 | kingzcheung | >=0.0.1 |
+| wubi_compact | 五笔86紧凑布局 | kingzcheung | >=0.0.1 |
+| xime_flypy_proxy | 小鹤双拼多功能配置 | tiengming | >=0.0.1 |
+| xime_index_net | 扩展商店资源加速 | tiengming | >=0.0.1 |
 
 ## 目录结构
 
@@ -134,6 +134,7 @@ mopm pack plugins/openai-ocr --out dist/plugin-js --release-dir dist/plugin-rele
 
 ```bash
 uv run python scripts/test_provides.py
+uv run python scripts/test_resource_versions.py
 uv run python scripts/ci-update.py
 # 检查源条目是否缺失校验值（历史资源可能仍有缺项）
 uv run python scripts/ci-update.py --check

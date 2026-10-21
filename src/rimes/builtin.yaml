@@ -7,7 +7,7 @@ tags:
 - 五笔
 - 拼音
 homepage: https://github.com/kingzcheung/rime-wubi
-appVersion: '>=2.6.0'
+appVersion: ">=0.0.1"
 currentVersion: 2.1.2
 versions:
 - version: 2.1.2

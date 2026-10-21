@@ -9,7 +9,7 @@ tags:
 - 简繁
 homepage: https://github.com/chen32768/zhengma_for_rime
 dependencies: []
-appVersion: '>=2.3.0'
+appVersion: ">=0.0.1"
 currentVersion: master
 versions:
 - version: master

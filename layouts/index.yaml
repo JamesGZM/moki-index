@@ -1,7 +1,7 @@
 # Moki 键盘布局子索引
 # ⚠️ 此文件由 scripts/ci-update.py 自动生成，请勿手动编辑
 index_version: 1
-updated_at: '2026-10-20'
+updated_at: '2026-10-21'
 layouts:
 - id: flypy
   name: 小鹤双拼带韵母
@@ -12,7 +12,7 @@ layouts:
   - 全键盘
   repo: https://github.com/cz-archive/flypy
   license: GPL-3.0
-  appVersion: '>=3.0.0'
+  appVersion: '>=0.0.1'
   requiresSchemes: []
   screenshots:
   - https://cdn.jsdelivr.net/gh/cz-archive/flypy@1.0.0/images/0.jpg
@@ -43,7 +43,7 @@ layouts:
   - 全键盘
   repo: https://github.com/cz-archive/msdouble
   license: GPL-3.0
-  appVersion: '>=3.0.0'
+  appVersion: '>=0.0.1'
   requiresSchemes: []
   screenshots:
   - https://cdn.jsdelivr.net/gh/cz-archive/msdouble@1.0.0/images/0.jpg
@@ -66,7 +66,7 @@ layouts:
   - 全键盘
   repo: https://github.com/cz-archive/no_bubble
   license: GPL-3.0
-  appVersion: '>=3.0.0'
+  appVersion: '>=0.0.1'
   requiresSchemes: []
   screenshots:
   - https://cdn.jsdelivr.net/gh/cz-archive/no_bubble@1.0.0/0.jpg
@@ -89,7 +89,7 @@ layouts:
   - 全键盘
   repo: https://github.com/cz-archive/number_rows
   license: GPL-3.0
-  appVersion: '>=3.0.0'
+  appVersion: '>=0.0.1'
   requiresSchemes: []
   screenshots:
   - https://cdn.jsdelivr.net/gh/cz-archive/number_rows@master/images/number_rows.jpg
@@ -111,7 +111,7 @@ layouts:
   - 全键盘
   repo: https://github.com/cz-archive/wubi_compact
   license: GPL-3.0
-  appVersion: '>=3.0.0'
+  appVersion: '>=0.0.1'
   requiresSchemes: []
   screenshots:
   - https://cdn.jsdelivr.net/gh/cz-archive/wubi_compact@1.0.1/images/0.jpg
@@ -136,7 +136,7 @@ layouts:
   - 多主题
   repo: https://github.com/tiengming/xime_flypy_proxy
   license: GPL-3.0
-  appVersion: '>=3.0.0'
+  appVersion: '>=0.0.1'
   requiresSchemes: []
   screenshots:
   - https://cdn.jsdelivr.net/gh/tiengming/xime_flypy_proxy@xime_flypy_proxy-v1.0.1/images/img1.jpg
@@ -162,7 +162,7 @@ layouts:
   - xime_index
   repo: https://github.com/tiengming/xime_flypy_proxy
   license: GPL-3.0
-  appVersion: '>=2.5.0'
+  appVersion: '>=0.0.1'
   requiresSchemes: []
   screenshots:
   - https://cdn.jsdelivr.net/gh/tiengming/xime_flypy_proxy@xime_index_net-v1.0.1/images/img1.jpg

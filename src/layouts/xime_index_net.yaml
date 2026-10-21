@@ -7,7 +7,7 @@ tags:
   - xime_index
 repo: https://github.com/tiengming/xime_flypy_proxy
 license: GPL-3.0
-appVersion: ">=2.5.0"
+appVersion: ">=0.0.1"
 requiresSchemes: []
 screenshots:
   - https://cdn.jsdelivr.net/gh/tiengming/xime_flypy_proxy@xime_index_net-v1.0.1/images/img1.jpg
