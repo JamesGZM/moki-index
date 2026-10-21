@@ -44,6 +44,9 @@ jobs:
       - name: Test Moki resource version requirements
         run: uv run python scripts/test_resource_versions.py
 
+      - name: Test Moki default scheme
+        run: uv run python scripts/test_default_scheme.py
+
       - uses: actions/setup-node@v4
         with:
           node-version: '24'

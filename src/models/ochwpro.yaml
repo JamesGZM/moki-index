@@ -9,7 +9,7 @@ tags:
 - 手写
 - ONNX
 homepage: https://github.com/ximeiorg/ochwpro
-appVersion: '>=2.5.0'
+appVersion: '>=0.0.1'
 currentVersion: v1.0
 versions:
 - version: v1.0
