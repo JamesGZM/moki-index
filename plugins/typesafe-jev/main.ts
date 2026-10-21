@@ -1,12 +1,12 @@
-// 博查 JEV（TypeScript 源码，编译为 QuickJS 单文件 main.js）
+// TypeSafe 兼容 JEV（TypeScript 源码，编译为 QuickJS 单文件 main.js）
 //
-// 宿主传入 {state, questions} 字符串。脚本补上 model 后 POST systemone。
+// 宿主传入 {state, questions}；补上配置的 model，POST 到用户填写的完整接口地址。
 // 429/529 与传输失败按 500ms 左移退避重试，最多 3 次；其它 4xx 不重试。
 // 沙箱没有定时器，退避用 Date.now 等待。失败消息不得包含 API Key。
 
+const KEY_ENDPOINT = 'endpoint';
 const KEY_API_KEY = 'apiKey';
-const MODEL = 'bocha-jev-v1';
-const ENDPOINT = 'https://jev.bocha.cn/v1/systemone';
+const KEY_MODEL = 'model';
 const REQUEST_TIMEOUT_MS = 40000;
 const MAX_ATTEMPTS = 3;
 
@@ -90,6 +90,14 @@ const plugin = definePlugin({
     schema(): MokiUiNode[] {
       return [
         {
+          key: KEY_ENDPOINT,
+          label: '接口地址',
+          type: 'input',
+          required: true,
+          placeholder: 'https://example.com/v1/systemone',
+          helpText: '填写完整的 TypeSafe System One 兼容接口地址，不会追加路径；保存后自动授权该域名',
+        },
+        {
           key: KEY_API_KEY,
           label: 'API Key',
           type: 'secret',
@@ -97,14 +105,29 @@ const plugin = definePlugin({
           placeholder: '输入 API Key',
           helpText: '加密保存在本插件配置里，请求使用 Authorization: Bearer',
         },
+        {
+          key: KEY_MODEL,
+          label: '模型名',
+          type: 'input',
+          required: true,
+          placeholder: '服务商提供的 JEV 模型名',
+        },
       ];
     },
   },
 
   jev: {
     async postSystemOne(requestJson: string): Promise<JevCallResult> {
+      const endpoint = trim(host.config.get(KEY_ENDPOINT));
       const apiKey = trim(host.config.get(KEY_API_KEY));
+      const model = trim(host.config.get(KEY_MODEL));
+      if (endpoint === '') return { ok: false, message: '尚未配置接口地址' };
       if (apiKey === '') return { ok: false, message: '尚未配置 API Key' };
+      if (model === '') return { ok: false, message: '尚未配置模型名' };
+      const address = /^https?:\/\/([^/?#\s]+)(?:[/?][^\s#]*)?$/i.exec(endpoint);
+      if (!address || address[1].indexOf('@') >= 0) {
+        return { ok: false, message: '请填写完整 HTTP(S) 接口地址，不要包含空白、账号密码或 # 片段' };
+      }
 
       let incoming: SystemOneRequest;
       try {
@@ -118,7 +141,7 @@ const plugin = definePlugin({
       }
 
       const payload = new TextEncoder().encode(JSON.stringify({
-        model: MODEL,
+        model: model,
         state: incoming.state,
         questions: incoming.questions,
       }));
@@ -131,7 +154,7 @@ const plugin = definePlugin({
       let lastMessage = '判断接口请求失败';
       while (attempt < MAX_ATTEMPTS) {
         try {
-          const resp = await host.http.request('POST', ENDPOINT, headers, payload, REQUEST_TIMEOUT_MS);
+          const resp = await host.http.request('POST', endpoint, headers, payload, REQUEST_TIMEOUT_MS);
           if (resp.status === 429 || resp.status === 529) {
             lastMessage = httpMessage(resp.status, resp.text, apiKey);
             attempt++;
