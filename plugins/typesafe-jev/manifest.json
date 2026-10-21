@@ -1,14 +1,14 @@
 // =============================================
-// 博查 JEV 插件元数据（QuickJS/TS 版；宽松 JSON：支持 // 注释与尾逗号）
+// TypeSafe 兼容 JEV 插件元数据（QuickJS/TS 版；宽松 JSON：支持 // 注释与尾逗号）
 // =============================================
 {
   // 插件唯一标识
-  "id": "com.jxmfkj.ai.ime.plugin.bocha_jev",
+  "id": "com.jxmfkj.ai.ime.plugin.typesafe_jev",
 
   // 插件名称与描述
-  "name": "博查 JEV",
+  "name": "TypeSafe 兼容 JEV",
   "icon": "判",
-  "description": "博查在线 JEV。协议与 TypeSafe /v1/systemone 一致。使用用户填写的 API Key（Authorization: Bearer），不内置密钥。",
+  "description": "通过 TypeSafe System One 兼容接口进行在线判断，支持自定义完整接口地址、API Key 和模型。",
 
   // 插件版本
   "version": "0.0.1",
@@ -24,9 +24,9 @@
 
   "minHostVersion": "0.0.1",
 
-  // 只允许请求博查判断域名
+  // 用户保存配置时授权所填接口地址的域名
   "network": {
-    "hosts": ["jev.bocha.cn"]
+    "allowCustomHosts": true
   },
 
   "capabilities": {
