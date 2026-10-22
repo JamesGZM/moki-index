@@ -4,7 +4,8 @@ Moki 输入法的插件、输入方案、模型与键盘布局市场索引。线
 
 ## 当前 Moki 插件
 
-- 当前发布：**21 个插件，统一 `0.0.1`**，最低宿主 **Moki `0.0.1`**。
+- 当前收录 **21 个插件**：AI 回复、OCR 清洗、界面读取、会话管理为 **`0.0.2`**，要求 **Moki `>=0.0.2`**；其余 17 个保留 `0.0.1`／最低宿主 `0.0.1`。
+- [采集与识图插件 0.0.2 预发布](https://github.com/JamesGZM/moki-index/releases/tag/plugins-capture-0.0.2) 配套 [App PR54](https://github.com/JamesGZM/Moki/pull/54)。App 尚未合并／发布，需使用配套宿主；四个旧 `0.0.1` 版本下载记录与附件保留。
 - SDK 协议：`1.0.0`；命令：`mopm`；插件包后缀：`.mopk`。插件不使用 `versionCode`。
 - [插件商店索引](plugins/v2/index.yaml) 的 `index_version: 2` 表示索引结构版本，与 SDK 版本分别管理。
 - 下载包以各条目的地址为准：既有包见 [Moki 插件 0.0.1 Release](https://github.com/JamesGZM/moki-index/releases/tag/plugins-moki-0.0.1)，新 JEV 包见 [TypeSafe 兼容 JEV 预发布](https://github.com/JamesGZM/moki-index/releases/tag/plugins-typesafe-jev-0.0.1)。每个下载条目包含真实文件的 SHA256、字节数和展示大小。
@@ -12,23 +13,23 @@ Moki 输入法的插件、输入方案、模型与键盘布局市场索引。线
 
 | ID | 插件 | 商店分类 | 版本 | 包大小 | 最低 App 版本 |
 | --- | --- | --- | --- | --- | --- |
-| `com.jxmfkj.ai.ime.plugin.ai_reply` | AI 智能回复 | tool | 0.0.1 | 16.1 KB | >=0.0.1 |
+| `com.jxmfkj.ai.ime.plugin.ai_reply` | AI 智能回复 | tool | 0.0.2 | 17.1 KB | >=0.0.2 |
 | `com.jxmfkj.ai.ime.plugin.ai_write` | AI 帮写 | tool | 0.0.1 | 2.9 KB | >=0.0.1 |
 | `com.jxmfkj.ai.ime.plugin.ai_writing` | AI 写作 | tool | 0.0.1 | 5.8 KB | >=0.0.1 |
 | `com.jxmfkj.ai.ime.plugin.funasr_asr` | 阿里百炼 FunAsr | speech | 0.0.1 | 9.9 KB | >=0.0.1 |
 | `com.jxmfkj.ai.ime.plugin.kaomoji` | 颜文字表情包 | emoji | 0.0.1 | 3.0 KB | >=0.0.1 |
 | `com.jxmfkj.ai.ime.plugin.knowledge.local` | 本地知识库 | context | 0.0.1 | 10.2 KB | >=0.0.1 |
 | `com.jxmfkj.ai.ime.plugin.meme_bunny` | 恶搞兔表情包 | emoji | 0.0.1 | 64.9 KB | >=0.0.1 |
-| `com.jxmfkj.ai.ime.plugin.ocr_clean` | OCR 清洗规则 | tool | 0.0.1 | 12.7 KB | >=0.0.1 |
+| `com.jxmfkj.ai.ime.plugin.ocr_clean` | OCR 清洗规则 | tool | 0.0.2 | 15.1 KB | >=0.0.2 |
 | `com.jxmfkj.ai.ime.plugin.openai_ocr` | OpenAI 兼容 OCR | ocr | 0.0.1 | 2.6 KB | >=0.0.1 |
 | `com.jxmfkj.ai.ime.plugin.quick_phrase` | 常用语 | tool | 0.0.1 | 1.5 KB | >=0.0.1 |
 | `com.jxmfkj.ai.ime.plugin.qwen_translate` | 千问翻译 | tool | 0.0.1 | 2.9 KB | >=0.0.1 |
 | `com.jxmfkj.ai.ime.plugin.s3_clipboard_sync` | S3 剪贴板同步 | clipboard_sync | 0.0.1 | 6.9 KB | >=0.0.1 |
-| `com.jxmfkj.ai.ime.plugin.sessions` | 会话管理 | context | 0.0.1 | 12.2 KB | >=0.0.1 |
+| `com.jxmfkj.ai.ime.plugin.sessions` | 会话管理 | context | 0.0.2 | 12.5 KB | >=0.0.2 |
 | `com.jxmfkj.ai.ime.plugin.tencent_asr` | 腾讯云实时语音识别 | speech | 0.0.1 | 11.8 KB | >=0.0.1 |
 | `com.jxmfkj.ai.ime.plugin.typesafe_jev` | TypeSafe 兼容 JEV | jev | 0.0.1 | 2.5 KB | >=0.0.1 |
 | `com.jxmfkj.ai.ime.plugin.typing_stats` | 输入统计 | tool | 0.0.1 | 2.5 KB | >=0.0.1 |
-| `com.jxmfkj.ai.ime.plugin.ui_read` | 界面读取规则 | tool | 0.0.1 | 3.3 KB | >=0.0.1 |
+| `com.jxmfkj.ai.ime.plugin.ui_read` | 界面读取规则 | tool | 0.0.2 | 7.8 KB | >=0.0.2 |
 | `com.jxmfkj.ai.ime.plugin.volc_asr` | 火山引擎流式语音识别 | speech | 0.0.1 | 9.2 KB | >=0.0.1 |
 | `com.jxmfkj.ai.ime.plugin.webdav_backup` | WebDAV 云备份 | backup | 0.0.1 | 3.7 KB | >=0.0.1 |
 | `com.jxmfkj.ai.ime.plugin.webdav_clipboard_sync` | WebDAV 剪贴板同步 | clipboard_sync | 0.0.1 | 4.2 KB | >=0.0.1 |
