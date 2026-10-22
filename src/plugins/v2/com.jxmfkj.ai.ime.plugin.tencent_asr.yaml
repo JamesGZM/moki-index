@@ -8,6 +8,7 @@ tags:
 - 语音
 pluginType: speech
 icon: icon-v1.png
+iconUrl: https://raw.githubusercontent.com/JamesGZM/moki-index/main/plugins/v2/icons/com.jxmfkj.ai.ime.plugin.tencent_asr/2b65ea5a3c43327d106f0fe96d138f93089b85fd4ca55327494d52c080d9ad79.png
 activation: single
 minHostVersion: 0.0.5
 platforms:

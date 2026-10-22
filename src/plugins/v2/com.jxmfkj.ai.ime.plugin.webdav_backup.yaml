@@ -8,6 +8,7 @@ tags:
 - WebDAV
 pluginType: backup
 icon: icon-v1.png
+iconUrl: https://raw.githubusercontent.com/JamesGZM/moki-index/main/plugins/v2/icons/com.jxmfkj.ai.ime.plugin.webdav_backup/1530d0926db6824cae752a2cc038f833fec71815982aadedca8040c8e5754465.png
 activation: single
 minHostVersion: 0.0.5
 platforms:

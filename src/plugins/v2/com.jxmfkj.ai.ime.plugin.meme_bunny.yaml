@@ -8,6 +8,7 @@ tags:
 - 贴纸
 pluginType: emoji
 icon: icon-v1.png
+iconUrl: https://raw.githubusercontent.com/JamesGZM/moki-index/main/plugins/v2/icons/com.jxmfkj.ai.ime.plugin.meme_bunny/c3362d582fe84582c00a96622b7576b1d4935c5650937e79a5a0142353f113dc.png
 activation: multi
 minHostVersion: 0.0.5
 platforms:

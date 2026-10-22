@@ -14,6 +14,7 @@ plugins:
   - 工具
   pluginType: tool
   icon: icon-v2.png
+  iconUrl: https://raw.githubusercontent.com/JamesGZM/moki-index/main/plugins/v2/icons/com.jxmfkj.ai.ime.plugin.ai_reply/49a5cfde1e64bbb646dc9c2b004fb9bdefeba12002d3f2909da3c5509d0e84f6.png
   activation: multi
   minHostVersion: 0.0.6
   platforms:
@@ -55,6 +56,7 @@ plugins:
   - 工具
   pluginType: tool
   icon: icon-v2.png
+  iconUrl: https://raw.githubusercontent.com/JamesGZM/moki-index/main/plugins/v2/icons/com.jxmfkj.ai.ime.plugin.ai_write/339b23d4f56b56c1bfe9a73eeaa428e9f1452628746ae95be8e4db4a02647a5a.png
   activation: multi
   minHostVersion: 0.0.5
   platforms:
@@ -94,6 +96,7 @@ plugins:
   - 工具
   pluginType: tool
   icon: icon-v2.png
+  iconUrl: https://raw.githubusercontent.com/JamesGZM/moki-index/main/plugins/v2/icons/com.jxmfkj.ai.ime.plugin.ai_writing/803538c07db7784f4722903c7c2d8981165d7a1665faa7c3673b3c1b32a66e47.png
   activation: multi
   minHostVersion: 0.0.5
   platforms:
@@ -134,6 +137,7 @@ plugins:
   - ASR
   pluginType: speech
   icon: icon-v1.png
+  iconUrl: https://raw.githubusercontent.com/JamesGZM/moki-index/main/plugins/v2/icons/com.jxmfkj.ai.ime.plugin.funasr_asr/22cc28572e1873b1dd17a2a814767ebc5282ed6c2c4e7392106cd7da0214aee0.png
   activation: single
   minHostVersion: 0.0.5
   platforms:
@@ -176,6 +180,7 @@ plugins:
   - 颜文字
   pluginType: emoji
   icon: icon-v1.png
+  iconUrl: https://raw.githubusercontent.com/JamesGZM/moki-index/main/plugins/v2/icons/com.jxmfkj.ai.ime.plugin.kaomoji/f5c2218e6e1c266129eff71ccfff1a53c3920b9527ad25a2a7022159839ec54f.png
   activation: multi
   minHostVersion: 0.0.5
   platforms:
@@ -215,6 +220,7 @@ plugins:
   - 资料
   pluginType: context
   icon: icon-v2.png
+  iconUrl: https://raw.githubusercontent.com/JamesGZM/moki-index/main/plugins/v2/icons/com.jxmfkj.ai.ime.plugin.knowledge.local/8f7bf76c6fd0b5c5e62c16f4dd0c7dcada2bedc397714635c1d9ac8948b2656c.png
   activation: multi
   minHostVersion: 0.0.5
   platforms:
@@ -253,6 +259,7 @@ plugins:
   - 贴纸
   pluginType: emoji
   icon: icon-v1.png
+  iconUrl: https://raw.githubusercontent.com/JamesGZM/moki-index/main/plugins/v2/icons/com.jxmfkj.ai.ime.plugin.meme_bunny/c3362d582fe84582c00a96622b7576b1d4935c5650937e79a5a0142353f113dc.png
   activation: multi
   minHostVersion: 0.0.5
   platforms:
@@ -292,6 +299,7 @@ plugins:
   - 工具
   pluginType: tool
   icon: icon-v1.png
+  iconUrl: https://raw.githubusercontent.com/JamesGZM/moki-index/main/plugins/v2/icons/com.jxmfkj.ai.ime.plugin.ocr_clean/e03c9bdd564e7c2ec7332884673faaf1426e4a6d2fff83d35b462d6a58c458b9.png
   activation: multi
   minHostVersion: 0.0.5
   provides:
@@ -361,6 +369,7 @@ plugins:
   - 常用语
   pluginType: tool
   icon: icon-v1.png
+  iconUrl: https://raw.githubusercontent.com/JamesGZM/moki-index/main/plugins/v2/icons/com.jxmfkj.ai.ime.plugin.quick_phrase/ec3be798efdb491d8da105edaf67ccfb4771a62ab1b66bec84da6a962e932ca2.png
   activation: multi
   minHostVersion: 0.0.5
   platforms:
@@ -402,6 +411,7 @@ plugins:
   - 工具
   pluginType: tool
   icon: icon-v2.png
+  iconUrl: https://raw.githubusercontent.com/JamesGZM/moki-index/main/plugins/v2/icons/com.jxmfkj.ai.ime.plugin.qwen_translate/faa8bd36471204c415736476fbb6f741dca2081d03286c257bfd6fb8885cc990.png
   activation: multi
   minHostVersion: 0.0.5
   platforms:
@@ -441,6 +451,7 @@ plugins:
   - 剪贴板
   pluginType: clipboard_sync
   icon: icon-v1.png
+  iconUrl: https://raw.githubusercontent.com/JamesGZM/moki-index/main/plugins/v2/icons/com.jxmfkj.ai.ime.plugin.s3_clipboard_sync/878c4b99809ff746fc4637b6f759cbe7af66cb684d78eb5167317d399f384a31.png
   activation: single
   minHostVersion: 0.0.5
   platforms:
@@ -483,6 +494,7 @@ plugins:
   - 资料
   pluginType: context
   icon: icon-v2.png
+  iconUrl: https://raw.githubusercontent.com/JamesGZM/moki-index/main/plugins/v2/icons/com.jxmfkj.ai.ime.plugin.sessions/200b688260a3e2f9a412700de253d40dd6eb18304fb92cdd2d1772c82f408a97.png
   activation: multi
   minHostVersion: 0.0.5
   platforms:
@@ -524,6 +536,7 @@ plugins:
   - 语音
   pluginType: speech
   icon: icon-v1.png
+  iconUrl: https://raw.githubusercontent.com/JamesGZM/moki-index/main/plugins/v2/icons/com.jxmfkj.ai.ime.plugin.tencent_asr/2b65ea5a3c43327d106f0fe96d138f93089b85fd4ca55327494d52c080d9ad79.png
   activation: single
   minHostVersion: 0.0.5
   platforms:
@@ -598,6 +611,7 @@ plugins:
   - 统计
   pluginType: tool
   icon: icon-v1.png
+  iconUrl: https://raw.githubusercontent.com/JamesGZM/moki-index/main/plugins/v2/icons/com.jxmfkj.ai.ime.plugin.typing_stats/a40ac7ba8b8af929b00307af539e09cefe842836ffbdc309d36df71313de1a76.png
   activation: multi
   minHostVersion: 0.0.5
   platforms:
@@ -638,6 +652,7 @@ plugins:
   - 工具
   pluginType: tool
   icon: icon-v1.png
+  iconUrl: https://raw.githubusercontent.com/JamesGZM/moki-index/main/plugins/v2/icons/com.jxmfkj.ai.ime.plugin.ui_read/d16671725abe5c20ffff17e7686562037058f1b142fe0bf8c7adf1d15fe98c91.png
   activation: multi
   minHostVersion: 0.0.5
   provides:
@@ -674,6 +689,7 @@ plugins:
   - ASR
   pluginType: speech
   icon: icon-v1.png
+  iconUrl: https://raw.githubusercontent.com/JamesGZM/moki-index/main/plugins/v2/icons/com.jxmfkj.ai.ime.plugin.volc_asr/e603b3416c979c4d82a163d93643fa9ddf89603afa4e3262075334e0f9949173.png
   activation: single
   minHostVersion: 0.0.5
   platforms:
@@ -716,6 +732,7 @@ plugins:
   - WebDAV
   pluginType: backup
   icon: icon-v1.png
+  iconUrl: https://raw.githubusercontent.com/JamesGZM/moki-index/main/plugins/v2/icons/com.jxmfkj.ai.ime.plugin.webdav_backup/1530d0926db6824cae752a2cc038f833fec71815982aadedca8040c8e5754465.png
   activation: single
   minHostVersion: 0.0.5
   platforms:
@@ -758,6 +775,7 @@ plugins:
   - 同步
   pluginType: clipboard_sync
   icon: icon-v1.png
+  iconUrl: https://raw.githubusercontent.com/JamesGZM/moki-index/main/plugins/v2/icons/com.jxmfkj.ai.ime.plugin.webdav_clipboard_sync/a079577eefe0020789a1bd5471016d6d9bc833cb9893764407f78bf73f1b985e.png
   activation: single
   minHostVersion: 0.0.5
   platforms:
@@ -800,6 +818,7 @@ plugins:
   - 剪贴板
   pluginType: clipboard_sync
   icon: icon-v1.png
+  iconUrl: https://raw.githubusercontent.com/JamesGZM/moki-index/main/plugins/v2/icons/com.jxmfkj.ai.ime.plugin.ximed_sync/2414d13f9a9e3eea0f82d3a86f395f6d16fe66be8c5763e3043a9104640c2e87.png
   activation: single
   minHostVersion: 0.0.5
   platforms:

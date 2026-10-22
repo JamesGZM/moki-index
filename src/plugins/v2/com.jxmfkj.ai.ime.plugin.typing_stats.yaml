@@ -8,6 +8,7 @@ tags:
 - 统计
 pluginType: tool
 icon: icon-v1.png
+iconUrl: https://raw.githubusercontent.com/JamesGZM/moki-index/main/plugins/v2/icons/com.jxmfkj.ai.ime.plugin.typing_stats/a40ac7ba8b8af929b00307af539e09cefe842836ffbdc309d36df71313de1a76.png
 activation: multi
 minHostVersion: 0.0.5
 platforms:

@@ -43,7 +43,7 @@ PLUGIN_FIELDS = [
 # v2 插件索引（JS/QuickJS，Moki 宿主 >=0.0.1）：在旧字段上追加新插件系统的元数据
 PLUGIN_V2_FIELDS = [
     "id", "name", "author", "description", "type",
-    "tags", "pluginType", "icon", "activation",
+    "tags", "pluginType", "icon", "iconUrl", "activation",
     "minHostVersion", "platforms", "capabilities", "provides", "network",
     "homepage", "license",
     "appVersion", "warning", "currentVersion", "versions",

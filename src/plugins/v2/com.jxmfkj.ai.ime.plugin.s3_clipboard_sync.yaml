@@ -7,6 +7,7 @@ tags:
 - 剪贴板
 pluginType: clipboard_sync
 icon: icon-v1.png
+iconUrl: https://raw.githubusercontent.com/JamesGZM/moki-index/main/plugins/v2/icons/com.jxmfkj.ai.ime.plugin.s3_clipboard_sync/878c4b99809ff746fc4637b6f759cbe7af66cb684d78eb5167317d399f384a31.png
 activation: single
 minHostVersion: 0.0.5
 platforms:

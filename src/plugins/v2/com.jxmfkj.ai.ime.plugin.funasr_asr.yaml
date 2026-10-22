@@ -8,6 +8,7 @@ tags:
 - ASR
 pluginType: speech
 icon: icon-v1.png
+iconUrl: https://raw.githubusercontent.com/JamesGZM/moki-index/main/plugins/v2/icons/com.jxmfkj.ai.ime.plugin.funasr_asr/22cc28572e1873b1dd17a2a814767ebc5282ed6c2c4e7392106cd7da0214aee0.png
 activation: single
 minHostVersion: 0.0.5
 platforms:

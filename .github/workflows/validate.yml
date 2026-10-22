@@ -41,6 +41,9 @@ jobs:
       - name: Test provides metadata
         run: uv run python scripts/test_provides.py
 
+      - name: Test plugin icon metadata
+        run: uv run python scripts/test_plugin_icons.py
+
       - name: Test Moki resource version requirements
         run: uv run python scripts/test_resource_versions.py
 
