@@ -25,7 +25,7 @@ AI 回复、写作、帮写共享线框四角星芒，主体分别为回复气�
 }
 ```
 
-图片位于包内 `resources/`。首批 AI 回复、AI 写作、AI 帮写、翻译、知识库、会话使用 `icon-v2.png`；另外 13 个使用 `icon-v1.png`。`iconThemed` 是包内 manifest 的显示声明，索引中的 `icon` 与包内资源名保持一致。
+图片位于包内 `resources/`。首批 AI 回复、AI 写作、AI 帮写、翻译、知识库、会话使用 `icon-v2.png`；另外 13 个使用 `icon-v1.png`。示例展示图标本身的最低要求；AI 回复还依赖原文全文编辑，实际 `minHostVersion` 必须为 `0.0.6`。`iconThemed` 是包内 manifest 的显示声明，索引中的 `icon` 与包内资源名保持一致。
 
 - 列表显示 PNG 原色；工具栏将同一 PNG 的透明轮廓按键盘 `keyTextColor` 着色，随深浅模式和自定义主题变化。
 - 主工具栏图像框 22dp、圆背景 32dp；定制预览图像框 18dp、圆背景 28dp。圆背景由宿主提供，与最左侧入口协调。
