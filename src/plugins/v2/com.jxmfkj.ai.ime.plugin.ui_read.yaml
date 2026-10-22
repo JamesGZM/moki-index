@@ -7,23 +7,23 @@ tags:
 - 工具
 pluginType: tool
 activation: multi
-minHostVersion: 0.0.2
+minHostVersion: 0.0.5
 provides:
 - id: ui.read
   version: 1
-homepage: https://github.com/JamesGZM/Moki/tree/01c8ec33a0149ab2f99ecece9ab78d4ed23539c2/plugins/ui-read
+homepage: https://github.com/JamesGZM/Moki/tree/693971d2f0b2fbcb5b169b21165e4442adbc0cd8/plugins/ui-read
 license: GPL-3.0
-appVersion: '>=0.0.2'
+appVersion: '>=0.0.5'
 currentVersion: 0.0.2
 versions:
 - version: 0.0.2
   date: '2026-10-22'
-  changelog: 新增企业微信、QQ 9.3.75／9.3.50 多结构与飞书 8.3.6 节点＋OCR；飞书对方归属待真机验证。配套 Moki >=0.0.2。
+  changelog: 统一细线双色图标，列表彩色、工具栏按文字色着色；配套 Moki >=0.0.5。 保留节点＋OCR、统一清洗及采集失败处理。
   downloadUrl:
-  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-capture-0.0.2/ui-read-0.0.2.mopk
-    sha256: 0260c68cee8ffda5753b798adcb9df68047a699426c6e8f69cedbc449940ff01
-    size: 7.8 KB
-    sizeBytes: 8022
+  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-icons-0.0.2-20261022/ui-read-0.0.2.mopk
+    sha256: 41f962e008cc1b335c8f60978b7ee7a8aba19960c30d73b367b4821c808f6029
+    size: 11.5 KB
+    sizeBytes: 11748
 - version: 0.0.1
   date: '2026-10-20'
   changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。
@@ -32,3 +32,4 @@ versions:
     sha256: c5d1dbfc2856f1c67188f96d3aec63d80f685b2d69899a3f0109b372ac323a3a
     size: 3.3 KB
     sizeBytes: 3389
+icon: icon-v1.png

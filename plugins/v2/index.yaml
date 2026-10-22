@@ -13,9 +13,9 @@ plugins:
   - 回复
   - 工具
   pluginType: tool
-  icon: 应
+  icon: icon-v2.png
   activation: multi
-  minHostVersion: 0.0.2
+  minHostVersion: 0.0.6
   platforms:
   - android
   capabilities:
@@ -23,19 +23,19 @@ plugins:
       display: passive
   network:
     allowCustomHosts: true
-  homepage: https://github.com/JamesGZM/Moki/tree/01c8ec33a0149ab2f99ecece9ab78d4ed23539c2/plugins/ai-reply
+  homepage: https://github.com/JamesGZM/Moki/tree/5e4291b6456f4fe2d0ff6c7ce085b08a3f7f0685/plugins/ai-reply
   license: GPL-3.0
-  appVersion: '>=0.0.2'
+  appVersion: '>=0.0.6'
   currentVersion: 0.0.2
   versions:
   - version: 0.0.2
     date: '2026-10-22'
-    changelog: 采集与面板改进；混合采集失败提示重试，避免重复截图。配套 Moki >=0.0.2。
+    changelog: 原文全文编辑（含归属标记），生成使用修改后的正文；最低宿主修正为 Moki 0.0.6，旧宿主不可安装。
     downloadUrl:
-    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-capture-0.0.2/ai-reply-0.0.2.mopk
-      sha256: 0beafe9fa13b2f59f6c2b3ead162c914c1809642767e0e3c2fa738f0efffaa52
-      size: 17.1 KB
-      sizeBytes: 17555
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-ai-reply-host-0.0.6-20261022/ai-reply-0.0.2.mopk
+      sha256: 80e267c1740d5079b8e5c34346446f147f5411a0a1590b6a48d72dbbb558db4d
+      size: 20.5 KB
+      sizeBytes: 21034
   - version: 0.0.1
     date: '2026-10-20'
     changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。
@@ -54,9 +54,9 @@ plugins:
   - 写作
   - 工具
   pluginType: tool
-  icon: 帮
+  icon: icon-v2.png
   activation: multi
-  minHostVersion: 0.0.1
+  minHostVersion: 0.0.5
   platforms:
   - android
   capabilities:
@@ -64,11 +64,19 @@ plugins:
       display: direct
   network:
     allowCustomHosts: true
-  homepage: https://github.com/JamesGZM/Moki/tree/0994f45d7bfa070a6ee902a330b6b0cee9195785/plugins/ai-write
+  homepage: https://github.com/JamesGZM/Moki/tree/693971d2f0b2fbcb5b169b21165e4442adbc0cd8/plugins/ai-write
   license: GPL-3.0
-  appVersion: '>=0.0.1'
-  currentVersion: 0.0.1
+  appVersion: '>=0.0.5'
+  currentVersion: 0.0.2
   versions:
+  - version: 0.0.2
+    date: '2026-10-22'
+    changelog: 统一细线双色图标，列表彩色、工具栏按文字色着色；配套 Moki >=0.0.5。
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-icons-0.0.2-20261022/ai-write-0.0.2.mopk
+      sha256: 72b45354f12b81811dfb4e8108fd872176ac665af7233b11071ba7269046d275
+      size: 5.2 KB
+      sizeBytes: 5298
   - version: 0.0.1
     date: '2026-10-20'
     changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。
@@ -85,9 +93,9 @@ plugins:
   tags:
   - 工具
   pluginType: tool
-  icon: 写
+  icon: icon-v2.png
   activation: multi
-  minHostVersion: 0.0.1
+  minHostVersion: 0.0.5
   platforms:
   - android
   capabilities:
@@ -95,11 +103,19 @@ plugins:
       display: passive
   network:
     allowCustomHosts: true
-  homepage: https://github.com/JamesGZM/Moki/tree/0994f45d7bfa070a6ee902a330b6b0cee9195785/plugins/ai-writing
+  homepage: https://github.com/JamesGZM/Moki/tree/693971d2f0b2fbcb5b169b21165e4442adbc0cd8/plugins/ai-writing
   license: GPL-3.0
-  appVersion: '>=0.0.1'
-  currentVersion: 0.0.1
+  appVersion: '>=0.0.5'
+  currentVersion: 0.0.2
   versions:
+  - version: 0.0.2
+    date: '2026-10-22'
+    changelog: 统一细线双色图标，列表彩色、工具栏按文字色着色；配套 Moki >=0.0.5。
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-icons-0.0.2-20261022/ai-writing-0.0.2.mopk
+      sha256: 7a6099d53b673a38bd83cde11c0ba0671a3f2a14db0ce88e858dc3333bbe9c33
+      size: 9.2 KB
+      sizeBytes: 9469
   - version: 0.0.1
     date: '2026-10-20'
     changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。
@@ -117,9 +133,9 @@ plugins:
   - 语音
   - ASR
   pluginType: speech
-  icon: 🎤
+  icon: icon-v1.png
   activation: single
-  minHostVersion: 0.0.1
+  minHostVersion: 0.0.5
   platforms:
   - android
   capabilities:
@@ -129,11 +145,19 @@ plugins:
   network:
     hosts:
     - dashscope.aliyuncs.com
-  homepage: https://github.com/JamesGZM/Moki/tree/0994f45d7bfa070a6ee902a330b6b0cee9195785/plugins/funasr-asr
+  homepage: https://github.com/JamesGZM/Moki/tree/693971d2f0b2fbcb5b169b21165e4442adbc0cd8/plugins/funasr-asr
   license: GPL-3.0
-  appVersion: '>=0.0.1'
-  currentVersion: 0.0.1
+  appVersion: '>=0.0.5'
+  currentVersion: 0.0.2
   versions:
+  - version: 0.0.2
+    date: '2026-10-22'
+    changelog: 统一细线双色图标，列表彩色、工具栏按文字色着色；配套 Moki >=0.0.5。
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-icons-0.0.2-20261022/funasr-asr-0.0.2.mopk
+      sha256: 00a5dfdc4ad7f163212fa78cba560131d251f842702b1b97bea28bb4819e7d7b
+      size: 7.0 KB
+      sizeBytes: 7169
   - version: 0.0.1
     date: '2026-10-20'
     changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。
@@ -151,9 +175,9 @@ plugins:
   - 表情
   - 颜文字
   pluginType: emoji
-  icon: థ౪థ
+  icon: icon-v1.png
   activation: multi
-  minHostVersion: 0.0.1
+  minHostVersion: 0.0.5
   platforms:
   - android
   capabilities:
@@ -161,11 +185,19 @@ plugins:
       supportsSearch: true
       columns: 3
       itemHeightDp: 30
-  homepage: https://github.com/JamesGZM/Moki/tree/0994f45d7bfa070a6ee902a330b6b0cee9195785/plugins/kaomoji
+  homepage: https://github.com/JamesGZM/Moki/tree/693971d2f0b2fbcb5b169b21165e4442adbc0cd8/plugins/kaomoji
   license: GPL-3.0
-  appVersion: '>=0.0.1'
-  currentVersion: 0.0.1
+  appVersion: '>=0.0.5'
+  currentVersion: 0.0.2
   versions:
+  - version: 0.0.2
+    date: '2026-10-22'
+    changelog: 统一细线双色图标，列表彩色、工具栏按文字色着色；配套 Moki >=0.0.5。
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-icons-0.0.2-20261022/kaomoji-0.0.2.mopk
+      sha256: 2d77d6bc83b8b177f0ce03be12149d1571a3074aa6dbf3945ec2a1decea7b40d
+      size: 6.7 KB
+      sizeBytes: 6897
   - version: 0.0.1
     date: '2026-10-20'
     changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。
@@ -182,19 +214,27 @@ plugins:
   tags:
   - 资料
   pluginType: context
-  icon: 知
+  icon: icon-v2.png
   activation: multi
-  minHostVersion: 0.0.1
+  minHostVersion: 0.0.5
   platforms:
   - android
   provides:
   - id: knowledge.query
     version: 1
-  homepage: https://github.com/JamesGZM/Moki/tree/0994f45d7bfa070a6ee902a330b6b0cee9195785/plugins/local-knowledge
+  homepage: https://github.com/JamesGZM/Moki/tree/693971d2f0b2fbcb5b169b21165e4442adbc0cd8/plugins/local-knowledge
   license: GPL-3.0
-  appVersion: '>=0.0.1'
-  currentVersion: 0.0.1
+  appVersion: '>=0.0.5'
+  currentVersion: 0.0.2
   versions:
+  - version: 0.0.2
+    date: '2026-10-22'
+    changelog: 统一细线双色图标，列表彩色、工具栏按文字色着色；配套 Moki >=0.0.5。
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-icons-0.0.2-20261022/local-knowledge-0.0.2.mopk
+      sha256: f026a8c552c1779aa723142befb7ed1f3d306738db84d6f7a7a0b33c1a986276
+      size: 12.5 KB
+      sizeBytes: 12784
   - version: 0.0.1
     date: '2026-10-20'
     changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。
@@ -212,9 +252,9 @@ plugins:
   - 表情
   - 贴纸
   pluginType: emoji
-  icon: 🐰
+  icon: icon-v1.png
   activation: multi
-  minHostVersion: 0.0.1
+  minHostVersion: 0.0.5
   platforms:
   - android
   capabilities:
@@ -222,11 +262,19 @@ plugins:
       supportsSearch: true
       columns: 3
       itemHeightDp: 110
-  homepage: https://github.com/JamesGZM/Moki/tree/0994f45d7bfa070a6ee902a330b6b0cee9195785/plugins/meme-bunny
+  homepage: https://github.com/JamesGZM/Moki/tree/693971d2f0b2fbcb5b169b21165e4442adbc0cd8/plugins/meme-bunny
   license: GPL-3.0
-  appVersion: '>=0.0.1'
-  currentVersion: 0.0.1
+  appVersion: '>=0.0.5'
+  currentVersion: 0.0.2
   versions:
+  - version: 0.0.2
+    date: '2026-10-22'
+    changelog: 统一细线双色图标，列表彩色、工具栏按文字色着色；配套 Moki >=0.0.5。
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-icons-0.0.2-20261022/meme-bunny-0.0.2.mopk
+      sha256: 5c35e9a345dcd6803bfc1e49e3a05049982b91d9fbcd1f27d46a20099c6be82b
+      size: 67.8 KB
+      sizeBytes: 69457
   - version: 0.0.1
     date: '2026-10-20'
     changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。
@@ -243,24 +291,25 @@ plugins:
   tags:
   - 工具
   pluginType: tool
+  icon: icon-v1.png
   activation: multi
-  minHostVersion: 0.0.2
+  minHostVersion: 0.0.5
   provides:
   - id: ocr.postprocess
     version: 1
-  homepage: https://github.com/JamesGZM/Moki/tree/01c8ec33a0149ab2f99ecece9ab78d4ed23539c2/plugins/ocr-clean
+  homepage: https://github.com/JamesGZM/Moki/tree/693971d2f0b2fbcb5b169b21165e4442adbc0cd8/plugins/ocr-clean
   license: GPL-3.0
-  appVersion: '>=0.0.2'
+  appVersion: '>=0.0.5'
   currentVersion: 0.0.2
   versions:
   - version: 0.0.2
     date: '2026-10-22'
-    changelog: 截图按包名选择应用规则；剪贴板与无匹配应用使用通用聊天识别，统一清洗设置。配套 Moki >=0.0.2。
+    changelog: 统一细线双色图标，列表彩色、工具栏按文字色着色；配套 Moki >=0.0.5。 保留节点＋OCR、统一清洗及采集失败处理。
     downloadUrl:
-    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-capture-0.0.2/ocr-clean-0.0.2.mopk
-      sha256: b6b04ecad7a3de008e535b648bb1255a4ddab8ffb0fce09bdc1a30b755f9b430
-      size: 15.1 KB
-      sizeBytes: 15503
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-icons-0.0.2-20261022/ocr-clean-0.0.2.mopk
+      sha256: d8604c52a9cc75e588243085a97449e4aa55fce8dd55396406949e559e329014
+      size: 18.0 KB
+      sizeBytes: 18459
   - version: 0.0.1
     date: '2026-10-20'
     changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。
@@ -311,9 +360,9 @@ plugins:
   - 候选
   - 常用语
   pluginType: tool
-  icon: 语
+  icon: icon-v1.png
   activation: multi
-  minHostVersion: 0.0.1
+  minHostVersion: 0.0.5
   platforms:
   - android
   capabilities:
@@ -321,11 +370,19 @@ plugins:
     quick_send_read: true
     events:
     - quick_send_changed
-  homepage: https://github.com/JamesGZM/Moki/tree/0994f45d7bfa070a6ee902a330b6b0cee9195785/plugins/quick-phrase
+  homepage: https://github.com/JamesGZM/Moki/tree/693971d2f0b2fbcb5b169b21165e4442adbc0cd8/plugins/quick-phrase
   license: GPL-3.0
-  appVersion: '>=0.0.1'
-  currentVersion: 0.0.1
+  appVersion: '>=0.0.5'
+  currentVersion: 0.0.2
   versions:
+  - version: 0.0.2
+    date: '2026-10-22'
+    changelog: 统一细线双色图标，列表彩色、工具栏按文字色着色；配套 Moki >=0.0.5。
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-icons-0.0.2-20261022/quick-phrase-0.0.2.mopk
+      sha256: 30fb73a552c2f73482cd2479b38332d81561081e53c49cc6d6d78f8152e58a79
+      size: 4.3 KB
+      sizeBytes: 4454
   - version: 0.0.1
     date: '2026-10-20'
     changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。
@@ -344,9 +401,9 @@ plugins:
   - 翻译
   - 工具
   pluginType: tool
-  icon: 译
+  icon: icon-v2.png
   activation: multi
-  minHostVersion: 0.0.1
+  minHostVersion: 0.0.5
   platforms:
   - android
   capabilities:
@@ -354,11 +411,19 @@ plugins:
       display: direct
   network:
     allowCustomHosts: true
-  homepage: https://github.com/JamesGZM/Moki/tree/0994f45d7bfa070a6ee902a330b6b0cee9195785/plugins/qwen-translate
+  homepage: https://github.com/JamesGZM/Moki/tree/693971d2f0b2fbcb5b169b21165e4442adbc0cd8/plugins/qwen-translate
   license: GPL-3.0
-  appVersion: '>=0.0.1'
-  currentVersion: 0.0.1
+  appVersion: '>=0.0.5'
+  currentVersion: 0.0.2
   versions:
+  - version: 0.0.2
+    date: '2026-10-22'
+    changelog: 统一细线双色图标，列表彩色、工具栏按文字色着色；配套 Moki >=0.0.5。
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-icons-0.0.2-20261022/qwen-translate-0.0.2.mopk
+      sha256: fd32b89debb3efec4c3a20857514efdcba5bb3079a174944ba06f0143732fe04
+      size: 6.7 KB
+      sizeBytes: 6857
   - version: 0.0.1
     date: '2026-10-20'
     changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。
@@ -375,9 +440,9 @@ plugins:
   tags:
   - 剪贴板
   pluginType: clipboard_sync
-  icon: 🪣
+  icon: icon-v1.png
   activation: single
-  minHostVersion: 0.0.1
+  minHostVersion: 0.0.5
   platforms:
   - android
   capabilities:
@@ -388,11 +453,19 @@ plugins:
   network:
     hosts: []
     allowCustomHosts: true
-  homepage: https://github.com/JamesGZM/Moki/tree/0994f45d7bfa070a6ee902a330b6b0cee9195785/plugins/s3-clipboard-sync
+  homepage: https://github.com/JamesGZM/Moki/tree/693971d2f0b2fbcb5b169b21165e4442adbc0cd8/plugins/s3-clipboard-sync
   license: GPL-3.0
-  appVersion: '>=0.0.1'
-  currentVersion: 0.0.1
+  appVersion: '>=0.0.5'
+  currentVersion: 0.0.2
   versions:
+  - version: 0.0.2
+    date: '2026-10-22'
+    changelog: 统一细线双色图标，列表彩色、工具栏按文字色着色；配套 Moki >=0.0.5。
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-icons-0.0.2-20261022/s3-clipboard-sync-0.0.2.mopk
+      sha256: 7c304be3198bc28421e72c8b54dc6e1fdc15d18c0df6c53f064d0ff39638aef7
+      size: 10.0 KB
+      sizeBytes: 10197
   - version: 0.0.1
     date: '2026-10-20'
     changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。
@@ -409,9 +482,9 @@ plugins:
   tags:
   - 资料
   pluginType: context
-  icon: 话
+  icon: icon-v2.png
   activation: multi
-  minHostVersion: 0.0.2
+  minHostVersion: 0.0.5
   platforms:
   - android
   capabilities:
@@ -420,19 +493,19 @@ plugins:
   provides:
   - id: chat.profile
     version: 1
-  homepage: https://github.com/JamesGZM/Moki/tree/01c8ec33a0149ab2f99ecece9ab78d4ed23539c2/plugins/sessions
+  homepage: https://github.com/JamesGZM/Moki/tree/693971d2f0b2fbcb5b169b21165e4442adbc0cd8/plugins/sessions
   license: GPL-3.0
-  appVersion: '>=0.0.2'
+  appVersion: '>=0.0.5'
   currentVersion: 0.0.2
   versions:
   - version: 0.0.2
     date: '2026-10-22'
-    changelog: 添加会话识别遵循统一清洗，失败／停止后可手填保存，拒绝迟到结果覆盖。配套 Moki >=0.0.2。
+    changelog: 统一细线双色图标，列表彩色、工具栏按文字色着色；配套 Moki >=0.0.5。 保留节点＋OCR、统一清洗及采集失败处理。
     downloadUrl:
-    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-capture-0.0.2/sessions-0.0.2.mopk
-      sha256: aefc0f487658f9a4a339ae5a207254dc6e72b02ce1e0a5d73ef482f4354c5522
-      size: 12.5 KB
-      sizeBytes: 12782
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-icons-0.0.2-20261022/sessions-0.0.2.mopk
+      sha256: 3d1ec9d7bdae8f076b8d6d2faccaf97d75d6a15a2f06775cb8c82cd8a19fd12b
+      size: 17.7 KB
+      sizeBytes: 18126
   - version: 0.0.1
     date: '2026-10-20'
     changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。
@@ -450,9 +523,9 @@ plugins:
   tags:
   - 语音
   pluginType: speech
-  icon: 🎙️
+  icon: icon-v1.png
   activation: single
-  minHostVersion: 0.0.1
+  minHostVersion: 0.0.5
   platforms:
   - android
   capabilities:
@@ -462,11 +535,19 @@ plugins:
   network:
     hosts:
     - asr.cloud.tencent.com
-  homepage: https://github.com/JamesGZM/Moki/tree/0994f45d7bfa070a6ee902a330b6b0cee9195785/plugins/tencent-asr
+  homepage: https://github.com/JamesGZM/Moki/tree/693971d2f0b2fbcb5b169b21165e4442adbc0cd8/plugins/tencent-asr
   license: GPL-3.0
-  appVersion: '>=0.0.1'
-  currentVersion: 0.0.1
+  appVersion: '>=0.0.5'
+  currentVersion: 0.0.2
   versions:
+  - version: 0.0.2
+    date: '2026-10-22'
+    changelog: 统一细线双色图标，列表彩色、工具栏按文字色着色；配套 Moki >=0.0.5。
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-icons-0.0.2-20261022/tencent-asr-0.0.2.mopk
+      sha256: 7970fe060d01107bb6545195310d27980b30f700669f4fce86b31316625c9ad5
+      size: 7.9 KB
+      sizeBytes: 8076
   - version: 0.0.1
     date: '2026-10-20'
     changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。
@@ -516,9 +597,9 @@ plugins:
   - 工具
   - 统计
   pluginType: tool
-  icon: 统
+  icon: icon-v1.png
   activation: multi
-  minHostVersion: 0.0.1
+  minHostVersion: 0.0.5
   platforms:
   - android
   capabilities:
@@ -527,11 +608,19 @@ plugins:
     events:
     - input_changed
     - text_committed
-  homepage: https://github.com/JamesGZM/Moki/tree/0994f45d7bfa070a6ee902a330b6b0cee9195785/plugins/typing-stats
+  homepage: https://github.com/JamesGZM/Moki/tree/693971d2f0b2fbcb5b169b21165e4442adbc0cd8/plugins/typing-stats
   license: GPL-3.0
-  appVersion: '>=0.0.1'
-  currentVersion: 0.0.1
+  appVersion: '>=0.0.5'
+  currentVersion: 0.0.2
   versions:
+  - version: 0.0.2
+    date: '2026-10-22'
+    changelog: 统一细线双色图标，列表彩色、工具栏按文字色着色；配套 Moki >=0.0.5。
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-icons-0.0.2-20261022/typing-stats-0.0.2.mopk
+      sha256: 3214e3ef7896731c2ce184a9afbc013c1f2be93c4b66b6d9ee441d2987db53dd
+      size: 5.6 KB
+      sizeBytes: 5701
   - version: 0.0.1
     date: '2026-10-20'
     changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。
@@ -548,24 +637,25 @@ plugins:
   tags:
   - 工具
   pluginType: tool
+  icon: icon-v1.png
   activation: multi
-  minHostVersion: 0.0.2
+  minHostVersion: 0.0.5
   provides:
   - id: ui.read
     version: 1
-  homepage: https://github.com/JamesGZM/Moki/tree/01c8ec33a0149ab2f99ecece9ab78d4ed23539c2/plugins/ui-read
+  homepage: https://github.com/JamesGZM/Moki/tree/693971d2f0b2fbcb5b169b21165e4442adbc0cd8/plugins/ui-read
   license: GPL-3.0
-  appVersion: '>=0.0.2'
+  appVersion: '>=0.0.5'
   currentVersion: 0.0.2
   versions:
   - version: 0.0.2
     date: '2026-10-22'
-    changelog: 新增企业微信、QQ 9.3.75／9.3.50 多结构与飞书 8.3.6 节点＋OCR；飞书对方归属待真机验证。配套 Moki >=0.0.2。
+    changelog: 统一细线双色图标，列表彩色、工具栏按文字色着色；配套 Moki >=0.0.5。 保留节点＋OCR、统一清洗及采集失败处理。
     downloadUrl:
-    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-capture-0.0.2/ui-read-0.0.2.mopk
-      sha256: 0260c68cee8ffda5753b798adcb9df68047a699426c6e8f69cedbc449940ff01
-      size: 7.8 KB
-      sizeBytes: 8022
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-icons-0.0.2-20261022/ui-read-0.0.2.mopk
+      sha256: 41f962e008cc1b335c8f60978b7ee7a8aba19960c30d73b367b4821c808f6029
+      size: 11.5 KB
+      sizeBytes: 11748
   - version: 0.0.1
     date: '2026-10-20'
     changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。
@@ -583,9 +673,9 @@ plugins:
   - 语音
   - ASR
   pluginType: speech
-  icon: 🎙️
+  icon: icon-v1.png
   activation: single
-  minHostVersion: 0.0.1
+  minHostVersion: 0.0.5
   platforms:
   - android
   capabilities:
@@ -595,11 +685,19 @@ plugins:
   network:
     hosts:
     - openspeech.bytedance.com
-  homepage: https://github.com/JamesGZM/Moki/tree/0994f45d7bfa070a6ee902a330b6b0cee9195785/plugins/volc-asr
+  homepage: https://github.com/JamesGZM/Moki/tree/693971d2f0b2fbcb5b169b21165e4442adbc0cd8/plugins/volc-asr
   license: GPL-3.0
-  appVersion: '>=0.0.1'
-  currentVersion: 0.0.1
+  appVersion: '>=0.0.5'
+  currentVersion: 0.0.2
   versions:
+  - version: 0.0.2
+    date: '2026-10-22'
+    changelog: 统一细线双色图标，列表彩色、工具栏按文字色着色；配套 Moki >=0.0.5。
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-icons-0.0.2-20261022/volc-asr-0.0.2.mopk
+      sha256: f7654c1d9098b4146dd340fb89ecfdf868aba2b763500cef83c30abe97d4e56c
+      size: 6.3 KB
+      sizeBytes: 6450
   - version: 0.0.1
     date: '2026-10-20'
     changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。
@@ -617,9 +715,9 @@ plugins:
   - 备份
   - WebDAV
   pluginType: backup
-  icon: ☁️
+  icon: icon-v1.png
   activation: single
-  minHostVersion: 0.0.1
+  minHostVersion: 0.0.5
   platforms:
   - android
   capabilities:
@@ -629,11 +727,19 @@ plugins:
   network:
     hosts: []
     allowCustomHosts: true
-  homepage: https://github.com/JamesGZM/Moki/tree/0994f45d7bfa070a6ee902a330b6b0cee9195785/plugins/webdav-backup
+  homepage: https://github.com/JamesGZM/Moki/tree/693971d2f0b2fbcb5b169b21165e4442adbc0cd8/plugins/webdav-backup
   license: GPL-3.0
-  appVersion: '>=0.0.1'
-  currentVersion: 0.0.1
+  appVersion: '>=0.0.5'
+  currentVersion: 0.0.2
   versions:
+  - version: 0.0.2
+    date: '2026-10-22'
+    changelog: 统一细线双色图标，列表彩色、工具栏按文字色着色；配套 Moki >=0.0.5。
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-icons-0.0.2-20261022/webdav-backup-0.0.2.mopk
+      sha256: ddfb7dcc32b509fea62541b087ffc0f48dd55d56471ad1f105ad0bf1a4e980f3
+      size: 7.6 KB
+      sizeBytes: 7740
   - version: 0.0.1
     date: '2026-10-20'
     changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。
@@ -651,9 +757,9 @@ plugins:
   - 剪贴板
   - 同步
   pluginType: clipboard_sync
-  icon: ☁️
+  icon: icon-v1.png
   activation: single
-  minHostVersion: 0.0.1
+  minHostVersion: 0.0.5
   platforms:
   - android
   capabilities:
@@ -664,11 +770,19 @@ plugins:
   network:
     hosts: []
     allowCustomHosts: true
-  homepage: https://github.com/JamesGZM/Moki/tree/0994f45d7bfa070a6ee902a330b6b0cee9195785/plugins/webdav-clipboard-sync
+  homepage: https://github.com/JamesGZM/Moki/tree/693971d2f0b2fbcb5b169b21165e4442adbc0cd8/plugins/webdav-clipboard-sync
   license: GPL-3.0
-  appVersion: '>=0.0.1'
-  currentVersion: 0.0.1
+  appVersion: '>=0.0.5'
+  currentVersion: 0.0.2
   versions:
+  - version: 0.0.2
+    date: '2026-10-22'
+    changelog: 统一细线双色图标，列表彩色、工具栏按文字色着色；配套 Moki >=0.0.5。
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-icons-0.0.2-20261022/webdav-clipboard-sync-0.0.2.mopk
+      sha256: ada486200ab599cfa59b7eda5459fbc6b02abd48c636672fbb3fb78b8bc1ef7d
+      size: 7.2 KB
+      sizeBytes: 7372
   - version: 0.0.1
     date: '2026-10-20'
     changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。
@@ -685,9 +799,9 @@ plugins:
   tags:
   - 剪贴板
   pluginType: clipboard_sync
-  icon: 🔗
+  icon: icon-v1.png
   activation: single
-  minHostVersion: 0.0.1
+  minHostVersion: 0.0.5
   platforms:
   - android
   capabilities:
@@ -697,11 +811,19 @@ plugins:
   network:
     hosts: []
     allowCustomHosts: true
-  homepage: https://github.com/JamesGZM/Moki/tree/0994f45d7bfa070a6ee902a330b6b0cee9195785/plugins/ximed-clipboard-sync
+  homepage: https://github.com/JamesGZM/Moki/tree/693971d2f0b2fbcb5b169b21165e4442adbc0cd8/plugins/ximed-clipboard-sync
   license: GPL-3.0
-  appVersion: '>=0.0.1'
-  currentVersion: 0.0.1
+  appVersion: '>=0.0.5'
+  currentVersion: 0.0.2
   versions:
+  - version: 0.0.2
+    date: '2026-10-22'
+    changelog: 统一细线双色图标，列表彩色、工具栏按文字色着色；配套 Moki >=0.0.5。
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-icons-0.0.2-20261022/ximed-clipboard-sync-0.0.2.mopk
+      sha256: e7c10bbc42b1b50c9584cc5de0ecd2ebae007419f7eec138423ae5bd3cf9af0b
+      size: 5.8 KB
+      sizeBytes: 5907
   - version: 0.0.1
     date: '2026-10-20'
     changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。

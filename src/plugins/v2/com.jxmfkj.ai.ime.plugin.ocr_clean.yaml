@@ -7,23 +7,23 @@ tags:
 - 工具
 pluginType: tool
 activation: multi
-minHostVersion: 0.0.2
+minHostVersion: 0.0.5
 provides:
 - id: ocr.postprocess
   version: 1
-homepage: https://github.com/JamesGZM/Moki/tree/01c8ec33a0149ab2f99ecece9ab78d4ed23539c2/plugins/ocr-clean
+homepage: https://github.com/JamesGZM/Moki/tree/693971d2f0b2fbcb5b169b21165e4442adbc0cd8/plugins/ocr-clean
 license: GPL-3.0
-appVersion: '>=0.0.2'
+appVersion: '>=0.0.5'
 currentVersion: 0.0.2
 versions:
 - version: 0.0.2
   date: '2026-10-22'
-  changelog: 截图按包名选择应用规则；剪贴板与无匹配应用使用通用聊天识别，统一清洗设置。配套 Moki >=0.0.2。
+  changelog: 统一细线双色图标，列表彩色、工具栏按文字色着色；配套 Moki >=0.0.5。 保留节点＋OCR、统一清洗及采集失败处理。
   downloadUrl:
-  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-capture-0.0.2/ocr-clean-0.0.2.mopk
-    sha256: b6b04ecad7a3de008e535b648bb1255a4ddab8ffb0fce09bdc1a30b755f9b430
-    size: 15.1 KB
-    sizeBytes: 15503
+  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-icons-0.0.2-20261022/ocr-clean-0.0.2.mopk
+    sha256: d8604c52a9cc75e588243085a97449e4aa55fce8dd55396406949e559e329014
+    size: 18.0 KB
+    sizeBytes: 18459
 - version: 0.0.1
   date: '2026-10-20'
   changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。
@@ -32,3 +32,4 @@ versions:
     sha256: abb97c450799d9ec2528ce971057aa35af75bfcb8be30e91aa23739289fa58e1
     size: 12.7 KB
     sizeBytes: 13035
+icon: icon-v1.png

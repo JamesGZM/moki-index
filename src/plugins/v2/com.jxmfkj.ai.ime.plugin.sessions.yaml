@@ -6,30 +6,30 @@ type: remote
 tags:
 - 资料
 pluginType: context
+icon: icon-v2.png
 activation: multi
-minHostVersion: 0.0.2
+minHostVersion: 0.0.5
 platforms:
 - android
-icon: 话
 capabilities:
   tool:
     display: passive
 provides:
 - id: chat.profile
   version: 1
-homepage: https://github.com/JamesGZM/Moki/tree/01c8ec33a0149ab2f99ecece9ab78d4ed23539c2/plugins/sessions
+homepage: https://github.com/JamesGZM/Moki/tree/693971d2f0b2fbcb5b169b21165e4442adbc0cd8/plugins/sessions
 license: GPL-3.0
-appVersion: '>=0.0.2'
+appVersion: '>=0.0.5'
 currentVersion: 0.0.2
 versions:
 - version: 0.0.2
   date: '2026-10-22'
-  changelog: 添加会话识别遵循统一清洗，失败／停止后可手填保存，拒绝迟到结果覆盖。配套 Moki >=0.0.2。
+  changelog: 统一细线双色图标，列表彩色、工具栏按文字色着色；配套 Moki >=0.0.5。 保留节点＋OCR、统一清洗及采集失败处理。
   downloadUrl:
-  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-capture-0.0.2/sessions-0.0.2.mopk
-    sha256: aefc0f487658f9a4a339ae5a207254dc6e72b02ce1e0a5d73ef482f4354c5522
-    size: 12.5 KB
-    sizeBytes: 12782
+  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-icons-0.0.2-20261022/sessions-0.0.2.mopk
+    sha256: 3d1ec9d7bdae8f076b8d6d2faccaf97d75d6a15a2f06775cb8c82cd8a19fd12b
+    size: 17.7 KB
+    sizeBytes: 18126
 - version: 0.0.1
   date: '2026-10-20'
   changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。

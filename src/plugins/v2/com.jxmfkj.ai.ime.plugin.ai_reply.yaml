@@ -8,9 +8,9 @@ tags:
 - 回复
 - 工具
 pluginType: tool
-icon: 应
+icon: icon-v2.png
 activation: multi
-minHostVersion: 0.0.2
+minHostVersion: 0.0.6
 platforms:
 - android
 capabilities:
@@ -18,19 +18,19 @@ capabilities:
     display: passive
 network:
   allowCustomHosts: true
-homepage: https://github.com/JamesGZM/Moki/tree/01c8ec33a0149ab2f99ecece9ab78d4ed23539c2/plugins/ai-reply
+homepage: https://github.com/JamesGZM/Moki/tree/5e4291b6456f4fe2d0ff6c7ce085b08a3f7f0685/plugins/ai-reply
 license: GPL-3.0
-appVersion: '>=0.0.2'
+appVersion: '>=0.0.6'
 currentVersion: 0.0.2
 versions:
 - version: 0.0.2
   date: '2026-10-22'
-  changelog: 采集与面板改进；混合采集失败提示重试，避免重复截图。配套 Moki >=0.0.2。
+  changelog: 原文全文编辑（含归属标记），生成使用修改后的正文；最低宿主修正为 Moki 0.0.6，旧宿主不可安装。
   downloadUrl:
-  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-capture-0.0.2/ai-reply-0.0.2.mopk
-    sha256: 0beafe9fa13b2f59f6c2b3ead162c914c1809642767e0e3c2fa738f0efffaa52
-    size: 17.1 KB
-    sizeBytes: 17555
+  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-ai-reply-host-0.0.6-20261022/ai-reply-0.0.2.mopk
+    sha256: 80e267c1740d5079b8e5c34346446f147f5411a0a1590b6a48d72dbbb558db4d
+    size: 20.5 KB
+    sizeBytes: 21034
 - version: 0.0.1
   date: '2026-10-20'
   changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。
