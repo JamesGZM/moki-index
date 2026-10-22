@@ -1,7 +1,7 @@
 # Moki 模型子索引
 # ⚠️ 此文件由 scripts/ci-update.py 自动生成，请勿手动编辑
 index_version: 1
-updated_at: '2026-10-21'
+updated_at: '2026-10-22'
 models:
 - id: jev-laya-int8
   name: laya 多语言 int8
