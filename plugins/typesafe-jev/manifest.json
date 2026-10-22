@@ -7,11 +7,12 @@
 
   // 插件名称与描述
   "name": "TypeSafe 兼容 JEV",
-  "icon": "判",
+  "icon": "icon-v1.png",
+  "iconThemed": true,
   "description": "通过 TypeSafe System One 兼容接口进行在线判断，支持自定义完整接口地址、API Key 和模型。",
 
   // 插件版本
-  "version": "0.0.1",
+  "version": "0.0.2",
 
   // 插件分类：jev 在线判断（单选）
   "type": "jev",

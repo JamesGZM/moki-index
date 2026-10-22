@@ -14,7 +14,7 @@ from urllib.request import urlopen
 
 import yaml
 
-from lib import ROOT
+from lib import ROOT, _load_manifest_json
 
 
 def load_ci():
@@ -85,9 +85,27 @@ def check_catalog(check_urls=False):
     print(f"OK: {len(sources)} entries, {image_count} image URLs, source/generated metadata match")
 
 
+def check_index_owned_plugins():
+    root = Path(ROOT)
+    for name in ("typesafe-jev", "openai-ocr"):
+        plugin = root / "plugins" / name
+        manifest = _load_manifest_json((plugin / "manifest.json").read_text())
+        entry = yaml.safe_load((root / "src/plugins/v2" / (manifest["id"] + ".yaml")).read_text())
+        assert manifest["version"] == entry["currentVersion"], name
+        assert manifest["icon"] == entry["icon"] and manifest["iconThemed"] is True, name
+        assert manifest["minHostVersion"] == entry["minHostVersion"], name
+        content = (plugin / "resources" / manifest["icon"]).read_bytes()
+        prefix = "https://raw.githubusercontent.com/JamesGZM/moki-index/main/"
+        assert entry["iconUrl"].startswith(prefix), name
+        assert (root / entry["iconUrl"].removeprefix(prefix)).read_bytes() == content, name
+        assert (root / "docs/plugin-icons" / (name + ".svg")).exists(), name
+    print("OK: JEV/OCR manifests, sources, package images and public copies agree")
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--check-urls", action="store_true")
     args = parser.parse_args()
     check_generation()
     check_catalog(args.check_urls)
+    check_index_owned_plugins()

@@ -7,11 +7,12 @@
 
   // 插件名称与描述
   "name": "OpenAI 兼容 OCR",
-  "icon": "识",
+  "icon": "icon-v1.png",
+  "iconThemed": true,
   "description": "调用 OpenAI 兼容接口，识别图片中的文字。",
 
   // 插件版本
-  "version": "0.0.1",
+  "version": "0.0.2",
 
   // 插件分类：ocr 文字识别（单选）
   "type": "ocr",
