@@ -21,7 +21,7 @@ function load(host) {
   };
   context.globalThis = context;
   vm.createContext(context);
-  vm.runInContext(fs.readFileSync(new URL("./main.js", import.meta.url), "utf8"), context);
+  vm.runInContext(fs.readFileSync(process.env.MOKI_OCR_BUNDLE || new URL("./main.js", import.meta.url), "utf8"), context);
   return context.plugin;
 }
 

@@ -4,7 +4,7 @@ Moki 输入法的插件、输入方案、模型与键盘布局市场索引。线
 
 ## 当前 Moki 插件
 
-- 当前收录 **21 个插件**：主仓 19 个统一为 **`0.0.2`**，其中 AI 回复要求 **Moki `>=0.0.6`**，其余 18 个要求 **`>=0.0.5`**；本仓 OpenAI 兼容 OCR、TypeSafe 兼容 JEV 保持 `0.0.1`／最低宿主 `0.0.1`。
+- 当前收录 **21 个插件**：主仓 19 个统一为 **`0.0.2`**，其中 AI 回复要求 **Moki `>=0.0.6`**，其余 18 个要求 **`>=0.0.5`**；本仓 OpenAI 兼容 OCR、TypeSafe 兼容 JEV 也升级为 **`0.0.2`**／最低宿主保持 `0.0.1`。[两项图标补充预发布](https://github.com/JamesGZM/moki-index/releases/tag/plugins-jev-ocr-icons-0.0.2-20261022)已公开，两个实际包及校验文件均已匿名核对，详情见[补充发布记录](docs/jev-ocr-icons-0.0.2.md)。
 - [统一图标批次 0.0.2 预发布](https://github.com/JamesGZM/moki-index/releases/tag/plugins-icons-0.0.2-20261022) 保留原始附件；其中 AI 回复请使用[最低宿主 0.0.6 修正版](https://github.com/JamesGZM/moki-index/releases/tag/plugins-ai-reply-host-0.0.6-20261022)，其余 18 个沿用原包。两次预发布均附 `SHA256SUMS`；图标、原文编辑及同版本覆盖方式见[发布记录](docs/plugin-release-0.0.2.md)，设计基线见[图标规范 1.0](docs/plugin-icons.md)。App 保持 `0.0.6`／build 6，本次不发布 App。
 - SDK 协议：`1.0.0`；命令：`mopm`；插件包后缀：`.mopk`。插件不使用 `versionCode`。
 - [插件商店索引](plugins/v2/index.yaml) 的 `index_version: 2` 表示索引结构版本，与 SDK 版本分别管理。
@@ -21,13 +21,13 @@ Moki 输入法的插件、输入方案、模型与键盘布局市场索引。线
 | `com.jxmfkj.ai.ime.plugin.knowledge.local` | 本地知识库 | context | 0.0.2 | 12.5 KB | >=0.0.5 |
 | `com.jxmfkj.ai.ime.plugin.meme_bunny` | 恶搞兔表情包 | emoji | 0.0.2 | 67.8 KB | >=0.0.5 |
 | `com.jxmfkj.ai.ime.plugin.ocr_clean` | OCR 清洗规则 | tool | 0.0.2 | 18.0 KB | >=0.0.5 |
-| `com.jxmfkj.ai.ime.plugin.openai_ocr` | OpenAI 兼容 OCR | ocr | 0.0.1 | 2.6 KB | >=0.0.1 |
+| `com.jxmfkj.ai.ime.plugin.openai_ocr` | OpenAI 兼容 OCR | ocr | 0.0.2 | 6.1 KB | >=0.0.1 |
 | `com.jxmfkj.ai.ime.plugin.quick_phrase` | 常用语 | tool | 0.0.2 | 4.3 KB | >=0.0.5 |
 | `com.jxmfkj.ai.ime.plugin.qwen_translate` | 千问翻译 | tool | 0.0.2 | 6.7 KB | >=0.0.5 |
 | `com.jxmfkj.ai.ime.plugin.s3_clipboard_sync` | S3 剪贴板同步 | clipboard_sync | 0.0.2 | 10.0 KB | >=0.0.5 |
 | `com.jxmfkj.ai.ime.plugin.sessions` | 会话管理 | context | 0.0.2 | 17.7 KB | >=0.0.5 |
 | `com.jxmfkj.ai.ime.plugin.tencent_asr` | 腾讯云实时语音识别 | speech | 0.0.2 | 7.9 KB | >=0.0.5 |
-| `com.jxmfkj.ai.ime.plugin.typesafe_jev` | TypeSafe 兼容 JEV | jev | 0.0.1 | 2.5 KB | >=0.0.1 |
+| `com.jxmfkj.ai.ime.plugin.typesafe_jev` | TypeSafe 兼容 JEV | jev | 0.0.2 | 6.1 KB | >=0.0.1 |
 | `com.jxmfkj.ai.ime.plugin.typing_stats` | 输入统计 | tool | 0.0.2 | 5.6 KB | >=0.0.5 |
 | `com.jxmfkj.ai.ime.plugin.ui_read` | 界面读取规则 | tool | 0.0.2 | 11.5 KB | >=0.0.5 |
 | `com.jxmfkj.ai.ime.plugin.volc_asr` | 火山引擎流式语音识别 | speech | 0.0.2 | 6.3 KB | >=0.0.5 |

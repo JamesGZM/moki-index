@@ -7,7 +7,8 @@ tags:
 - OCR
 - 文字识别
 pluginType: ocr
-icon: 识
+icon: icon-v1.png
+iconUrl: https://raw.githubusercontent.com/JamesGZM/moki-index/main/plugins/v2/icons/com.jxmfkj.ai.ime.plugin.openai_ocr/cdda99f9e0f17058755e380a86c7cd414830478f8e0271608ca90d64d99bf79f.png
 activation: single
 minHostVersion: 0.0.1
 platforms:
@@ -20,8 +21,16 @@ network:
 homepage: https://github.com/JamesGZM/moki-index/tree/main/plugins/openai-ocr
 license: GPL-3.0
 appVersion: '>=0.0.1'
-currentVersion: 0.0.1
+currentVersion: 0.0.2
 versions:
+- version: 0.0.2
+  date: '2026-10-22'
+  changelog: 新增统一细线双色图标；商店、已安装列表共用同一PNG，功能与配置保持。
+  downloadUrl:
+  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-jev-ocr-icons-0.0.2-20261022/openai-ocr-0.0.2.mopk
+    sha256: 7a011ebb60d036a67d1f683298a0ec9da9889f11c27b48b4d57f2ed2bafeb5a8
+    size: 6.1 KB
+    sizeBytes: 6242
 - version: 0.0.1
   date: '2026-10-20'
   changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。
