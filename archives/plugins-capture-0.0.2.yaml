@@ -1,0 +1,153 @@
+# 旧采集版 0.0.2 快照；保留原兼容要求与下载记录，不参与当前版本选择。
+index_version: 2
+updated_at: '2026-10-22'
+plugins:
+- id: com.jxmfkj.ai.ime.plugin.ai_reply
+  name: AI 智能回复
+  author: JamesGZM
+  description: 根据当前对话生成 3 条回复候选，点选上屏。支持任意 OpenAI 兼容的 chat/completions 接口。
+  type: remote
+  tags:
+  - AI
+  - 回复
+  - 工具
+  pluginType: tool
+  icon: 应
+  activation: multi
+  minHostVersion: 0.0.2
+  platforms:
+  - android
+  capabilities:
+    tool:
+      display: passive
+  network:
+    allowCustomHosts: true
+  homepage: https://github.com/JamesGZM/Moki/tree/01c8ec33a0149ab2f99ecece9ab78d4ed23539c2/plugins/ai-reply
+  license: GPL-3.0
+  appVersion: '>=0.0.2'
+  currentVersion: 0.0.2
+  versions:
+  - version: 0.0.2
+    date: '2026-10-22'
+    changelog: 采集与面板改进；混合采集失败提示重试，避免重复截图。配套 Moki >=0.0.2。
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-capture-0.0.2/ai-reply-0.0.2.mopk
+      sha256: 0beafe9fa13b2f59f6c2b3ead162c914c1809642767e0e3c2fa738f0efffaa52
+      size: 17.1 KB
+      sizeBytes: 17555
+  - version: 0.0.1
+    date: '2026-10-20'
+    changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-0.0.1/ai-reply-0.0.1.mopk
+      sha256: 3cb4055c1d2743b692eaca30d31e3efd31d08fce42322fa35c5594d9bc736561
+      size: 16.1 KB
+      sizeBytes: 16480
+- id: com.jxmfkj.ai.ime.plugin.ocr_clean
+  name: OCR 清洗规则
+  author: JamesGZM
+  description: 在本机将 OCR 文字块整理为消息、会话列表和噪音信息，保留识别原文。
+  type: remote
+  tags:
+  - 工具
+  pluginType: tool
+  activation: multi
+  minHostVersion: 0.0.2
+  provides:
+  - id: ocr.postprocess
+    version: 1
+  homepage: https://github.com/JamesGZM/Moki/tree/01c8ec33a0149ab2f99ecece9ab78d4ed23539c2/plugins/ocr-clean
+  license: GPL-3.0
+  appVersion: '>=0.0.2'
+  currentVersion: 0.0.2
+  versions:
+  - version: 0.0.2
+    date: '2026-10-22'
+    changelog: 截图按包名选择应用规则；剪贴板与无匹配应用使用通用聊天识别，统一清洗设置。配套 Moki >=0.0.2。
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-capture-0.0.2/ocr-clean-0.0.2.mopk
+      sha256: b6b04ecad7a3de008e535b648bb1255a4ddab8ffb0fce09bdc1a30b755f9b430
+      size: 15.1 KB
+      sizeBytes: 15503
+  - version: 0.0.1
+    date: '2026-10-20'
+    changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-0.0.1/ocr-clean-0.0.1.mopk
+      sha256: abb97c450799d9ec2528ce971057aa35af75bfcb8be30e91aa23739289fa58e1
+      size: 12.7 KB
+      sizeBytes: 13035
+- id: com.jxmfkj.ai.ime.plugin.sessions
+  name: 会话管理
+  author: JamesGZM
+  description: 在本机记录个人和群聊的称呼、关系和备注，供其他插件按当前会话查询。
+  type: remote
+  tags:
+  - 资料
+  pluginType: context
+  icon: 话
+  activation: multi
+  minHostVersion: 0.0.2
+  platforms:
+  - android
+  capabilities:
+    tool:
+      display: passive
+  provides:
+  - id: chat.profile
+    version: 1
+  homepage: https://github.com/JamesGZM/Moki/tree/01c8ec33a0149ab2f99ecece9ab78d4ed23539c2/plugins/sessions
+  license: GPL-3.0
+  appVersion: '>=0.0.2'
+  currentVersion: 0.0.2
+  versions:
+  - version: 0.0.2
+    date: '2026-10-22'
+    changelog: 添加会话识别遵循统一清洗，失败／停止后可手填保存，拒绝迟到结果覆盖。配套 Moki >=0.0.2。
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-capture-0.0.2/sessions-0.0.2.mopk
+      sha256: aefc0f487658f9a4a339ae5a207254dc6e72b02ce1e0a5d73ef482f4354c5522
+      size: 12.5 KB
+      sizeBytes: 12782
+  - version: 0.0.1
+    date: '2026-10-20'
+    changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-0.0.1/sessions-0.0.1.mopk
+      sha256: e2ea64eac04f14e6b288be9d79c51212d0114709b7633777b535aa86d6ffee66
+      size: 12.2 KB
+      sizeBytes: 12498
+- id: com.jxmfkj.ai.ime.plugin.ui_read
+  name: 界面读取规则
+  author: JamesGZM
+  description: 按 App 规则从无障碍界面树提取聊天标题与消息。
+  type: remote
+  tags:
+  - 工具
+  pluginType: tool
+  activation: multi
+  minHostVersion: 0.0.2
+  provides:
+  - id: ui.read
+    version: 1
+  homepage: https://github.com/JamesGZM/Moki/tree/01c8ec33a0149ab2f99ecece9ab78d4ed23539c2/plugins/ui-read
+  license: GPL-3.0
+  appVersion: '>=0.0.2'
+  currentVersion: 0.0.2
+  versions:
+  - version: 0.0.2
+    date: '2026-10-22'
+    changelog: 新增企业微信、QQ 9.3.75／9.3.50 多结构与飞书 8.3.6 节点＋OCR；飞书对方归属待真机验证。配套 Moki >=0.0.2。
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-capture-0.0.2/ui-read-0.0.2.mopk
+      sha256: 0260c68cee8ffda5753b798adcb9df68047a699426c6e8f69cedbc449940ff01
+      size: 7.8 KB
+      sizeBytes: 8022
+  - version: 0.0.1
+    date: '2026-10-20'
+    changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-0.0.1/ui-read-0.0.1.mopk
+      sha256: c5d1dbfc2856f1c67188f96d3aec63d80f685b2d69899a3f0109b372ac323a3a
+      size: 3.3 KB
+      sizeBytes: 3389

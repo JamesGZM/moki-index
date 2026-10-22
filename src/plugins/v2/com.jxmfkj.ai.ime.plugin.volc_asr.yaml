@@ -7,9 +7,9 @@ tags:
 - 语音
 - ASR
 pluginType: speech
-icon: 🎙️
+icon: icon-v1.png
 activation: single
-minHostVersion: 0.0.1
+minHostVersion: 0.0.5
 platforms:
 - android
 capabilities:
@@ -19,11 +19,19 @@ capabilities:
 network:
   hosts:
   - openspeech.bytedance.com
-homepage: https://github.com/JamesGZM/Moki/tree/0994f45d7bfa070a6ee902a330b6b0cee9195785/plugins/volc-asr
+homepage: https://github.com/JamesGZM/Moki/tree/693971d2f0b2fbcb5b169b21165e4442adbc0cd8/plugins/volc-asr
 license: GPL-3.0
-appVersion: '>=0.0.1'
-currentVersion: 0.0.1
+appVersion: '>=0.0.5'
+currentVersion: 0.0.2
 versions:
+- version: 0.0.2
+  date: '2026-10-22'
+  changelog: 统一细线双色图标，列表彩色、工具栏按文字色着色；配套 Moki >=0.0.5。
+  downloadUrl:
+  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-icons-0.0.2-20261022/volc-asr-0.0.2.mopk
+    sha256: f7654c1d9098b4146dd340fb89ecfdf868aba2b763500cef83c30abe97d4e56c
+    size: 6.3 KB
+    sizeBytes: 6450
 - version: 0.0.1
   date: '2026-10-20'
   changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。

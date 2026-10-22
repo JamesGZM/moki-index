@@ -98,7 +98,11 @@ python scripts/ci-update.py
 
 ## 上架 v2 插件（JS/QuickJS）
 
-当前 Moki 插件使用 SDK `1.0.0`，最低宿主按实际包内 `minHostVersion` 填写；采集相关四个 `0.0.2` 插件要求 Moki `>=0.0.2`，其余现有插件保留 `0.0.1`。安装包为 `.mopk`，不使用 `versionCode`。先上传并验证真实 Release 资产，再填写源 YAML 的下载地址、大小和 SHA256。当前 `plugins/v2/index.yaml` 只发布这套协议的插件；旧 SDK / `.xipk` 条目保留在 [历史索引](plugins/v2/legacy-index.yaml) 与旧 Release，不混入当前安装版本。
+当前 Moki 插件使用 SDK `1.0.0`，最低宿主按实际包内 `minHostVersion` 填写；主仓 19 个 `0.0.2` 插件要求 Moki `>=0.0.5`，本仓 OCR／JEV 两项保持 `0.0.1`／最低宿主 `0.0.1`。安装包为 `.mopk`，不使用 `versionCode`。先上传并验证真实 Release 资产，再填写源 YAML 的下载地址、大小和 SHA256。当前 `plugins/v2/index.yaml` 只发布这套协议的插件；旧 SDK / `.xipk` 条目保留在 [历史索引](plugins/v2/legacy-index.yaml) 与旧 Release，不混入当前安装版本。
+
+App 与插件版本仅在用户明确要求时调整，不能因改图、打包、安装或同步索引自行升级版本。当前同版本修订使用独立 Release tag 和下载 URL，不能覆盖旧 tag 下的同名附件；替换当前条目前先将旧记录保存到 `archives/`。同一个条目的 `versions` 不重复填写相同版本，也不能把不同内容的两个包当成同一版本的镜像下载地址。本批流程及同版本覆盖限制见[发布记录](docs/plugin-release-0.0.2.md)。
+
+插件入口图标遵循[图标规范 1.0](docs/plugin-icons.md)，`icon` 对应包内 `resources/` 的 PNG 文件名。主题着色由包内 `iconThemed: true` 声明；列表保留原色，工具栏使用键盘文字色及宿主圆背景。不为两处维护两套 PNG。
 
 v2 插件是 TypeScript/QuickJS 形态：源码为 `manifest.json` + `main.ts`（由 `mopm pack` 产出 `.mopk`，
 包内含 `manifest.json` + 编译产物 `main.js` + `resources/`）。它们使用独立索引
