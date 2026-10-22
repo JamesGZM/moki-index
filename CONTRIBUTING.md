@@ -102,7 +102,7 @@ python scripts/ci-update.py
 
 App 与插件版本仅在用户明确要求时调整，不能因改图、打包、安装或同步索引自行升级版本。当前同版本修订使用独立 Release tag 和下载 URL，不能覆盖旧 tag 下的同名附件；替换当前条目前先将旧记录保存到 `archives/`。同一个条目的 `versions` 不重复填写相同版本，也不能把不同内容的两个包当成同一版本的镜像下载地址。本批流程及同版本覆盖限制见[发布记录](docs/plugin-release-0.0.2.md)。
 
-插件入口图标遵循[图标规范 1.0](docs/plugin-icons.md)，`icon` 对应包内 `resources/` 的 PNG 文件名。主题着色由包内 `iconThemed: true` 声明；列表保留原色，工具栏使用键盘文字色及宿主圆背景。不为两处维护两套 PNG。
+插件入口图标遵循[图标规范 1.0](docs/plugin-icons.md)，`icon` 对应包内 `resources/` 的 PNG 文件名；图片还必须提供 `iconUrl`，供未安装时的商店列表与详情加载。使用可匿名访问的 HTTPS 图片地址，内容与包内 PNG 一致，不填写私有源码地址或 GitHub 文件预览页。本仓图片保存为 `plugins/v2/icons/<id>/<PNG的SHA256>.png`，索引指向本仓 main 的公开 raw 地址；更新时新增摘要路径，保留旧图。文字图标可省略 `iconUrl`。主题着色由包内 `iconThemed: true` 声明；列表保留原色，工具栏使用键盘文字色及宿主圆背景。不为两处维护两套 PNG。
 
 v2 插件是 TypeScript/QuickJS 形态：源码为 `manifest.json` + `main.ts`（由 `mopm pack` 产出 `.mopk`，
 包内含 `manifest.json` + 编译产物 `main.js` + `resources/`）。它们使用独立索引
@@ -122,6 +122,7 @@ type: remote                     # 下载类型，固定 remote
 tags: [工具]
 pluginType: tool                 # 商店分类。通常与 manifest type 一致；context 例外，见下方
 icon: "我"                        # manifest.icon：字符图标或 resources 下的图片名
+iconUrl: ""                       # 图片图标必填 HTTPS 图片地址，文字图标可省略
 activation: multi                # manifest.activation：single / multi
 minHostVersion: '0.0.1'          # manifest.minHostVersion
 platforms: [android]             # manifest.platforms
@@ -145,7 +146,7 @@ versions:
 ```
 
 > `plugins/v2/index.yaml` 的 `index_version` 为 `2`，条目是旧扁平结构的超集，
-> 追加 `icon` / `activation` / `minHostVersion` / `platforms` / `capabilities` / `provides` / `network`。
+> 追加 `icon` / `iconUrl` / `activation` / `minHostVersion` / `platforms` / `capabilities` / `provides` / `network`。
 
 `provides` 不用在源文件里手写完整清单。生成索引时：
 

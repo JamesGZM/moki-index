@@ -7,6 +7,7 @@ tags:
 - 资料
 pluginType: context
 icon: icon-v2.png
+iconUrl: https://raw.githubusercontent.com/JamesGZM/moki-index/main/plugins/v2/icons/com.jxmfkj.ai.ime.plugin.knowledge.local/8f7bf76c6fd0b5c5e62c16f4dd0c7dcada2bedc397714635c1d9ac8948b2656c.png
 activation: multi
 minHostVersion: 0.0.5
 platforms:

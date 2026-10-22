@@ -8,6 +8,7 @@ tags:
 - 颜文字
 pluginType: emoji
 icon: icon-v1.png
+iconUrl: https://raw.githubusercontent.com/JamesGZM/moki-index/main/plugins/v2/icons/com.jxmfkj.ai.ime.plugin.kaomoji/f5c2218e6e1c266129eff71ccfff1a53c3920b9527ad25a2a7022159839ec54f.png
 activation: multi
 minHostVersion: 0.0.5
 platforms:

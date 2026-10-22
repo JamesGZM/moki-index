@@ -9,6 +9,7 @@ tags:
 - 常用语
 pluginType: tool
 icon: icon-v1.png
+iconUrl: https://raw.githubusercontent.com/JamesGZM/moki-index/main/plugins/v2/icons/com.jxmfkj.ai.ime.plugin.quick_phrase/ec3be798efdb491d8da105edaf67ccfb4771a62ab1b66bec84da6a962e932ca2.png
 activation: multi
 minHostVersion: 0.0.5
 platforms:

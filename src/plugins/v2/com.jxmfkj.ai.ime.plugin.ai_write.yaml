@@ -9,6 +9,7 @@ tags:
 - 工具
 pluginType: tool
 icon: icon-v2.png
+iconUrl: https://raw.githubusercontent.com/JamesGZM/moki-index/main/plugins/v2/icons/com.jxmfkj.ai.ime.plugin.ai_write/339b23d4f56b56c1bfe9a73eeaa428e9f1452628746ae95be8e4db4a02647a5a.png
 activation: multi
 minHostVersion: 0.0.5
 platforms:

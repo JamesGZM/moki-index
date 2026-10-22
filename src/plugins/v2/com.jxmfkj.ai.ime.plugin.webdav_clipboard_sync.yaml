@@ -8,6 +8,7 @@ tags:
 - 同步
 pluginType: clipboard_sync
 icon: icon-v1.png
+iconUrl: https://raw.githubusercontent.com/JamesGZM/moki-index/main/plugins/v2/icons/com.jxmfkj.ai.ime.plugin.webdav_clipboard_sync/a079577eefe0020789a1bd5471016d6d9bc833cb9893764407f78bf73f1b985e.png
 activation: single
 minHostVersion: 0.0.5
 platforms:
