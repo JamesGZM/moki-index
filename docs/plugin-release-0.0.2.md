@@ -11,7 +11,7 @@
 
 ## 下载与同版本覆盖
 
-[本批独立预发布](https://github.com/JamesGZM/moki-index/releases/tag/plugins-icons-0.0.2-20261022) 保留最初 19 个附件，其中 AI 回复的最低宿主误标为 0.0.5；当前请使用[AI 回复修正版](https://github.com/JamesGZM/moki-index/releases/tag/plugins-ai-reply-host-0.0.6-20261022)（0.0.2 包、最低宿主 0.0.6），其余 18 个包沿用原预发布。两次预发布均附 `SHA256SUMS`。单包的下载地址、SHA256、字节数见[当前索引](../plugins/v2/index.yaml)；版本与展示大小见 [README](../README.md) 的插件表。
+[本批独立预发布](https://github.com/JamesGZM/moki-index/releases/tag/plugins-icons-0.0.2-20261022) 保留最初 19 个附件，其中 AI 回复的最低宿主误标为 0.0.5；最低宿主随后已由[声明修正版](https://github.com/JamesGZM/moki-index/releases/tag/plugins-ai-reply-host-0.0.6-20261022)修正。当前 AI 回复请使用[规则／通用切换修复包](https://github.com/JamesGZM/moki-index/releases/tag/plugins-ai-reply-reader-cache-0.0.2-20261022)（版本仍为0.0.2／最低宿主0.0.6，见[本次记录](ai-reply-reader-cache-0.0.2.md)），其余 18 个包沿用原预发布。各次预发布均附 `SHA256SUMS`。单包的下载地址、SHA256、字节数见[当前索引](../plugins/v2/index.yaml)；版本与展示大小见 [README](../README.md) 的插件表。
 
 按用户要求，本批继续使用 `0.0.2`，而旧采集版已有四个同版本包。为保持下载内容可追溯，新内容使用独立 Release tag `plugins-icons-0.0.2-20261022`，不覆盖 `plugins-capture-0.0.2` 下的旧附件。AI 回复的兼容声明修正同样使用独立 tag，旧误标条目存入[修正前快照](../archives/ai-reply-before-host-0.0.6.yaml)，不作为当前安装入口。旧四条目的完整记录保存于[采集版快照](../archives/plugins-capture-0.0.2.yaml)，所有 `0.0.1` 下载记录继续保留。
 

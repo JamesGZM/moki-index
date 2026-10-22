@@ -5,7 +5,7 @@ Moki 输入法的插件、输入方案、模型与键盘布局市场索引。线
 ## 当前 Moki 插件
 
 - 当前收录 **21 个插件**：主仓 19 个统一为 **`0.0.2`**，其中 AI 回复要求 **Moki `>=0.0.6`**，其余 18 个要求 **`>=0.0.5`**；本仓 OpenAI 兼容 OCR、TypeSafe 兼容 JEV 也升级为 **`0.0.2`**／最低宿主保持 `0.0.1`。[两项图标补充预发布](https://github.com/JamesGZM/moki-index/releases/tag/plugins-jev-ocr-icons-0.0.2-20261022)已公开，两个实际包及校验文件均已匿名核对，详情见[补充发布记录](docs/jev-ocr-icons-0.0.2.md)。
-- [统一图标批次 0.0.2 预发布](https://github.com/JamesGZM/moki-index/releases/tag/plugins-icons-0.0.2-20261022) 保留原始附件；其中 AI 回复请使用[最低宿主 0.0.6 修正版](https://github.com/JamesGZM/moki-index/releases/tag/plugins-ai-reply-host-0.0.6-20261022)，其余 18 个沿用原包。两次预发布均附 `SHA256SUMS`；图标、原文编辑及同版本覆盖方式见[发布记录](docs/plugin-release-0.0.2.md)，设计基线见[图标规范 1.0](docs/plugin-icons.md)。App 保持 `0.0.6`／build 6，本次不发布 App。
+- [统一图标批次 0.0.2 预发布](https://github.com/JamesGZM/moki-index/releases/tag/plugins-icons-0.0.2-20261022) 保留原始附件；其中 AI 回复当前请使用[规则／通用切换修复包](https://github.com/JamesGZM/moki-index/releases/tag/plugins-ai-reply-reader-cache-0.0.2-20261022)（版本 `0.0.2`／最低宿主 `0.0.6`，见[本次发布记录](docs/ai-reply-reader-cache-0.0.2.md)），其余 18 个沿用原包。各次预发布均附 `SHA256SUMS`；图标、原文编辑及同版本覆盖方式见[发布记录](docs/plugin-release-0.0.2.md)，设计基线见[图标规范 1.0](docs/plugin-icons.md)。App 保持 `0.0.6`／build 6，本次不发布 App。
 - SDK 协议：`1.0.0`；命令：`mopm`；插件包后缀：`.mopk`。插件不使用 `versionCode`。
 - [插件商店索引](plugins/v2/index.yaml) 的 `index_version: 2` 表示索引结构版本，与 SDK 版本分别管理。
 - 下载包以各条目的地址为准，每个下载条目包含真实文件的 SHA256、字节数和展示大小。旧 [0.0.1 Release](https://github.com/JamesGZM/moki-index/releases/tag/plugins-moki-0.0.1)、[采集版 0.0.2](https://github.com/JamesGZM/moki-index/releases/tag/plugins-capture-0.0.2) 及 [TypeSafe 兼容 JEV 预发布](https://github.com/JamesGZM/moki-index/releases/tag/plugins-typesafe-jev-0.0.1) 附件继续保留。
@@ -13,7 +13,7 @@ Moki 输入法的插件、输入方案、模型与键盘布局市场索引。线
 
 | ID | 插件 | 商店分类 | 版本 | 包大小 | 最低 App 版本 |
 | --- | --- | --- | --- | --- | --- |
-| `com.jxmfkj.ai.ime.plugin.ai_reply` | AI 智能回复 | tool | 0.0.2 | 20.5 KB | >=0.0.6 |
+| `com.jxmfkj.ai.ime.plugin.ai_reply` | AI 智能回复 | tool | 0.0.2 | 20.7 KB | >=0.0.6 |
 | `com.jxmfkj.ai.ime.plugin.ai_write` | AI 帮写 | tool | 0.0.2 | 5.2 KB | >=0.0.5 |
 | `com.jxmfkj.ai.ime.plugin.ai_writing` | AI 写作 | tool | 0.0.2 | 9.2 KB | >=0.0.5 |
 | `com.jxmfkj.ai.ime.plugin.funasr_asr` | 阿里百炼 FunAsr | speech | 0.0.2 | 7.0 KB | >=0.0.5 |
