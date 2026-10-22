@@ -1,0 +1,46 @@
+# AI 回复规则／通用切换修复前的 0.0.2 条目；仅供追溯，不参与当前安装选择。
+index_version: 2
+updated_at: '2026-10-22'
+plugins:
+- id: com.jxmfkj.ai.ime.plugin.ai_reply
+  name: AI 智能回复
+  author: JamesGZM
+  description: 根据当前对话生成 3 条回复候选，点选上屏。支持任意 OpenAI 兼容的 chat/completions 接口。
+  type: remote
+  tags:
+  - AI
+  - 回复
+  - 工具
+  pluginType: tool
+  icon: icon-v2.png
+  iconUrl: https://raw.githubusercontent.com/JamesGZM/moki-index/main/plugins/v2/icons/com.jxmfkj.ai.ime.plugin.ai_reply/49a5cfde1e64bbb646dc9c2b004fb9bdefeba12002d3f2909da3c5509d0e84f6.png
+  activation: multi
+  minHostVersion: 0.0.6
+  platforms:
+  - android
+  capabilities:
+    tool:
+      display: passive
+  network:
+    allowCustomHosts: true
+  homepage: https://github.com/JamesGZM/Moki/tree/5e4291b6456f4fe2d0ff6c7ce085b08a3f7f0685/plugins/ai-reply
+  license: GPL-3.0
+  appVersion: '>=0.0.6'
+  currentVersion: 0.0.2
+  versions:
+  - version: 0.0.2
+    date: '2026-10-22'
+    changelog: 原文全文编辑（含归属标记），生成使用修改后的正文；最低宿主修正为 Moki 0.0.6，旧宿主不可安装。
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-ai-reply-host-0.0.6-20261022/ai-reply-0.0.2.mopk
+      sha256: 80e267c1740d5079b8e5c34346446f147f5411a0a1590b6a48d72dbbb558db4d
+      size: 20.5 KB
+      sizeBytes: 21034
+  - version: 0.0.1
+    date: '2026-10-20'
+    changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。
+    downloadUrl:
+    - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-moki-0.0.1/ai-reply-0.0.1.mopk
+      sha256: 3cb4055c1d2743b692eaca30d31e3efd31d08fce42322fa35c5594d9bc736561
+      size: 16.1 KB
+      sizeBytes: 16480
