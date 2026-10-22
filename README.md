@@ -5,7 +5,7 @@ Moki 输入法的插件、输入方案、模型与键盘布局市场索引。线
 ## 当前 Moki 插件
 
 - 当前收录 **21 个插件**：AI 回复、OCR 清洗、界面读取、会话管理为 **`0.0.2`**，要求 **Moki `>=0.0.2`**；其余 17 个保留 `0.0.1`／最低宿主 `0.0.1`。
-- [采集与识图插件 0.0.2 预发布](https://github.com/JamesGZM/moki-index/releases/tag/plugins-capture-0.0.2) 配套 [App PR54](https://github.com/JamesGZM/Moki/pull/54)。App 尚未合并／发布，需使用配套宿主；四个旧 `0.0.1` 版本下载记录与附件保留。
+- [采集与识图插件 0.0.2 预发布](https://github.com/JamesGZM/moki-index/releases/tag/plugins-capture-0.0.2) 配套 [App PR54](https://github.com/JamesGZM/Moki/pull/54)。App PR54已合并，安装前须使用支持此采集流程的 Moki `>=0.0.2`；插件预发布与App发布分别管理，四个旧 `0.0.1` 版本下载记录与附件保留。
 - SDK 协议：`1.0.0`；命令：`mopm`；插件包后缀：`.mopk`。插件不使用 `versionCode`。
 - [插件商店索引](plugins/v2/index.yaml) 的 `index_version: 2` 表示索引结构版本，与 SDK 版本分别管理。
 - 下载包以各条目的地址为准：既有包见 [Moki 插件 0.0.1 Release](https://github.com/JamesGZM/moki-index/releases/tag/plugins-moki-0.0.1)，新 JEV 包见 [TypeSafe 兼容 JEV 预发布](https://github.com/JamesGZM/moki-index/releases/tag/plugins-typesafe-jev-0.0.1)。每个下载条目包含真实文件的 SHA256、字节数和展示大小。
