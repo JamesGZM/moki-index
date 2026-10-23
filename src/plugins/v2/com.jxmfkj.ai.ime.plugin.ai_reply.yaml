@@ -19,20 +19,20 @@ capabilities:
     display: passive
 network:
   allowCustomHosts: true
-homepage: https://github.com/JamesGZM/Moki/tree/827267a2ab70f6ff04a96ad3ca0491c23759a496/plugins/ai-reply
+homepage: https://github.com/JamesGZM/Moki/tree/bb993f7af84e0bab05461739acb482377b027cec/plugins/ai-reply
 license: GPL-3.0
 appVersion: '>=0.0.6'
 currentVersion: 0.0.2
 versions:
 - version: 0.0.2
-  date: '2026-10-22'
-  changelog: 修复树读取及 OCR 来源的规则／通用切换重复匹配资料、误入识别忙碌；切换复用本次缓存并保留回复，主动重新识别仍刷新。版本保持 0.0.2，最低宿主仍为
-    Moki 0.0.6。
+  date: '2026-10-23'
+  changelog: 设置增加自动读取主题开关，与面板共用 captureMode 并即时持久化；关闭后使用剪贴板文字或图片，切换不重新采集或生成。保留规则／通用切换缓存修复，版本仍
+    0.0.2，最低 Moki 0.0.6。
   downloadUrl:
-  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-ai-reply-reader-cache-0.0.2-20261022/ai-reply-0.0.2.mopk
-    sha256: 9c1c78729dcc570bca69e4d5ba476e650c2fd4cc3651d399c00e20a8059c20f0
-    size: 20.7 KB
-    sizeBytes: 21191
+  - url: https://github.com/JamesGZM/moki-index/releases/download/plugins-ai-reply-settings-0.0.2-20261023/ai-reply-0.0.2.mopk
+    sha256: 0a9b4e7841505e2005a38723e62290c61f6e46f758f7914e4298de04d43981bf
+    size: 20.8 KB
+    sizeBytes: 21264
 - version: 0.0.1
   date: '2026-10-20'
   changelog: Moki 首次统一发布：SDK 1.0.0、mopm 构建的 .mopk 安装包，最低宿主 0.0.1。

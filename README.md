@@ -5,7 +5,7 @@ Moki 输入法的插件、输入方案、模型与键盘布局市场索引。线
 ## 当前 Moki 插件
 
 - 当前收录 **21 个插件**：主仓 19 个统一为 **`0.0.2`**，其中 AI 回复要求 **Moki `>=0.0.6`**，其余 18 个要求 **`>=0.0.5`**；本仓 OpenAI 兼容 OCR、TypeSafe 兼容 JEV 也升级为 **`0.0.2`**／最低宿主保持 `0.0.1`。[两项图标补充预发布](https://github.com/JamesGZM/moki-index/releases/tag/plugins-jev-ocr-icons-0.0.2-20261022)已公开，两个实际包及校验文件均已匿名核对，详情见[补充发布记录](docs/jev-ocr-icons-0.0.2.md)。
-- [统一图标批次 0.0.2 预发布](https://github.com/JamesGZM/moki-index/releases/tag/plugins-icons-0.0.2-20261022) 保留原始附件；其中 AI 回复当前请使用[规则／通用切换修复包](https://github.com/JamesGZM/moki-index/releases/tag/plugins-ai-reply-reader-cache-0.0.2-20261022)（版本 `0.0.2`／最低宿主 `0.0.6`，见[本次发布记录](docs/ai-reply-reader-cache-0.0.2.md)），其余 18 个沿用原包。各次预发布均附 `SHA256SUMS`；图标、原文编辑及同版本覆盖方式见[发布记录](docs/plugin-release-0.0.2.md)，设计基线见[图标规范 1.0](docs/plugin-icons.md)。App 保持 `0.0.6`／build 6，本次不发布 App。
+- [统一图标批次 0.0.2 预发布](https://github.com/JamesGZM/moki-index/releases/tag/plugins-icons-0.0.2-20261022) 保留原始附件；其中 AI 回复当前请使用[设置模式开关优化包](https://github.com/JamesGZM/moki-index/releases/tag/plugins-ai-reply-settings-0.0.2-20261023)（版本 `0.0.2`／最低宿主 `0.0.6`，见[本次发布记录](docs/ai-reply-settings-scheme-names-20261023.md)），其余 18 个沿用原包。各次预发布均附 `SHA256SUMS`；图标、原文编辑及同版本覆盖方式见[发布记录](docs/plugin-release-0.0.2.md)，设计基线见[图标规范 1.0](docs/plugin-icons.md)。App 保持 `0.0.6`／build 6，本次不发布 App。
 - SDK 协议：`1.0.0`；命令：`mopm`；插件包后缀：`.mopk`。插件不使用 `versionCode`。
 - [插件商店索引](plugins/v2/index.yaml) 的 `index_version: 2` 表示索引结构版本，与 SDK 版本分别管理。
 - 下载包以各条目的地址为准，每个下载条目包含真实文件的 SHA256、字节数和展示大小。旧 [0.0.1 Release](https://github.com/JamesGZM/moki-index/releases/tag/plugins-moki-0.0.1)、[采集版 0.0.2](https://github.com/JamesGZM/moki-index/releases/tag/plugins-capture-0.0.2) 及 [TypeSafe 兼容 JEV 预发布](https://github.com/JamesGZM/moki-index/releases/tag/plugins-typesafe-jev-0.0.1) 附件继续保留。
@@ -13,7 +13,7 @@ Moki 输入法的插件、输入方案、模型与键盘布局市场索引。线
 
 | ID | 插件 | 商店分类 | 版本 | 包大小 | 最低 App 版本 |
 | --- | --- | --- | --- | --- | --- |
-| `com.jxmfkj.ai.ime.plugin.ai_reply` | AI 智能回复 | tool | 0.0.2 | 20.7 KB | >=0.0.6 |
+| `com.jxmfkj.ai.ime.plugin.ai_reply` | AI 智能回复 | tool | 0.0.2 | 20.8 KB | >=0.0.6 |
 | `com.jxmfkj.ai.ime.plugin.ai_write` | AI 帮写 | tool | 0.0.2 | 5.2 KB | >=0.0.5 |
 | `com.jxmfkj.ai.ime.plugin.ai_writing` | AI 写作 | tool | 0.0.2 | 9.2 KB | >=0.0.5 |
 | `com.jxmfkj.ai.ime.plugin.funasr_asr` | 阿里百炼 FunAsr | speech | 0.0.2 | 7.0 KB | >=0.0.5 |
@@ -70,9 +70,9 @@ AI 帮写、AI 写作、WebDAV 剪贴板同步及其他插件可从商店按需�
 
 ### Moki 默认方案
 
-`builtin` 保留原条目 ID，替换为 Moki 自有的六类方案包：九键拼音（新安装默认）、全键盘拼音、手写、笔画、五笔86、小鹤双拼。配套 App 随包内置手写模型；商店包排除 `*.custom.yaml` 用户配置模板，不携带模型。手写模型兼容要求同步改为 Moki `>=0.0.1`，文件与校验值保持。生成入口是主应用仓库的 `scripts/package-default-scheme.py`，从 App 资源清单派生商店清单；使用 `-market.zip` 附件，不使用包含配置模板的初版 zip。
+`builtin` 保留原条目 ID，替换为 Moki 自有的六类方案包：九宫格拼音（新安装默认）、全键盘拼音、手写键盘、笔画键盘、五笔键盘、双拼键盘。配套 App 随包内置手写模型；商店包排除 `*.custom.yaml` 用户配置模板，不携带模型。手写模型兼容要求同步改为 Moki `>=0.0.1`，文件与校验值保持。生成入口是主应用仓库的 `scripts/package-default-scheme.py`，从 App 资源清单派生商店清单；使用 `-market.zip` 附件，不使用包含配置模板的初版 zip。
 
-[默认方案 0.0.1 预发布包](https://github.com/JamesGZM/moki-index/releases/tag/schemes-moki-default-0.0.1) 为本次 PR 的验证产物，索引合并前不切换线上默认条目。旧五笔包的版本／作者／下载记录见 [历史条目](archives/builtin-wubi.yaml)，不混入新默认方案的可选版本。
+[默认方案 0.0.1 名称同步包](https://github.com/JamesGZM/moki-index/releases/tag/schemes-moki-default-names-0.0.1-20261023) 与当前 App 名称／顺序一致，包版本保持不变。旧默认包记录见[修订前快照](archives/builtin-before-names-0.0.1.yaml)，旧附件继续保留。旧五笔包的版本／作者／下载记录见 [历史条目](archives/builtin-wubi.yaml)，不混入新默认方案的可选版本。
 
 ### 模型
 
