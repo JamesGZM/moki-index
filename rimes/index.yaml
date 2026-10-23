@@ -1,12 +1,12 @@
 # Moki 输入方案子索引
 # ⚠️ 此文件由 scripts/ci-update.py 自动生成，请勿手动编辑
 index_version: 1
-updated_at: '2026-10-22'
+updated_at: '2026-10-23'
 schemas:
 - id: builtin
   name: 默认方案
   author: Moki（整合；保留各上游作者）
-  description: Moki 默认方案：九键拼音（默认）、全键盘拼音、手写、笔画、五笔86和小鹤双拼。
+  description: Moki 默认方案：九宫格拼音（默认）、全键盘拼音、手写键盘、笔画键盘、五笔键盘（五笔86）和双拼键盘（小鹤双拼）。
   type: built-in
   tags:
   - 拼音
@@ -24,13 +24,13 @@ schemas:
   currentVersion: 0.0.1
   versions:
   - version: 0.0.1
-    date: '2026-10-21'
-    changelog: 替换原五笔为主的默认方案，统一为 Moki 六类输入方案；新安装默认九键拼音，手写模型由配套 App 内置。
+    date: '2026-10-23'
+    changelog: 六方案名称与 App 快捷面板及管理页一致，按九宫格拼音、全键盘拼音、手写键盘、笔画键盘、五笔键盘、双拼键盘排列；更新说明和适配来源摘要，不改词库、模型、用户配置模板或版本。
     downloadUrl:
-    - url: https://github.com/JamesGZM/moki-index/releases/download/schemes-moki-default-0.0.1/moki-default-0.0.1-market.zip
-      sha256: 3e9b5bade00b078c97d5e9a2c247323c63998374f0f498f36ad7a4b568373d20
+    - url: https://github.com/JamesGZM/moki-index/releases/download/schemes-moki-default-names-0.0.1-20261023/moki-default-0.0.1-market.zip
+      sha256: 19ef229c9fe12c377e27a3208ef456d7af1096165ee431b4f64e1d1afa323216
       size: 7.3 MB
-      sizeBytes: 7685301
+      sizeBytes: 7685325
 - id: cangjie
   name: 倉頡輸入法
   author: rime

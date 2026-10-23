@@ -1,0 +1,28 @@
+id: builtin
+name: 默认方案
+author: Moki（整合；保留各上游作者）
+description: Moki 默认方案：九键拼音（默认）、全键盘拼音、手写、笔画、五笔86和小鹤双拼。
+type: built-in
+tags:
+- 拼音
+- 九键
+- 全键盘
+- 手写
+- 笔画
+- 五笔
+- 小鹤双拼
+homepage: https://github.com/JamesGZM/Moki
+license: GPL-3.0
+dependencies: []
+appVersion: '>=0.0.1'
+warning: 请使用配套新版 Moki；离线手写模型由 App 随包提供，方案包不覆盖已有模型和用户配置。
+currentVersion: 0.0.1
+versions:
+- version: 0.0.1
+  date: '2026-10-21'
+  changelog: 替换原五笔为主的默认方案，统一为 Moki 六类输入方案；新安装默认九键拼音，手写模型由配套 App 内置。
+  downloadUrl:
+  - url: https://github.com/JamesGZM/moki-index/releases/download/schemes-moki-default-0.0.1/moki-default-0.0.1-market.zip
+    sha256: 3e9b5bade00b078c97d5e9a2c247323c63998374f0f498f36ad7a4b568373d20
+    size: 7.3 MB
+    sizeBytes: 7685301

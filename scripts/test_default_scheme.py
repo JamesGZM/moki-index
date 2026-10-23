@@ -20,7 +20,7 @@ class DefaultSchemeTest(unittest.TestCase):
         self.assertEqual("默认方案", entry["name"])
         self.assertEqual("built-in", entry["type"])
         self.assertIn("Moki", entry["author"])
-        for text in ["九键", "全键盘", "手写", "笔画", "五笔86", "小鹤双拼"]:
+        for text in ["九宫格拼音", "全键盘拼音", "手写键盘", "笔画键盘", "五笔键盘", "双拼键盘"]:
             self.assertIn(text, entry["description"])
         self.assertIn("默认", entry["description"])
 
@@ -42,6 +42,14 @@ class DefaultSchemeTest(unittest.TestCase):
         old = read("archives/builtin-wubi.yaml")
         self.assertEqual("王永民", old["author"])
         self.assertIn("kingzcheung/rime-wubi", old["versions"][0]["downloadUrl"][0]["url"])
+
+    def test_name_revision_keeps_the_version_and_previous_download(self):
+        source = read("src/rimes/builtin.yaml")
+        old = read("archives/builtin-before-names-0.0.1.yaml")
+        self.assertEqual(old["currentVersion"], source["currentVersion"])
+        self.assertEqual(old["appVersion"], source["appVersion"])
+        self.assertNotEqual(old["versions"][0]["downloadUrl"], source["versions"][0]["downloadUrl"])
+        self.assertEqual(["0.0.1"], [v["version"] for v in source["versions"]])
 
     def test_bundled_handwriting_model_uses_moki_requirements_without_changing_the_files(self):
         source = read("src/models/ochwpro.yaml")
